@@ -55,7 +55,18 @@ def _shortlist(records, limit, priority_ids=()):
             if len(preferred) >= min(2, limit):
                 break
         preferred_ids = {r["candidate_id"] for r in preferred}
-        selected = preferred + [r for r in selected if r["candidate_id"] not in preferred_ids]
+        # Advice nominates membership, not random-number assignment. Preserve
+        # the existing order when the model agrees with the numerical shortlist.
+        selected = selected[:limit]
+        for proposed in preferred:
+            if proposed["candidate_id"] in {r["candidate_id"] for r in selected}:
+                continue
+            if len(selected) >= limit:
+                removable = [i for i, r in enumerate(selected) if r["candidate_id"] not in preferred_ids]
+                if not removable:
+                    continue
+                selected.pop(removable[-1])
+            selected.append(proposed)
     return selected[:limit]
 
 
@@ -87,6 +98,52 @@ def _priority(record, records, env, n, multiplier, price):
                 value_at_stake=stake, se_reduction=reduction,
                 ambiguity_weight=ambiguity, burden=burden, feasible_reach=reach)
 
+
+
+def _confirmation_size(record, records, env, cfg, multiplier):
+    """Precision planning near profit/channel/target boundaries, not a guarantee.
+
+    Use observed means only to plan the next batch. Confidence estimates still
+    use actual returned samples. Stop confirming decisions whose current band
+    clears all relevant boundaries; retain a bounded batch for ambiguous ones.
+    """
+    cap = min(200, int(cfg["confirmation_n"]))
+    if not cfg.get("adaptive_confirmation_n", False):
+        return cap
+    average_arpu = record["served_arpu"] / max(1, record["served_size"])
+    thresholds = [0.0]
+    channels = []
+    if average_arpu > 0:
+        for name in ("push", "sms", "digital_ads"):
+            channel = env.channels.get(name, {})
+            cost = float(channel.get("cost_per_contact", -1))
+            effect = float(channel.get("conversion_multiplier", 0))
+            if math.isfinite(cost) and math.isfinite(effect) and cost >= 0 and effect > 0:
+                thresholds.append(cost / (effect * average_arpu))
+                channels.append((cost, effect))
+        for i, (cost, effect) in enumerate(channels):
+            for other_cost, other_effect in channels[i + 1:]:
+                if effect != other_effect:
+                    boundary = (cost - other_cost) / ((effect - other_effect) * average_arpu)
+                    if boundary >= 0:
+                        thresholds.append(boundary)
+    peers = [r for r in records if r["cell_id"] == record["cell_id"]
+             and r["candidate_id"] != record["candidate_id"] and r["status"] == "measured"]
+    thresholds += [r["mean_lift"] for r in peers]
+    gap = min(abs(record["mean_lift"] - value) for value in thresholds)
+    if gap <= 1e-12:
+        return cap
+    # Account for a competing target's uncertainty when planning comparisons.
+    if peers:
+        gap = min(gap, max(0.0, min(abs(record["mean_lift"] - r["mean_lift"])
+                                   - cfg["risk_z"] * r["se_lift"] for r in peers)))
+        if gap <= 1e-12:
+            return cap
+    required_total = (cfg["risk_z"] * 0.804 / (multiplier * gap)) ** 2
+    additional = math.ceil(min(required_total, record["pilot_n"] + cap)) - record["pilot_n"]
+    if additional <= 0:
+        return 0
+    return min(cap, max(40, additional))
 
 def run_adaptive_pilots(env, candidates, *, config=None, trace=None):
     """Return one fresh observation per candidate; only run_pilot spends resources."""
@@ -169,19 +226,28 @@ def run_adaptive_pilots(env, candidates, *, config=None, trace=None):
                requested_n=n, actual_n=int(actual), cost=cost, observed_lift_ratio=ratio,
                **(components or {}))
 
-    for record in _shortlist(records, max(0, min(10, int(cfg["exploration_pilots"]))),
-                             cfg.get("exploration_priority_ids", ())):
+    limit = max(0, min(10, int(cfg["exploration_pilots"])))
+    shortlist = _shortlist(records, limit, cfg.get("exploration_priority_ids", ()))
+    if cfg.get("exploration_priority_ids"):
+        baseline_ids = [r["candidate_id"] for r in _shortlist(records, limit)]
+        selected_ids = [r["candidate_id"] for r in shortlist]
+        _event(trace, "llm_exploration", reason="Model nominations are subject to eligibility and resource limits.",
+               nominated_ids=list(cfg["exploration_priority_ids"]), selected_ids=selected_ids,
+               selection_changed=selected_ids != baseline_ids)
+    for record in shortlist:
         run(record, cfg["exploration_n"], "exploration")
     for _ in range(max(0, min(5, int(cfg["confirmation_pilots"])))):
         choices = []
         for record in records:
             if record["status"] != "measured" or record["candidate_id"] in disabled:
                 continue
-            n = feasible(record, cfg["confirmation_n"])
+            requested = _confirmation_size(record, records, env, cfg, multiplier)
+            n = feasible(record, requested)
             if n < 10:
                 continue
             components = _priority(record, records, env, n, multiplier, price)
             if components and components["priority"] > 0:
+                components["adaptive_sample_size"] = bool(cfg.get("adaptive_confirmation_n", False))
                 choices.append((record, n, components))
         if not choices:
             break

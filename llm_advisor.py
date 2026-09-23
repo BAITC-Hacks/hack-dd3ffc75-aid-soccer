@@ -1,13 +1,14 @@
 """Optional, bounded LLM advice over aggregate public candidate data.
 
-No optimizer, pilot execution, raw customer data, filesystem reads, or training
-jobs live here. The OpenAI SDK is imported only when a live request is made.
+No optimizer, pilot execution, raw customer data, or training jobs live here.
+Frozen policy reads are local and never trigger network access. The OpenAI SDK is imported only when a live request is made.
 """
 from copy import deepcopy
 import hashlib
 import json
 import math
 import os
+from pathlib import Path
 
 
 PROMPT_VERSION = "campaign-exploration-v1"
@@ -136,8 +137,52 @@ def validate_recommendation(payload, context):
     return {"candidate_ids": list(ids), "reason": reason.strip()}
 
 
+class FrozenAdvisor:
+    """Replay a validated model decision only for identical public inputs."""
+    request_count = 0
+    source = "frozen_openai"
+
+    def __init__(self, path):
+        try:
+            path = Path(path)
+            if path.stat().st_size > 100000:
+                raise ValueError("Oversized policy")
+            self.policy = json.loads(path.read_text(encoding="utf-8"))
+            self.model = self.policy["model"]
+            if (self.policy["schema_version"] != "1.0"
+                    or self.policy["source"] != "openai"
+                    or self.policy["prompt_version"] != PROMPT_VERSION
+                    or self.policy["instructions_hash"] != context_hash(INSTRUCTIONS)
+                    or not isinstance(self.model, str) or not self.model):
+                raise ValueError("Invalid policy")
+        except (OSError, ValueError, KeyError, TypeError):
+            raise AdviceUnavailable("invalid_policy") from None
+
+    def recommend(self, context):
+        if self.policy["context_hash"] != context_hash(context):
+            raise AdviceUnavailable("policy_context_mismatch")
+        recommendation = validate_recommendation(self.policy["recommendation"], context)
+        return {"recommendation": recommendation, "usage": {}}
+
+
+def freeze_advice(advice):
+    """Freeze the first successful live recommendation, without evaluator labels."""
+    context = advice.get("context")
+    if (advice.get("status") != "ok" or advice.get("source") != "openai"
+            or not context or advice.get("context_hash") != context_hash(context)
+            or context.get("prompt_version") != PROMPT_VERSION):
+        raise AdviceUnavailable("invalid_policy")
+    return dict(schema_version="1.0", source="openai", model=advice["model"],
+                prompt_version=PROMPT_VERSION, instructions_hash=context_hash(INSTRUCTIONS),
+                context_hash=context_hash(context),
+                recommendation=validate_recommendation(advice["recommendation"], context),
+                original_usage=advice.get("usage", {}))
+
+
 class OpenAIAdvisor:
     """One Responses API request per recommendation, no automatic retries."""
+    source = "openai"
+
     def __init__(self, *, model=None, timeout=10.0, max_output_tokens=800, client=None):
         self.model = model or os.environ.get("OPENAI_MODEL") or DEFAULT_MODEL
         if not isinstance(self.model, str) or not 1 <= len(self.model) <= 200 or self.model != self.model.strip():
@@ -193,12 +238,12 @@ class OpenAIAdvisor:
 
 def get_advice(env, candidates, *, mode, advisor=None, config=None):
     """Failure at this optional boundary preserves the deterministic policy."""
-    if mode not in {"shadow", "assist"}:
-        raise ValueError("llm_mode must be off, shadow, or assist")
+    if mode not in {"shadow", "assist", "replay"}:
+        raise ValueError("llm_mode must be off, shadow, assist, or replay")
     settings = config or {}
     record = dict(mode=mode, status="fallback", prompt_version=PROMPT_VERSION,
                   context_hash=None, context=None, recommendation=None,
-                  applied_candidate_ids=[], usage={}, error_code=None, model=None)
+                  applied_candidate_ids=[], usage={}, error_code=None, model=None, source=None)
     try:
         context = build_context(env, candidates,
                                 max_recommendations=settings.get("llm_max_recommendations", 2))
@@ -206,25 +251,28 @@ def get_advice(env, candidates, *, mode, advisor=None, config=None):
         if not context["candidates"]:
             record.update(status="skipped", error_code="no_eligible_candidates")
             return record
+        if mode == "replay":
+            advisor = FrozenAdvisor(settings["llm_policy_path"])
         if advisor is None:
             advisor = OpenAIAdvisor(model=settings.get("llm_model"),
                                    timeout=settings.get("llm_timeout_seconds", 10),
                                    max_output_tokens=settings.get("llm_max_output_tokens", 800))
         record["model"] = advisor.model
+        record["source"] = getattr(advisor, "source", "injected")
         response = advisor.recommend(deepcopy(context))
         validated = validate_recommendation(response["recommendation"], context)
         usage = {k: v for k, v in response.get("usage", {}).items()
                  if k in {"input_tokens", "output_tokens", "total_tokens"}
                  and isinstance(v, int) and not isinstance(v, bool) and v >= 0}
         record.update(status="ok", recommendation=validated, usage=usage)
-        if mode == "assist":
+        if mode in {"assist", "replay"}:
             record["applied_candidate_ids"] = validated["candidate_ids"][:]
     except AdviceUnavailable as exc:
         # Only our explicitly raised fixed reason codes are exported.
         safe_codes = {"invalid_settings", "invalid_candidate", "duplicate_candidate_ids",
                       "context_too_large", "invalid_response", "unknown_candidate", "duplicate_cell",
                       "incomplete_response", "empty_or_oversized_response", "invalid_json",
-                      "missing_api_key", "missing_openai_sdk"}
+                      "missing_api_key", "missing_openai_sdk", "invalid_policy", "policy_context_mismatch"}
         record["error_code"] = str(exc) if str(exc) in safe_codes else "advisor_error"
     except Exception:
         # Provider exceptions can contain request bodies or credentials. Do not

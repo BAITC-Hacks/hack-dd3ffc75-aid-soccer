@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "source": "openai",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "prompt_version": "campaign-exploration-v1",
+  "instructions_hash": "30ebe912cbc6e82ba8997c5ad710ca3a8d3b2de1903b011b5f539b4db36785ec",
+  "context_hash": "ebf49a9492c562ed44a9efa46c46b4ffcd8286670bd70f13d7d69797d09af966",
+  "recommendation": {
+    "candidate_ids": [
+      "tariff_4|MID|tariff_8",
+      "tariff_10|HIGH|tariff_20"
+    ],
+    "reason": "Selected one high-priority MID segment candidate with strong prior lift and large audience (tariff_4|MID|tariff_8) for reliable impact measurement. Also selected a HIGH segment candidate from catalog-based plausible offers without historical data (tariff_10|HIGH|tariff_20) to explore a potentially high ARPU audience and diversify hypotheses tested within budget constraints."
+  },
+  "original_usage": {
+    "input_tokens": 6981,
+    "output_tokens": 109,
+    "total_tokens": 7090
+  }
+}

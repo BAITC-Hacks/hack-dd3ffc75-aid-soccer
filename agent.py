@@ -5,10 +5,16 @@ import pandas as pd
 
 from pilot_policy import run_adaptive_pilots
 
+DEFAULT_POLICY_PATH = Path(__file__).resolve().parent / "artifacts" / "llm_policy.json"
+
 
 class Agent:
     def __init__(self, config=None, *, advisor=None):
         self.config = dict(config or {})
+        # Bundled policy replay is offline and tied to an exact public context.
+        # Explicit off/assist/shadow settings always override this release default.
+        if "llm_mode" not in self.config and DEFAULT_POLICY_PATH.is_file():
+            self.config.update(llm_mode="replay", llm_policy_path=str(DEFAULT_POLICY_PATH))
         self.advisor = advisor
         self.last_trace = {}
 
@@ -51,8 +57,8 @@ class Agent:
         # API use is explicit configuration, never triggered by finding a key.
         pilot_config = dict(self.config)
         mode = self.config.get("llm_mode", "off")
-        if mode not in {"off", "shadow", "assist"}:
-            raise ValueError("llm_mode must be off, shadow, or assist")
+        if mode not in {"off", "shadow", "assist", "replay"}:
+            raise ValueError("llm_mode must be off, shadow, assist, or replay")
         if mode != "off":
             from llm_advisor import get_advice
             advice = get_advice(env, trace["candidates"], mode=mode,

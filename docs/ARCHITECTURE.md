@@ -112,3 +112,19 @@ Fallback явно называется emergency и сохраняет оцен�
 адаптивного отбора не являются simultaneous guarantees. Идентификаторы
 pilot-клиентов недоступны, поэтому точная дедупликация с финальными кампаниями
 невозможна на стороне planner.
+
+
+## Optional LLM decision module
+
+`llm_advisor.py` supplies bounded exploration nominations between candidate
+generation and pilots. The release replays `artifacts/llm_policy.json` only for
+identical aggregate public inputs. Changed contexts fall back to the numerical
+policy. Explicit live runs can refresh the artifact for a new dataset. Existing
+shortlist members keep their order; novel nominations can replace up to two
+positions. Measured pilot effects and portfolio constraints remain numerical.
+
+`adaptive_confirmation_n=True` additionally sizes confirmations from current
+uncertainty near profit, channel, and competing-target boundaries. It is opt-in
+because the measured ten-seed minimum declined. See
+[LLM integration](LLM_INTEGRATION.md) for API setup, actual results, replay, and
+the reviewed training-data workflow. No model weights have been trained.

@@ -113,7 +113,7 @@ def test_shortlist_honors_two_ids_without_changing_scores():
     before = deepcopy(cs)
     preferred = [cs[11]["candidate_id"], cs[10]["candidate_id"], cs[9]["candidate_id"]]
     selected = _shortlist(cs, 5, preferred)
-    assert [c["candidate_id"] for c in selected[:2]] == preferred[:2]
+    assert [c["candidate_id"] for c in selected[-2:]] == preferred[:2]
     assert len(selected) == 5 and cs == before
     assert _shortlist(cs, 0, preferred) == []
     assert _shortlist(cs, 5, ["missing"]) == _shortlist(cs, 5)
@@ -134,7 +134,7 @@ def make_pipeline_env():
 
 def test_agent_off_never_calls_advisor_and_shadow_preserves_plan(monkeypatch):
     monkeypatch.setattr("agent.pd.read_csv", lambda *a, **k: pd.DataFrame())
-    config = dict(confirmation_pilots=0, final_contact_reserve=0, exploration_pilots=1)
+    config = dict(llm_mode="off", confirmation_pilots=0, final_contact_reserve=0, exploration_pilots=1)
     failing = FakeAdvisor(error=AssertionError("must not call in off mode"))
     baseline = Agent(config, advisor=failing)
     expected = baseline.act(make_pipeline_env())
@@ -146,7 +146,7 @@ def test_agent_off_never_calls_advisor_and_shadow_preserves_plan(monkeypatch):
     campaigns = assist.act(make_pipeline_env())
     assert campaigns[0]["target_tariff"] == "c"
     assert assist.last_trace["observations"][0]["prior_lift"] == 0
-    assert config == dict(confirmation_pilots=0, final_contact_reserve=0, exploration_pilots=1)
+    assert config == dict(llm_mode="off", confirmation_pilots=0, final_contact_reserve=0, exploration_pilots=1)
     first = assist.last_trace
     advisor.payload = {"candidate_ids": ["unknown"], "reason": "Invalid second response"}
     assert assist.act(make_pipeline_env()) == expected
@@ -197,3 +197,16 @@ def test_real_sdk_request_shape_with_mock_http_transport():
     assert captured[0]["text"]["format"]["strict"] is True
     assert captured[0]["max_output_tokens"] == 800
     assert "unit-test-placeholder" not in json.dumps(captured)
+
+
+def test_existing_nominations_preserve_pilot_order():
+    cs = [candidate(f"t{i}", score=100-i) for i in range(12)]
+    assert _shortlist(cs, 10, [cs[4]["candidate_id"], cs[0]["candidate_id"]]) == _shortlist(cs, 10)
+
+
+def test_new_nominations_change_membership_and_keep_existing_nominee():
+    cs = [candidate(f"t{i}", score=100-i) for i in range(12)]
+    ids = [cs[4]["candidate_id"], cs[11]["candidate_id"]]
+    selected = _shortlist(cs, 5, ids)
+    assert all(value in [c["candidate_id"] for c in selected] for value in ids)
+    assert selected != _shortlist(cs, 5)

@@ -258,3 +258,28 @@ def test_confirmation_reacts_to_latest_confirmation_not_just_exploration():
                         config={"confirmation_pilots": 2}, trace=trace)
     path = [e["candidate_id"] for e in trace if e["event"] == "confirmation"]
     assert path == ["a|HIGH|b", "c|HIGH|b"]
+
+
+def test_adaptive_confirmation_sizes_follow_observed_precision():
+    sizes = []
+    for lift in (.05, .10):
+        env = fake_env(lambda k, i: (k['n_customers'], lift))
+        run_adaptive_pilots(env, [candidate()], config={
+            'adaptive_confirmation_n': True, 'confirmation_pilots': 1})
+        sizes.append(env.pilot_history[1]['n_customers'])
+    assert sizes[0] == 200
+    assert 10 <= sizes[1] < sizes[0]
+
+
+def test_adaptive_confirmation_stops_when_current_decision_is_clear():
+    env = fake_env(lambda k, i: (k['n_customers'], .8))
+    result = run_adaptive_pilots(env, [candidate()], config={'adaptive_confirmation_n': True})
+    assert result[0]['pilot_count'] == 1
+    assert result[0]['safe_lift'] > 0
+
+
+def test_adaptive_confirmation_remains_within_residual_caps():
+    env = fake_env(budget=600)
+    result = run_adaptive_pilots(env, [candidate()], config={'adaptive_confirmation_n': True})
+    assert result[0]['pilot_n'] <= 150
+    assert env.remaining_budget >= 0

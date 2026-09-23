@@ -5,7 +5,7 @@ import os
 from pathlib import Path
 
 from agent import Agent
-from llm_advisor import DEFAULT_MODEL, OpenAIAdvisor, scenario_group
+from llm_advisor import DEFAULT_MODEL, OpenAIAdvisor, FrozenAdvisor, freeze_advice, scenario_group
 from tools.benchmark import run_one, summarize
 
 
@@ -42,6 +42,9 @@ def main(argv=None):
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--model")
     parser.add_argument("--output-dir", type=Path)
+    parser.add_argument("--policy", type=Path, help="Replay a frozen policy offline; no key or API needed")
+    parser.add_argument("--adaptive-sizing", action="store_true",
+                        help="Use evidence-dependent confirmation sample sizes")
     args = parser.parse_args(argv)
     if not 1 <= args.runs <= 10:
         parser.error("--runs must be 1–10; each live run makes at most one API request")
@@ -53,9 +56,11 @@ def main(argv=None):
         print(json.dumps(dict(api_key_configured=configured, model=model,
                               dotenv_available=dotenv_available, api_calls=0)))
         return 0 if configured else 1
-    if not args.dry_run and not configured:
+    if args.policy and args.dry_run:
+        parser.error("--policy and --dry-run cannot be combined")
+    if not args.dry_run and not args.policy and not configured:
         parser.error("Set OPENAI_API_KEY locally in .env or the environment; no API request made")
-    if not args.dry_run:
+    if not args.dry_run and not args.policy:
         try:
             import openai  # noqa: F401
         except ImportError:
@@ -65,19 +70,27 @@ def main(argv=None):
     if output.exists() and any(output.iterdir()):
         parser.error("Output directory is not empty; choose a new --output-dir to preserve reviewed examples")
     output.mkdir(parents=True, exist_ok=True)
-    advisor = PreviewAdvisor() if args.dry_run else OpenAIAdvisor(model=model)
+    advisor = (FrozenAdvisor(args.policy) if args.policy else
+               PreviewAdvisor() if args.dry_run else OpenAIAdvisor(model=model))
     rows, experiences, reviews = [], {}, {}
     # Organizer runners expect cwd-relative public CSV paths.
     previous_cwd = Path.cwd()
     try:
         os.chdir(root)
         for seed in range(args.seed, args.seed + args.runs):
-            baseline, _ = run_one(Agent(), seed, "baseline")
-            row, trace = run_one(Agent({"llm_mode": args.mode}, advisor=advisor), seed, args.mode)
+            baseline, _ = run_one(Agent({"llm_mode": "off"}), seed, "baseline")
+            row, trace = run_one(Agent({"llm_mode": args.mode, "adaptive_confirmation_n": args.adaptive_sizing}, advisor=advisor), seed, args.mode)
             advice = trace.get("llm", {})
             row["llm_status"] = advice.get("status")
             row["llm_error_code"] = advice.get("error_code")
+            row["llm_source"] = advice.get("source")
+            row["applied_candidate_ids"] = advice.get("applied_candidate_ids", [])
             rows.extend([baseline, row])
+            # Freeze the FIRST successful call before examining evaluation gain.
+            # Never choose model outputs by their mock score.
+            policy_path = output / "policy.json"
+            if advice.get("status") == "ok" and advice.get("source") == "openai" and not policy_path.exists():
+                _write_json(policy_path, freeze_advice(advice))
             _write_json(output / f"trace_{seed}.json", trace)
             context = advice.get("context")
             key = advice.get("context_hash")
@@ -105,9 +118,10 @@ def main(argv=None):
     summary = {name: summarize([row for row in rows if row["agent"] == name])
                for name in ("baseline", args.mode)}
     report = dict(mode=args.mode, dry_run=args.dry_run, requested_model=model,
-                  api_requests=advisor.request_count, summary=summary, runs=rows,
+                  api_requests=advisor.request_count, replay=bool(args.policy),
+                  adaptive_sizing=args.adaptive_sizing, summary=summary, runs=rows,
                   notes=["Preview runs do not use an LLM and do not demonstrate LLM quality.",
-                         "Live advice is not guaranteed deterministic; the official submission defaults to LLM off.",
+                         "Live advice may vary; freeze the first valid response for deterministic offline submission replay.",
                          "Model suggestions and evaluator net gain are not supervised training labels.",
                          "Repeated seeds on identical context are one training example, not independent scenarios."])
     _write_json(output / "evaluation.json", report)

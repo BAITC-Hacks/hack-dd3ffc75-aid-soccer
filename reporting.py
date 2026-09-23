@@ -192,6 +192,23 @@ def _measured_result(trace: dict) -> str:
     )
 
 
+
+def _llm_panel(trace):
+    advice = trace.get("llm")
+    if not isinstance(advice, dict):
+        return ""
+    recommendation = advice.get("recommendation") or {}
+    changes = [e.get("details", {}).get("selection_changed") for e in _events(trace)
+               if e.get("event") == "llm_exploration"]
+    return ('<h2>LLM exploration advice</h2><div class="panel">'
+            f'<p>Mode: {_text(advice.get("mode"))}; status: {_text(advice.get("status"))}; '
+            f'source: {_text(advice.get("source"))}; model: {_text(advice.get("model"))}; '
+            f'fallback reason: {_text(advice.get("error_code"))}.</p>'
+            f'<p>Nominated: {_text(", ".join(advice.get("applied_candidate_ids", [])))}.</p>'
+            f'<p>{_text(recommendation.get("reason"))}</p>'
+            f'<p>Changed exploration membership: {_text(changes[-1] if changes else False)}. '
+            'Only measured pilots determine effect estimates and the final portfolio.</p></div>')
+
 def render_report(trace: dict, output_path: str) -> None:
     """Render *trace* without running the agent, pilots, or evaluator."""
     if not isinstance(trace, dict):
@@ -226,6 +243,7 @@ button{{border:1px solid #222;background:#fff;padding:7px 12px;margin-right:6px;
 {_warnings(events)}
 <section class="cards">{_summary_cards(trace, events)}</section>
 <h2>Selected campaigns</h2><div class="panel"><table><thead><tr><th>Name</th><th>Audience</th><th>Target</th><th>Channel</th><th>Why</th></tr></thead><tbody>{_campaign_rows(trace, events)}</tbody></table></div>
+{_llm_panel(trace)}
 <h2>Pilot evidence and uncertainty</h2><div class="panel">{_uncertainty_chart(trace)}<p class="sub">Line: safe-to-optimistic heuristic interval. Dot: normalized mean lift. Adaptive selection means this is not a simultaneous calibrated guarantee.</p></div>
 <h2>Selected and rejected alternatives</h2><div class="panel"><div class="toolbar"><button data-filter="all">All</button><button data-filter="selected">Selected</button><button data-filter="rejected">Rejected</button></div><table><thead><tr><th>Decision</th><th>Candidate</th><th>Channel</th><th>Reason</th><th>Conservative net</th></tr></thead><tbody id="decisions">{_decision_rows(events)}</tbody></table></div>
 <h2>Externally measured result</h2><div class="panel">{_measured_result(trace)}</div>

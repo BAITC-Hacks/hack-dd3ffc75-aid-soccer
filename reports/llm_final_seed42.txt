@@ -1,0 +1,38 @@
+=== Результат команды: local ===
+Статус: PASS
+Baseline ARPU (без кампаний):      150,641,084
+Прирост ARPU (gross):                3,280,497
+Затраты на коммуникацию:                74,256
+ЧИСТЫЙ РЕЗУЛЬТАТ (net):              3,206,241   (+2.128% к baseline)
+ARPU после кампаний:               153,847,326
+
+Кампаний: 19  |  контактов: 4,848  |  уникальных абонентов: 4,283 (18.3%)
+Средний чистый прирост на абонента: 748.6
+ROI (gross lift / затраты): 44.18
+Risk score (% абонентов с отрицательным эффектом): 1.9%
+Бюджет: 74,256 из 100,000 у.е. (74.3%)
+
+По кампаниям (gross, до дедупликации между кампаниями):
+  - pilot_1 [sms]: контактов=80  cost=320  gross_lift=59,671  negative=0
+  - pilot_2 [sms]: контактов=80  cost=320  gross_lift=63,658  negative=0
+  - pilot_3 [sms]: контактов=80  cost=320  gross_lift=25,653  negative=0
+  - pilot_4 [sms]: контактов=80  cost=320  gross_lift=-2,622  negative=80
+  - pilot_5 [sms]: контактов=80  cost=320  gross_lift=7,516  negative=0
+  - pilot_6 [sms]: контактов=80  cost=320  gross_lift=22,771  negative=0
+  - pilot_7 [sms]: контактов=80  cost=320  gross_lift=2,717  negative=0
+  - pilot_8 [sms]: контактов=80  cost=320  gross_lift=69,798  negative=0
+  - pilot_9 [sms]: контактов=80  cost=320  gross_lift=66,270  negative=0
+  - pilot_10 [sms]: контактов=80  cost=320  gross_lift=12,306  negative=0
+  - pilot_11 [sms]: контактов=200  cost=800  gross_lift=6,553  negative=0
+  - pilot_12 [sms]: контактов=200  cost=800  gross_lift=18,613  negative=0
+  - pilot_13 [sms]: контактов=200  cost=800  gross_lift=6,790  negative=0
+  - pilot_14 [sms]: контактов=200  cost=800  gross_lift=139,058  negative=0
+  - pilot_15 [sms]: контактов=200  cost=800  gross_lift=6,634  negative=0
+  - campaign_01_tariff_13_MID_tariff_8_digital_ads [digital_ads]: контактов=1,022  cost=22,484  gross_lift=1,089,843  negative=0
+  - campaign_02_tariff_8_LOW_tariff_9_digital_ads [digital_ads]: контактов=457  cost=10,054  gross_lift=538,782  negative=0
+  - campaign_03_tariff_4_MID_tariff_8_digital_ads [digital_ads]: контактов=1,227  cost=26,994  gross_lift=1,192,642  negative=0
+  - campaign_04_tariff_12_MID_tariff_8_digital_ads [digital_ads]: контактов=342  cost=7,524  gross_lift=354,608  negative=0
+
+Пилотов проведено: 15 из 20
+Осталось бюджета: 92,800 из 100,000
+Осталось охвата:  13,200 из 15,000

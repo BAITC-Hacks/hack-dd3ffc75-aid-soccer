@@ -1,0 +1,90 @@
+{
+  "branch": "feature/llm-integration",
+  "base_integration_commit": "d2beb2f",
+  "offline_tests": 147,
+  "live_api_requests": 11,
+  "token_usage": {
+    "input_tokens": 76791,
+    "output_tokens": 1400,
+    "total_tokens": 78191
+  },
+  "live_advice_successes": 11,
+  "final_live_ten_seed_summary": {
+    "baseline": {
+      "runs": 10,
+      "successful_runs": 10,
+      "failures": 0,
+      "mean": 2898763.7671715785,
+      "median": 3103097.097584981,
+      "minimum": 1567730.5511855623,
+      "standard_deviation": 756071.5308175391,
+      "positive_runs": 10
+    },
+    "assist": {
+      "runs": 10,
+      "successful_runs": 10,
+      "failures": 0,
+      "mean": 2898763.7671715785,
+      "median": 3103097.097584981,
+      "minimum": 1567730.5511855623,
+      "standard_deviation": 756071.5308175391,
+      "positive_runs": 10
+    }
+  },
+  "official_replay_summary": {
+    "adaptive": {
+      "runs": 10,
+      "successful_runs": 10,
+      "failures": 0,
+      "mean": 2898763.7671715785,
+      "median": 3103097.097584981,
+      "minimum": 1567730.5511855623,
+      "standard_deviation": 756071.5308175391,
+      "positive_runs": 10
+    },
+    "starter": {
+      "runs": 10,
+      "successful_runs": 10,
+      "failures": 0,
+      "mean": -480836.1838287679,
+      "median": -357947.7963826433,
+      "minimum": -1019431.0606441048,
+      "standard_deviation": 309734.3597929644,
+      "positive_runs": 0
+    }
+  },
+  "adaptive_sizing_summary": {
+    "runs": 10,
+    "successful_runs": 10,
+    "failures": 0,
+    "mean": 2840051.3200644515,
+    "median": 3002247.3926633135,
+    "minimum": 1305074.912024772,
+    "standard_deviation": 755556.6829969983,
+    "positive_runs": 10
+  },
+  "adaptive_sizing_default": false,
+  "policy_source": "first successful live recommendation, not selected by evaluation score",
+  "official_default_mode": "replay",
+  "official_default_api_requests": 0,
+  "trained_model_weights": false,
+  "reproducible_submission": true,
+  "submission_campaigns": 4,
+  "submission_sha256": "3cba2865d369ad86c93e110476a4436c42f25c3583cbb9265382844e8e848e5e",
+  "organizer_files_unchanged": 15,
+  "no_measured_llm_profit_improvement": true,
+  "tests_evidence": "reports/llm_final_tests.txt",
+  "live_evidence": "reports/llm_live_evidence.json",
+  "clean_export": {
+    "tests": 147,
+    "excluded_env": true,
+    "excluded_task": true,
+    "sha256": "3cba2865d369ad86c93e110476a4436c42f25c3583cbb9265382844e8e848e5e",
+    "reproducible": true,
+    "openai_sdk_available": false,
+    "dotenv_available": false,
+    "network_allowed": false,
+    "llm_source": "frozen_openai",
+    "net_gain": 3206241.490737184
+  }
+}
