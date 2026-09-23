@@ -28,13 +28,18 @@ def fake_env(response=None, *, budget=100000, contacts=15000, slots=20):
             self.pilots_left = slots
             self.pilot_history = []
 
-        def run_pilot(self, **kwargs):
+        def run_pilot(self, *, target_tariff, channel, n_customers,
+                      filter_arpu_segment, filter_current_tariff):
+            kwargs = dict(target_tariff=target_tariff, channel=channel, n_customers=n_customers,
+                          filter_arpu_segment=filter_arpu_segment,
+                          filter_current_tariff=filter_current_tariff)
             assert kwargs["channel"] == "sms"
             assert kwargs["filter_arpu_segment"] == "HIGH"
             requested = kwargs["n_customers"]
             assert 10 <= requested <= 200
             assert requested <= self.remaining_contacts
-            assert requested * 4 <= self.remaining_budget
+            price = self.channels["sms"]["cost_per_contact"]
+            assert requested * price <= self.remaining_budget
             assert self.pilots_left > 0
             if kwargs["target_tariff"] not in self.tariffs.tariff_plan_code.tolist():
                 raise ValueError("Unknown target")
@@ -42,11 +47,13 @@ def fake_env(response=None, *, budget=100000, contacts=15000, slots=20):
             if isinstance(value, Exception):
                 raise value
             n, lift = value
-            self.remaining_budget -= n * 4
+            self.remaining_budget -= n * price
             self.remaining_contacts -= n
             self.pilots_left -= 1
-            result = dict(n_customers=n, cost=n * 4, observed_lift_ratio=lift)
-            self.pilot_history.append(dict(kwargs, **result))
+            result = dict(n_customers=n, cost=n * price, observed_lift_ratio=lift,
+                          channel=channel, target_tariff=target_tariff)
+            # The public history does not reveal the candidate's filters or ID.
+            self.pilot_history.append(result)
             return result
     return FakeEnv()
 
@@ -213,3 +220,41 @@ def test_missing_ratio_still_accounts_for_reported_resources():
     assert len(calls) == 1
     assert result[0]["status"] == "error"
     assert result[1]["status"] == "untested"
+
+
+@pytest.mark.parametrize("limits", [{"contacts": 1080}, {"budget": 320}])
+def test_reported_charges_protect_residual_limits_with_lagging_counters(limits):
+    env = fake_env(**limits)
+    calls = []
+    def delayed(**kwargs):
+        calls.append(kwargs)
+        return {"n_customers": 80, "cost": 320, "observed_lift_ratio": float("nan")}
+    env.run_pilot = delayed
+    run_adaptive_pilots(env, [candidate(), candidate("c")])
+    assert len(calls) == 1
+
+
+def test_nondefault_sms_economics_and_history_does_not_pool():
+    def measure(history_count, prior_lift):
+        env = fake_env(lambda k, i: (k["n_customers"], 0.08), budget=100)
+        env.channels = {"sms": {"cost_per_contact": 5, "conversion_multiplier": 0.4}}
+        c = dict(candidate(), history_count=history_count, prior_lift=prior_lift)
+        result = run_adaptive_pilots(env, [c])[0]
+        assert env.remaining_budget == 0
+        assert result["pilot_n"] == 20
+        return result
+    small = measure(1, -9.0)
+    large = measure(1000000, 9.0)
+    for key in ("mean_lift", "se_lift", "safe_lift", "optimistic_lift"):
+        assert small[key] == large[key]
+    assert small["mean_lift"] == pytest.approx(0.2)
+    assert small["se_lift"] == pytest.approx(0.4494496634774577)
+
+
+def test_confirmation_reacts_to_latest_confirmation_not_just_exploration():
+    env = fake_env(lambda k, i: (k["n_customers"], -1.0 if i == 2 else 0.05))
+    trace = []
+    run_adaptive_pilots(env, [candidate(), candidate("c")],
+                        config={"confirmation_pilots": 2}, trace=trace)
+    path = [e["candidate_id"] for e in trace if e["event"] == "confirmation"]
+    assert path == ["a|HIGH|b", "c|HIGH|b"]

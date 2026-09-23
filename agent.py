@@ -39,13 +39,16 @@ class Agent:
         start_budget, start_contacts, start_slots = env.remaining_budget, env.remaining_contacts, env.pilots_left
         trace["candidates"] = generate_candidates(env.customer_profile, history, env.tariffs,
                                                     config=self.config, trace=events)
-        trace["observations"] = run_adaptive_pilots(env, trace["candidates"], config=self.config, trace=events)
         summary = trace["summary"]
-        summary.update(pilot_count=int(start_slots - env.pilots_left),
-                       pilot_contacts=int(start_contacts - env.remaining_contacts),
-                       pilot_cost=float(start_budget - env.remaining_budget),
-                       remaining_budget_after_plan=float(env.remaining_budget),
-                       remaining_contacts_after_plan=int(env.remaining_contacts))
+        try:
+            trace["observations"] = run_adaptive_pilots(env, trace["candidates"], config=self.config, trace=events)
+        finally:
+            # Preserve actual spending even when a programming/adapter error propagates.
+            summary.update(pilot_count=int(start_slots - env.pilots_left),
+                           pilot_contacts=int(start_contacts - env.remaining_contacts),
+                           pilot_cost=float(start_budget - env.remaining_budget),
+                           remaining_budget_after_plan=float(env.remaining_budget),
+                           remaining_contacts_after_plan=int(env.remaining_contacts))
         campaigns = build_campaigns(env, trace["observations"], config=self.config, trace=events)
         trace["campaigns"] = campaigns
         contacts, cost = 0, 0.0

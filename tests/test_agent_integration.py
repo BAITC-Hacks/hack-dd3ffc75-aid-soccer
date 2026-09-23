@@ -145,6 +145,58 @@ def test_portfolio_failure_retains_actual_pilot_spend(monkeypatch):
     assert instance.last_trace["summary"]["status"] == "error"
 
 
+def test_pilot_failure_retains_actual_spend(monkeypatch):
+    def pilots(env, *args, **kwargs):
+        env.remaining_budget -= 40
+        env.remaining_contacts -= 10
+        env.pilots_left -= 1
+        raise TypeError("Unexpected adapter bug after charging")
+    install_modules(monkeypatch, lambda *a, **k: [], lambda *a, **k: [])
+    monkeypatch.setattr(agent, "run_adaptive_pilots", pilots)
+    instance = agent.Agent()
+    with pytest.raises(TypeError, match="Unexpected adapter bug"):
+        instance.act(environment())
+    assert instance.last_trace["summary"]["pilot_contacts"] == 10
+    assert instance.last_trace["summary"]["pilot_cost"] == 40
+    assert instance.last_trace["summary"]["pilot_count"] == 1
+    assert instance.last_trace["summary"]["remaining_budget_after_plan"] == 60
+    assert instance.last_trace["summary"]["status"] == "error"
+
+
+def test_repeated_act_uses_fresh_real_pilot_observations(monkeypatch):
+    c = dict(candidate_id="a|HIGH|b", cell_id="a|HIGH", current_tariff="a",
+             arpu_segment="HIGH", target_tariff="b", history_count=100,
+             prior_lift=0.9, positive_rate=0.8, audience_size=20, audience_arpu=20000.0,
+             served_size=20, served_arpu=20000.0, prior_score=100.0, source="history")
+    install_modules(monkeypatch, lambda *a, **k: [c], lambda *a, **k: [])
+    monkeypatch.setattr(agent.pd, "read_csv", lambda *a, **k: pd.DataFrame())
+    def make_env(lift):
+        env = environment()
+        env.remaining_contacts = 2000
+        env.channels = {"sms": {"cost_per_contact": 4, "conversion_multiplier": 0.65}}
+        env.customer_profile = pd.DataFrame(dict(ID_NUMBER=range(20), current_tariff=["a"] * 20,
+                                                arpu_segment=["HIGH"] * 20, predicted_arpu=[1000] * 20))
+        def run_pilot(*, target_tariff, channel, n_customers, filter_arpu_segment, filter_current_tariff):
+            audience = env.customer_profile[(env.customer_profile.current_tariff == filter_current_tariff) &
+                                             (env.customer_profile.arpu_segment == filter_arpu_segment)]
+            assert target_tariff == "b" and channel == "sms"
+            n = min(n_customers, len(audience))
+            env.remaining_contacts -= n
+            env.remaining_budget -= n * 4
+            env.pilots_left -= 1
+            return dict(n_customers=n, cost=n * 4, observed_lift_ratio=lift)
+        env.run_pilot = run_pilot
+        return env
+    instance = agent.Agent({"confirmation_pilots": 0})
+    instance.act(make_env(0.2))
+    first = instance.last_trace
+    instance.act(make_env(-0.4))
+    assert first["observations"][0]["mean_lift"] == pytest.approx(0.2 / 0.65)
+    assert instance.last_trace["observations"][0]["mean_lift"] == pytest.approx(-0.4 / 0.65)
+    assert instance.last_trace["observations"][0]["pilot_n"] == 20
+    assert instance.last_trace["summary"]["pilot_count"] == 1
+
+
 def test_benchmark_detects_swallowed_exception(monkeypatch):
     from tools import benchmark
     def evaluator(instance, **kwargs):

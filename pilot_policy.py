@@ -99,8 +99,8 @@ def run_adaptive_pilots(env, candidates, *, config=None, trace=None):
         spent_cost = max(reported_cost, start_budget - env.remaining_budget)
         if attempts >= min(20, cfg["pilot_cap"]) or env.pilots_left <= 0:
             return 0
-        budget = min(env.remaining_budget, cfg["pilot_money_cap"] - spent_cost)
-        contacts = min(env.remaining_contacts - cfg["final_contact_reserve"],
+        budget = min(start_budget - spent_cost, cfg["pilot_money_cap"] - spent_cost)
+        contacts = min(start_contacts - spent_n - cfg["final_contact_reserve"],
                        cfg["pilot_contact_cap"] - spent_n)
         n = min(200, requested, record["audience_size"], contacts)
         if budget < 0:
