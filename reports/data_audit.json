@@ -1,0 +1,659 @@
+{
+  "schema_version": "1.0",
+  "profile": {
+    "rows": 23441,
+    "unique_ids": 23441,
+    "duplicate_id_rows": 0,
+    "invalid_id_rows": 0,
+    "usable_rows": 23341,
+    "excluded_rows": 100,
+    "blank_current_tariff_rows": 95,
+    "invalid_current_tariff_rows": 95,
+    "blank_arpu_segment_rows": 5,
+    "invalid_arpu_segment_rows": 5,
+    "duplicate_numeric_id_rows": 0,
+    "invalid_revenue_rows": 0,
+    "zero_revenue_rows": 103,
+    "cells": [
+      {
+        "cell_id": "tariff_1|HIGH",
+        "current_tariff": "tariff_1",
+        "arpu_segment": "HIGH",
+        "audience_size": 11,
+        "audience_arpu": 82638.48170901385,
+        "served_size": 11,
+        "served_arpu": 82638.48170901385
+      },
+      {
+        "cell_id": "tariff_1|LOW",
+        "current_tariff": "tariff_1",
+        "arpu_segment": "LOW",
+        "audience_size": 40,
+        "audience_arpu": 132219.59089506813,
+        "served_size": 40,
+        "served_arpu": 132219.59089506813
+      },
+      {
+        "cell_id": "tariff_1|MID",
+        "current_tariff": "tariff_1",
+        "arpu_segment": "MID",
+        "audience_size": 32,
+        "audience_arpu": 165169.06544740367,
+        "served_size": 32,
+        "served_arpu": 165169.06544740367
+      },
+      {
+        "cell_id": "tariff_10|HIGH",
+        "current_tariff": "tariff_10",
+        "arpu_segment": "HIGH",
+        "audience_size": 2950,
+        "audience_arpu": 24190636.44091341,
+        "served_size": 2950,
+        "served_arpu": 24190636.44091341
+      },
+      {
+        "cell_id": "tariff_10|LOW",
+        "current_tariff": "tariff_10",
+        "arpu_segment": "LOW",
+        "audience_size": 370,
+        "audience_arpu": 972233.5682257855,
+        "served_size": 370,
+        "served_arpu": 972233.5682257855
+      },
+      {
+        "cell_id": "tariff_10|MID",
+        "current_tariff": "tariff_10",
+        "arpu_segment": "MID",
+        "audience_size": 645,
+        "audience_arpu": 3003700.1472749137,
+        "served_size": 645,
+        "served_arpu": 3003700.1472749137
+      },
+      {
+        "cell_id": "tariff_11|HIGH",
+        "current_tariff": "tariff_11",
+        "arpu_segment": "HIGH",
+        "audience_size": 1633,
+        "audience_arpu": 14175708.002870273,
+        "served_size": 1633,
+        "served_arpu": 14175708.002870273
+      },
+      {
+        "cell_id": "tariff_11|LOW",
+        "current_tariff": "tariff_11",
+        "arpu_segment": "LOW",
+        "audience_size": 387,
+        "audience_arpu": 1067637.79615389,
+        "served_size": 387,
+        "served_arpu": 1067637.79615389
+      },
+      {
+        "cell_id": "tariff_11|MID",
+        "current_tariff": "tariff_11",
+        "arpu_segment": "MID",
+        "audience_size": 464,
+        "audience_arpu": 2059004.3405840572,
+        "served_size": 464,
+        "served_arpu": 2059004.3405840572
+      },
+      {
+        "cell_id": "tariff_12|HIGH",
+        "current_tariff": "tariff_12",
+        "arpu_segment": "HIGH",
+        "audience_size": 567,
+        "audience_arpu": 5244797.051878841,
+        "served_size": 567,
+        "served_arpu": 5244797.051878841
+      },
+      {
+        "cell_id": "tariff_12|LOW",
+        "current_tariff": "tariff_12",
+        "arpu_segment": "LOW",
+        "audience_size": 363,
+        "audience_arpu": 1017502.0543512055,
+        "served_size": 363,
+        "served_arpu": 1017502.0543512055
+      },
+      {
+        "cell_id": "tariff_12|MID",
+        "current_tariff": "tariff_12",
+        "arpu_segment": "MID",
+        "audience_size": 342,
+        "audience_arpu": 1503059.9061305257,
+        "served_size": 342,
+        "served_arpu": 1503059.9061305257
+      },
+      {
+        "cell_id": "tariff_13|HIGH",
+        "current_tariff": "tariff_13",
+        "arpu_segment": "HIGH",
+        "audience_size": 516,
+        "audience_arpu": 3712751.1737852106,
+        "served_size": 516,
+        "served_arpu": 3712751.1737852106
+      },
+      {
+        "cell_id": "tariff_13|LOW",
+        "current_tariff": "tariff_13",
+        "arpu_segment": "LOW",
+        "audience_size": 251,
+        "audience_arpu": 756421.0833960543,
+        "served_size": 251,
+        "served_arpu": 756421.0833960543
+      },
+      {
+        "cell_id": "tariff_13|MID",
+        "current_tariff": "tariff_13",
+        "arpu_segment": "MID",
+        "audience_size": 1022,
+        "audience_arpu": 5000571.23814045,
+        "served_size": 1022,
+        "served_arpu": 5000571.23814045
+      },
+      {
+        "cell_id": "tariff_14|HIGH",
+        "current_tariff": "tariff_14",
+        "arpu_segment": "HIGH",
+        "audience_size": 963,
+        "audience_arpu": 7609558.492534343,
+        "served_size": 963,
+        "served_arpu": 7609558.492534343
+      },
+      {
+        "cell_id": "tariff_14|LOW",
+        "current_tariff": "tariff_14",
+        "arpu_segment": "LOW",
+        "audience_size": 231,
+        "audience_arpu": 721988.3024613425,
+        "served_size": 231,
+        "served_arpu": 721988.3024613425
+      },
+      {
+        "cell_id": "tariff_14|MID",
+        "current_tariff": "tariff_14",
+        "arpu_segment": "MID",
+        "audience_size": 755,
+        "audience_arpu": 3686020.025355763,
+        "served_size": 755,
+        "served_arpu": 3686020.025355763
+      },
+      {
+        "cell_id": "tariff_15|HIGH",
+        "current_tariff": "tariff_15",
+        "arpu_segment": "HIGH",
+        "audience_size": 14,
+        "audience_arpu": 96923.36662092671,
+        "served_size": 14,
+        "served_arpu": 96923.36662092671
+      },
+      {
+        "cell_id": "tariff_15|LOW",
+        "current_tariff": "tariff_15",
+        "arpu_segment": "LOW",
+        "audience_size": 14,
+        "audience_arpu": 43367.06010503618,
+        "served_size": 14,
+        "served_arpu": 43367.06010503618
+      },
+      {
+        "cell_id": "tariff_15|MID",
+        "current_tariff": "tariff_15",
+        "arpu_segment": "MID",
+        "audience_size": 80,
+        "audience_arpu": 402182.2596318361,
+        "served_size": 80,
+        "served_arpu": 402182.2596318361
+      },
+      {
+        "cell_id": "tariff_16|HIGH",
+        "current_tariff": "tariff_16",
+        "arpu_segment": "HIGH",
+        "audience_size": 2,
+        "audience_arpu": 8012.469158351882,
+        "served_size": 2,
+        "served_arpu": 8012.469158351882
+      },
+      {
+        "cell_id": "tariff_16|LOW",
+        "current_tariff": "tariff_16",
+        "arpu_segment": "LOW",
+        "audience_size": 8,
+        "audience_arpu": 21006.127868354895,
+        "served_size": 8,
+        "served_arpu": 21006.127868354895
+      },
+      {
+        "cell_id": "tariff_16|MID",
+        "current_tariff": "tariff_16",
+        "arpu_segment": "MID",
+        "audience_size": 10,
+        "audience_arpu": 47207.16015030426,
+        "served_size": 10,
+        "served_arpu": 47207.16015030426
+      },
+      {
+        "cell_id": "tariff_17|HIGH",
+        "current_tariff": "tariff_17",
+        "arpu_segment": "HIGH",
+        "audience_size": 27,
+        "audience_arpu": 233018.89904674364,
+        "served_size": 27,
+        "served_arpu": 233018.89904674364
+      },
+      {
+        "cell_id": "tariff_17|LOW",
+        "current_tariff": "tariff_17",
+        "arpu_segment": "LOW",
+        "audience_size": 8,
+        "audience_arpu": 23317.104493311017,
+        "served_size": 8,
+        "served_arpu": 23317.104493311017
+      },
+      {
+        "cell_id": "tariff_17|MID",
+        "current_tariff": "tariff_17",
+        "arpu_segment": "MID",
+        "audience_size": 32,
+        "audience_arpu": 166536.6493991783,
+        "served_size": 32,
+        "served_arpu": 166536.6493991783
+      },
+      {
+        "cell_id": "tariff_18|HIGH",
+        "current_tariff": "tariff_18",
+        "arpu_segment": "HIGH",
+        "audience_size": 35,
+        "audience_arpu": 286137.26082276856,
+        "served_size": 35,
+        "served_arpu": 286137.26082276856
+      },
+      {
+        "cell_id": "tariff_18|LOW",
+        "current_tariff": "tariff_18",
+        "arpu_segment": "LOW",
+        "audience_size": 19,
+        "audience_arpu": 60062.980205548956,
+        "served_size": 19,
+        "served_arpu": 60062.980205548956
+      },
+      {
+        "cell_id": "tariff_18|MID",
+        "current_tariff": "tariff_18",
+        "arpu_segment": "MID",
+        "audience_size": 13,
+        "audience_arpu": 70016.13153131168,
+        "served_size": 13,
+        "served_arpu": 70016.13153131168
+      },
+      {
+        "cell_id": "tariff_19|HIGH",
+        "current_tariff": "tariff_19",
+        "arpu_segment": "HIGH",
+        "audience_size": 33,
+        "audience_arpu": 259350.81354660032,
+        "served_size": 33,
+        "served_arpu": 259350.81354660032
+      },
+      {
+        "cell_id": "tariff_19|LOW",
+        "current_tariff": "tariff_19",
+        "arpu_segment": "LOW",
+        "audience_size": 14,
+        "audience_arpu": 40738.450382627256,
+        "served_size": 14,
+        "served_arpu": 40738.450382627256
+      },
+      {
+        "cell_id": "tariff_19|MID",
+        "current_tariff": "tariff_19",
+        "arpu_segment": "MID",
+        "audience_size": 26,
+        "audience_arpu": 119249.02399881552,
+        "served_size": 26,
+        "served_arpu": 119249.02399881552
+      },
+      {
+        "cell_id": "tariff_2|HIGH",
+        "current_tariff": "tariff_2",
+        "arpu_segment": "HIGH",
+        "audience_size": 7,
+        "audience_arpu": 36800.23072418845,
+        "served_size": 7,
+        "served_arpu": 36800.23072418845
+      },
+      {
+        "cell_id": "tariff_2|LOW",
+        "current_tariff": "tariff_2",
+        "arpu_segment": "LOW",
+        "audience_size": 9,
+        "audience_arpu": 23951.38715991484,
+        "served_size": 9,
+        "served_arpu": 23951.38715991484
+      },
+      {
+        "cell_id": "tariff_2|MID",
+        "current_tariff": "tariff_2",
+        "arpu_segment": "MID",
+        "audience_size": 20,
+        "audience_arpu": 92193.04215266432,
+        "served_size": 20,
+        "served_arpu": 92193.04215266432
+      },
+      {
+        "cell_id": "tariff_20|HIGH",
+        "current_tariff": "tariff_20",
+        "arpu_segment": "HIGH",
+        "audience_size": 38,
+        "audience_arpu": 287290.72291460045,
+        "served_size": 38,
+        "served_arpu": 287290.72291460045
+      },
+      {
+        "cell_id": "tariff_20|LOW",
+        "current_tariff": "tariff_20",
+        "arpu_segment": "LOW",
+        "audience_size": 5,
+        "audience_arpu": 18274.493795633207,
+        "served_size": 5,
+        "served_arpu": 18274.493795633207
+      },
+      {
+        "cell_id": "tariff_20|MID",
+        "current_tariff": "tariff_20",
+        "arpu_segment": "MID",
+        "audience_size": 7,
+        "audience_arpu": 40256.80953791291,
+        "served_size": 7,
+        "served_arpu": 40256.80953791291
+      },
+      {
+        "cell_id": "tariff_21|HIGH",
+        "current_tariff": "tariff_21",
+        "arpu_segment": "HIGH",
+        "audience_size": 5,
+        "audience_arpu": 40063.82816157731,
+        "served_size": 5,
+        "served_arpu": 40063.82816157731
+      },
+      {
+        "cell_id": "tariff_21|LOW",
+        "current_tariff": "tariff_21",
+        "arpu_segment": "LOW",
+        "audience_size": 12,
+        "audience_arpu": 56342.329315095456,
+        "served_size": 12,
+        "served_arpu": 56342.329315095456
+      },
+      {
+        "cell_id": "tariff_21|MID",
+        "current_tariff": "tariff_21",
+        "arpu_segment": "MID",
+        "audience_size": 13,
+        "audience_arpu": 57141.37776829388,
+        "served_size": 13,
+        "served_arpu": 57141.37776829388
+      },
+      {
+        "cell_id": "tariff_3|HIGH",
+        "current_tariff": "tariff_3",
+        "arpu_segment": "HIGH",
+        "audience_size": 27,
+        "audience_arpu": 180049.65929309526,
+        "served_size": 27,
+        "served_arpu": 180049.65929309526
+      },
+      {
+        "cell_id": "tariff_3|LOW",
+        "current_tariff": "tariff_3",
+        "arpu_segment": "LOW",
+        "audience_size": 56,
+        "audience_arpu": 160544.44723558158,
+        "served_size": 56,
+        "served_arpu": 160544.44723558158
+      },
+      {
+        "cell_id": "tariff_3|MID",
+        "current_tariff": "tariff_3",
+        "arpu_segment": "MID",
+        "audience_size": 87,
+        "audience_arpu": 353907.75615506346,
+        "served_size": 87,
+        "served_arpu": 353907.75615506346
+      },
+      {
+        "cell_id": "tariff_4|HIGH",
+        "current_tariff": "tariff_4",
+        "arpu_segment": "HIGH",
+        "audience_size": 2108,
+        "audience_arpu": 15794121.77170824,
+        "served_size": 2108,
+        "served_arpu": 15794121.77170824
+      },
+      {
+        "cell_id": "tariff_4|LOW",
+        "current_tariff": "tariff_4",
+        "arpu_segment": "LOW",
+        "audience_size": 299,
+        "audience_arpu": 857563.179026669,
+        "served_size": 299,
+        "served_arpu": 857563.179026669
+      },
+      {
+        "cell_id": "tariff_4|MID",
+        "current_tariff": "tariff_4",
+        "arpu_segment": "MID",
+        "audience_size": 1227,
+        "audience_arpu": 5840537.244104053,
+        "served_size": 1227,
+        "served_arpu": 5840537.244104053
+      },
+      {
+        "cell_id": "tariff_5|HIGH",
+        "current_tariff": "tariff_5",
+        "arpu_segment": "HIGH",
+        "audience_size": 109,
+        "audience_arpu": 740120.0616143207,
+        "served_size": 109,
+        "served_arpu": 740120.0616143207
+      },
+      {
+        "cell_id": "tariff_5|LOW",
+        "current_tariff": "tariff_5",
+        "arpu_segment": "LOW",
+        "audience_size": 44,
+        "audience_arpu": 132153.6839166647,
+        "served_size": 44,
+        "served_arpu": 132153.6839166647
+      },
+      {
+        "cell_id": "tariff_5|MID",
+        "current_tariff": "tariff_5",
+        "arpu_segment": "MID",
+        "audience_size": 91,
+        "audience_arpu": 367820.61011102656,
+        "served_size": 91,
+        "served_arpu": 367820.61011102656
+      },
+      {
+        "cell_id": "tariff_6|HIGH",
+        "current_tariff": "tariff_6",
+        "arpu_segment": "HIGH",
+        "audience_size": 53,
+        "audience_arpu": 341665.53809705016,
+        "served_size": 53,
+        "served_arpu": 341665.53809705016
+      },
+      {
+        "cell_id": "tariff_6|LOW",
+        "current_tariff": "tariff_6",
+        "arpu_segment": "LOW",
+        "audience_size": 30,
+        "audience_arpu": 97039.60915588148,
+        "served_size": 30,
+        "served_arpu": 97039.60915588148
+      },
+      {
+        "cell_id": "tariff_6|MID",
+        "current_tariff": "tariff_6",
+        "arpu_segment": "MID",
+        "audience_size": 34,
+        "audience_arpu": 135351.60083776538,
+        "served_size": 34,
+        "served_arpu": 135351.60083776538
+      },
+      {
+        "cell_id": "tariff_7|HIGH",
+        "current_tariff": "tariff_7",
+        "arpu_segment": "HIGH",
+        "audience_size": 72,
+        "audience_arpu": 519437.624644454,
+        "served_size": 72,
+        "served_arpu": 519437.624644454
+      },
+      {
+        "cell_id": "tariff_7|LOW",
+        "current_tariff": "tariff_7",
+        "arpu_segment": "LOW",
+        "audience_size": 29,
+        "audience_arpu": 93486.11254736516,
+        "served_size": 29,
+        "served_arpu": 93486.11254736516
+      },
+      {
+        "cell_id": "tariff_7|MID",
+        "current_tariff": "tariff_7",
+        "arpu_segment": "MID",
+        "audience_size": 52,
+        "audience_arpu": 267570.6779826569,
+        "served_size": 52,
+        "served_arpu": 267570.6779826569
+      },
+      {
+        "cell_id": "tariff_8|HIGH",
+        "current_tariff": "tariff_8",
+        "arpu_segment": "HIGH",
+        "audience_size": 4726,
+        "audience_arpu": 36988107.97242949,
+        "served_size": 4726,
+        "served_arpu": 36988107.97242949
+      },
+      {
+        "cell_id": "tariff_8|LOW",
+        "current_tariff": "tariff_8",
+        "arpu_segment": "LOW",
+        "audience_size": 457,
+        "audience_arpu": 1312258.1647560755,
+        "served_size": 457,
+        "served_arpu": 1312258.1647560755
+      },
+      {
+        "cell_id": "tariff_8|MID",
+        "current_tariff": "tariff_8",
+        "arpu_segment": "MID",
+        "audience_size": 1720,
+        "audience_arpu": 8024489.894817886,
+        "served_size": 1720,
+        "served_arpu": 8024489.894817886
+      },
+      {
+        "cell_id": "tariff_9|HIGH",
+        "current_tariff": "tariff_9",
+        "arpu_segment": "HIGH",
+        "audience_size": 9,
+        "audience_arpu": 52537.21275559646,
+        "served_size": 9,
+        "served_arpu": 52537.21275559646
+      },
+      {
+        "cell_id": "tariff_9|LOW",
+        "current_tariff": "tariff_9",
+        "arpu_segment": "LOW",
+        "audience_size": 51,
+        "audience_arpu": 157453.03508879975,
+        "served_size": 51,
+        "served_arpu": 157453.03508879975
+      },
+      {
+        "cell_id": "tariff_9|MID",
+        "current_tariff": "tariff_9",
+        "arpu_segment": "MID",
+        "audience_size": 67,
+        "audience_arpu": 281271.3997881733,
+        "served_size": 67,
+        "served_arpu": 281271.3997881733
+      }
+    ]
+  },
+  "history": {
+    "rows": 14823,
+    "unique_ids": 14817,
+    "duplicate_id_rows": 6,
+    "invalid_id_rows": 0,
+    "usable_lift_rows": 13416,
+    "excluded_rows": 1407,
+    "nonfinite_arpu_rows": 0,
+    "nonpositive_pre_arpu_rows": 1407,
+    "invalid_tariff_rows": 0,
+    "self_transition_rows": 0,
+    "nonfinite_relative_lift_rows": 0,
+    "exact_history_cells": 456,
+    "winsor_lower": -1.0,
+    "winsor_upper": 1.0,
+    "clipped_lift_rows": 2558,
+    "abs_raw_lift_above_one_rows": 2558,
+    "raw_lift_min": -1.0,
+    "raw_lift_max": 592276.0,
+    "raw_lift_mean": 450.3693312033994,
+    "raw_lift_median": 0.013981849809465641,
+    "blank_from_tariff_rows": 0,
+    "blank_to_tariff_rows": 0,
+    "unknown_target_rows": 0,
+    "known_target_rows": 14823,
+    "known_target_fraction": 1.0,
+    "directed_transition_pairs": 168,
+    "nonself_directed_transition_pairs": 168
+  },
+  "catalog": {
+    "rows": 21,
+    "invalid_code_rows": 0,
+    "invalid_price_rows": 0,
+    "known_tariffs": 21
+  },
+  "history_profile_id_intersection": 0,
+  "candidate_pool": {
+    "eligible_candidates": 1260,
+    "selected": 40,
+    "selected_cells": 40,
+    "selected_catalog": 8,
+    "candidate_limit": 40,
+    "shrinkage_strength": 50.0,
+    "example_candidate": {
+      "cell_id": "tariff_4|MID",
+      "current_tariff": "tariff_4",
+      "arpu_segment": "MID",
+      "audience_size": 1227,
+      "audience_arpu": 5840537.244104053,
+      "served_size": 1227,
+      "served_arpu": 5840537.244104053,
+      "candidate_id": "tariff_4|MID|tariff_8",
+      "target_tariff": "tariff_8",
+      "history_count": 408,
+      "prior_lift": 0.20661661691828703,
+      "positive_rate": 0.6887254901960784,
+      "raw_mean_lift": 0.4123449791021593,
+      "raw_median_lift": 0.2921078866039747,
+      "robust_mean_lift": 0.2319372807563124,
+      "source": "history",
+      "prior_score": 1018936.4705189242
+    }
+  },
+  "notes": [
+    "Synthetic hackathon data, not actual Beeline business evidence.",
+    "Exclusion counters overlap; usable_rows/excluded_rows count their union.",
+    "Duplicate counts mean rows after the first occurrence of a valid numeric ID.",
+    "History_count counts usable switches, not contacts or independent pilot samples.",
+    "History ranks hypotheses; positive_rate is not a conversion probability.",
+    "Invalid profile rows are excluded locally; campaign filters cannot remove such rows in env.",
+    "Duplicate profile IDs are counted as rows; scorer deduplication may change realized revenue."
+  ]
+}
