@@ -1,0 +1,51 @@
+agent,seed,net_arpu_gain,cost,contacts,pilots,final_campaign_count,elapsed_seconds,failure,diagnostics
+adaptive,0,,,,,,0.24329990000114776,ModuleNotFoundError: No module named 'candidate_engine',"[!] Агент упал: ModuleNotFoundError: No module named 'candidate_engine'
+    На судействе это не обнулит вас — проведённые пилоты идут в зачёт,
+    но результат почти наверняка будет отрицательным.
+[!] Агент не вернул ни одной кампании и не провёл ни одного пилота."
+starter,0,-1019431.0606441048,23832.0,5958,6,2,0.5075351999985287,,
+adaptive,1,,,,,,0.1738435000006575,ModuleNotFoundError: No module named 'candidate_engine',"[!] Агент упал: ModuleNotFoundError: No module named 'candidate_engine'
+    На судействе это не обнулит вас — проведённые пилоты идут в зачёт,
+    но результат почти наверняка будет отрицательным.
+[!] Агент не вернул ни одной кампании и не провёл ни одного пилота."
+starter,1,-576203.7790105487,49616.0,12404,6,4,0.6835068000000319,,
+adaptive,2,,,,,,0.17335669999738457,ModuleNotFoundError: No module named 'candidate_engine',"[!] Агент упал: ModuleNotFoundError: No module named 'candidate_engine'
+    На судействе это не обнулит вас — проведённые пилоты идут в зачёт,
+    но результат почти наверняка будет отрицательным.
+[!] Агент не вернул ни одной кампании и не провёл ни одного пилота."
+starter,2,-338970.97459386534,39144.0,9786,6,4,0.6326910999996471,,
+adaptive,3,,,,,,0.1893123999980162,ModuleNotFoundError: No module named 'candidate_engine',"[!] Агент упал: ModuleNotFoundError: No module named 'candidate_engine'
+    На судействе это не обнулит вас — проведённые пилоты идут в зачёт,
+    но результат почти наверняка будет отрицательным.
+[!] Агент не вернул ни одной кампании и не провёл ни одного пилота."
+starter,3,-140280.93497766246,3600.0,900,6,0,0.5116763999976683,,
+adaptive,4,,,,,,0.17611980000219774,ModuleNotFoundError: No module named 'candidate_engine',"[!] Агент упал: ModuleNotFoundError: No module named 'candidate_engine'
+    На судействе это не обнулит вас — проведённые пилоты идут в зачёт,
+    но результат почти наверняка будет отрицательным.
+[!] Агент не вернул ни одной кампании и не провёл ни одного пилота."
+starter,4,-1019236.6714434463,23832.0,5958,6,2,0.5560232999996515,,
+adaptive,5,,,,,,0.17266009999730159,ModuleNotFoundError: No module named 'candidate_engine',"[!] Агент упал: ModuleNotFoundError: No module named 'candidate_engine'
+    На судействе это не обнулит вас — проведённые пилоты идут в зачёт,
+    но результат почти наверняка будет отрицательным.
+[!] Агент не вернул ни одной кампании и не провёл ни одного пилота."
+starter,5,-366963.8866435362,22280.0,5570,6,2,0.5588065999982064,,
+adaptive,6,,,,,,0.1984867999999551,ModuleNotFoundError: No module named 'candidate_engine',"[!] Агент упал: ModuleNotFoundError: No module named 'candidate_engine'
+    На судействе это не обнулит вас — проведённые пилоты идут в зачёт,
+    но результат почти наверняка будет отрицательным.
+[!] Агент не вернул ни одной кампании и не провёл ни одного пилота."
+starter,6,-320311.84019152867,37816.0,9454,6,3,0.608344100000977,,
+adaptive,7,,,,,,0.19685640000534477,ModuleNotFoundError: No module named 'candidate_engine',"[!] Агент упал: ModuleNotFoundError: No module named 'candidate_engine'
+    На судействе это не обнулит вас — проведённые пилоты идут в зачёт,
+    но результат почти наверняка будет отрицательным.
+[!] Агент не вернул ни одной кампании и не провёл ни одного пилота."
+starter,7,-348931.70612175035,30936.0,7734,6,2,0.662732100005087,,
+adaptive,8,,,,,,0.16586159999860683,ModuleNotFoundError: No module named 'candidate_engine',"[!] Агент упал: ModuleNotFoundError: No module named 'candidate_engine'
+    На судействе это не обнулит вас — проведённые пилоты идут в зачёт,
+    но результат почти наверняка будет отрицательным.
+[!] Агент не вернул ни одной кампании и не провёл ни одного пилота."
+starter,8,-76493.45195450934,18912.0,4728,6,2,0.5191559000013513,,
+adaptive,9,,,,,,0.16612159999931464,ModuleNotFoundError: No module named 'candidate_engine',"[!] Агент упал: ModuleNotFoundError: No module named 'candidate_engine'
+    На судействе это не обнулит вас — проведённые пилоты идут в зачёт,
+    но результат почти наверняка будет отрицательным.
+[!] Агент не вернул ни одной кампании и не провёл ни одного пилота."
+starter,9,-601537.532706727,42736.0,10684,6,3,0.6168832000039401,,

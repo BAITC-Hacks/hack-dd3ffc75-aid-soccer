@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "candidates": [],
+  "observations": [],
+  "campaigns": [],
+  "events": [
+    {
+      "stage": "agent",
+      "event": "missing_dependency",
+      "candidate_id": null,
+      "reason": "No module named 'candidate_engine'",
+      "details": {
+        "module": "candidate_engine"
+      }
+    }
+  ],
+  "summary": {
+    "pilot_count": 0,
+    "pilot_contacts": 0,
+    "pilot_cost": 0.0,
+    "final_contacts": 0,
+    "final_cost": 0.0,
+    "remaining_budget_after_plan": 100000.0,
+    "remaining_contacts_after_plan": 15000,
+    "status": "error"
+  }
+}
