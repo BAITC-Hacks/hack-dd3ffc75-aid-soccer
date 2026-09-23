@@ -27,7 +27,7 @@ def _aggregate(record, multiplier, risk_z):
                   optimistic_lift=mean + risk_z * se)
 
 
-def _shortlist(records, limit):
+def _shortlist(records, limit, priority_ids=()):
     ranked = sorted((r for r in records if r["audience_size"] >= 10),
                     key=lambda r: (-r["prior_score"], r["candidate_id"]))
     primary, alternatives, seen = [], [], set()
@@ -43,6 +43,19 @@ def _shortlist(records, limit):
     selected = primary[:max(0, limit - reserve)] + plausible[:reserve]
     selected_ids = {r["candidate_id"] for r in selected}
     selected += [r for r in ranked if r["candidate_id"] not in selected_ids][:max(0, limit - len(selected))]
+    if priority_ids:
+        # Optional advisers nominate at most two experiments; never overwrite
+        # historical scores, observations, sample sizes, or spending checks.
+        by_id = {r["candidate_id"]: r for r in ranked}
+        preferred = []
+        for candidate_id in priority_ids:
+            if (isinstance(candidate_id, str) and candidate_id in by_id
+                    and candidate_id not in {r["candidate_id"] for r in preferred}):
+                preferred.append(by_id[candidate_id])
+            if len(preferred) >= min(2, limit):
+                break
+        preferred_ids = {r["candidate_id"] for r in preferred}
+        selected = preferred + [r for r in selected if r["candidate_id"] not in preferred_ids]
     return selected[:limit]
 
 
@@ -156,7 +169,8 @@ def run_adaptive_pilots(env, candidates, *, config=None, trace=None):
                requested_n=n, actual_n=int(actual), cost=cost, observed_lift_ratio=ratio,
                **(components or {}))
 
-    for record in _shortlist(records, max(0, min(10, int(cfg["exploration_pilots"])))):
+    for record in _shortlist(records, max(0, min(10, int(cfg["exploration_pilots"]))),
+                             cfg.get("exploration_priority_ids", ())):
         run(record, cfg["exploration_n"], "exploration")
     for _ in range(max(0, min(5, int(cfg["confirmation_pilots"])))):
         choices = []

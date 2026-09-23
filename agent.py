@@ -7,8 +7,9 @@ from pilot_policy import run_adaptive_pilots
 
 
 class Agent:
-    def __init__(self, config=None):
+    def __init__(self, config=None, *, advisor=None):
         self.config = dict(config or {})
+        self.advisor = advisor
         self.last_trace = {}
 
     def act(self, env):
@@ -36,12 +37,36 @@ class Agent:
             history = pd.DataFrame()
             events.append(dict(stage="agent", event="history_unavailable", candidate_id=None,
                                reason=str(exc), details={}))
+        required_history = {"tariff_plan_code_from", "tariff_plan_code_to",
+                            "AVG_ARPU_PREV_3M", "AVG_ARPU_NEXT_3M"}
+        missing_history = sorted(required_history - set(history.columns))
+        if not history.empty and missing_history:
+            events.append(dict(stage="agent", event="history_unavailable", candidate_id=None,
+                               reason="Optional history schema is incomplete; using catalog hypotheses.",
+                               details={"missing_columns": missing_history}))
+            history = pd.DataFrame()
         start_budget, start_contacts, start_slots = env.remaining_budget, env.remaining_contacts, env.pilots_left
         trace["candidates"] = generate_candidates(env.customer_profile, history, env.tariffs,
                                                     config=self.config, trace=events)
+        # API use is explicit configuration, never triggered by finding a key.
+        pilot_config = dict(self.config)
+        mode = self.config.get("llm_mode", "off")
+        if mode not in {"off", "shadow", "assist"}:
+            raise ValueError("llm_mode must be off, shadow, or assist")
+        if mode != "off":
+            from llm_advisor import get_advice
+            advice = get_advice(env, trace["candidates"], mode=mode,
+                                advisor=self.advisor, config=self.config)
+            trace["llm"] = advice
+            events.append(dict(stage="agent", event="llm_advice", candidate_id=None,
+                               reason="Optional exploration advice; pilot evidence and resource checks remain authoritative.",
+                               details={key: advice[key] for key in
+                                        ("mode", "status", "context_hash", "applied_candidate_ids", "error_code")}))
+            if advice["applied_candidate_ids"]:
+                pilot_config["exploration_priority_ids"] = advice["applied_candidate_ids"]
         summary = trace["summary"]
         try:
-            trace["observations"] = run_adaptive_pilots(env, trace["candidates"], config=self.config, trace=events)
+            trace["observations"] = run_adaptive_pilots(env, trace["candidates"], config=pilot_config, trace=events)
         finally:
             # Preserve actual spending even when a programming/adapter error propagates.
             summary.update(pilot_count=int(start_slots - env.pilots_left),

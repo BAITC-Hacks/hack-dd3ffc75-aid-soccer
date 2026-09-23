@@ -5,3 +5,8 @@ __pycache__/
 .env
 .env.*
 *.py[cod]
+
+# Public template only; real local credentials and collected examples stay local.
+!.env.example
+reports/llm_runs/
+artifacts/training/
