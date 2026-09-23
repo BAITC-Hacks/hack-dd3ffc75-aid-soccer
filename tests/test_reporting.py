@@ -78,3 +78,15 @@ def test_report_handles_missing_optional_data_and_empty_state(tmp_path: Path):
     assert "No measured pilot uncertainty bands" in html
     assert "No externally measured mock result" in html
     assert "Infinity" not in html
+
+
+def test_report_displays_attached_official_measurement(tmp_path):
+    trace = sample_trace()
+    trace["benchmark"] = {"source": "official local_eval.evaluate_agent", "seed": 42,
+                          "net_gain": 1234.5, "failure": None}
+    destination = tmp_path / "measured.html"
+    render_report(trace, str(destination))
+    html = destination.read_text(encoding="utf-8")
+    assert "Externally measured mock net gain:" in html
+    assert "1 234.50" in html
+    assert "No externally measured mock result" not in html

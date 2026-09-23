@@ -59,9 +59,10 @@ python -m pytest tests/test_portfolio_optimizer.py tests/test_reporting.py -q
 python local_eval.py --runs 10
 ```
 
-Показать фактический `reports/benchmark.md`, когда капитан его создаст. До этого
-не произносить численные benchmark claims: интегрированный 10-seed результат
-пока pending.
+Показать `reports/benchmark.md`: 10/10 положительных adaptive-прогонов,
+медиана 3 103 097.10 у.е., минимум 1 567 730.55. У неизменённого starter
+медиана −357 947.80 и 0/10 положительных; на seed 3 нет финальных кампаний.
+Это фактическая mock-оценка, а не обещание результата на скрытых эффектах.
 
 ## 2:40–3:00 — честные границы
 

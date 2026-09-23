@@ -254,3 +254,78 @@ def test_provided_dataset_public_pilot_smoke():
     result = evaluate_agent(probe, seed=42, verbose=False)
     assert result["n_pilots"] == 1
     assert probe.records[0]["pilot_n"] == 80
+
+
+def test_benchmark_rejects_plan_that_scorer_would_truncate():
+    from tools.benchmark import validate_plan
+    env = environment()
+    env.remaining_contacts = 1
+    with pytest.raises(ValueError, match="residual resources"):
+        validate_plan(env, [campaign()])
+
+
+def test_benchmark_rejects_unsupported_campaign_keys():
+    from tools.benchmark import validate_plan
+    with pytest.raises(ValueError, match="unsupported keys"):
+        validate_plan(environment(), [dict(campaign(), explicit_ids=[1])])
+
+
+def test_benchmark_rejects_duplicate_cells_without_changing_starter():
+    from tools.benchmark import validate_plan
+    with pytest.raises(ValueError, match="distinct-cell"):
+        validate_plan(environment(), [campaign(), campaign()])
+    baseline = validate_plan(environment(), [campaign(), campaign()], strict=False)
+    assert not baseline["distinct_final_cells"]
+    assert baseline["final_contacts"] == 4
+
+
+def test_real_three_module_pipeline_uses_actual_samples_and_fresh_evidence(monkeypatch):
+    """Synthetic pilot outcomes live in the test closure, never on env."""
+    monkeypatch.setattr(agent.pd, "read_csv", lambda *a, **k: pd.DataFrame())
+
+    def make_env(ratio):
+        env = environment()
+        env.customer_profile = pd.DataFrame(dict(
+            ID_NUMBER=range(30), current_tariff=["a"] * 30, arpu_segment=["MID"] * 30,
+            predicted_arpu=[2000.0] * 30))
+        env.tariffs = pd.DataFrame(dict(tariff_plan_code=["a", "b"], price_tariff=[1000, 1200]))
+        env.channels = {"push": {"cost_per_contact": 0, "conversion_multiplier": 0.5},
+                        "sms": {"cost_per_contact": 4, "conversion_multiplier": 0.65}}
+        env.remaining_budget = 1000
+        env.remaining_contacts = 100
+        env.pilot_history = []
+
+        def run_pilot(**request):
+            assert request["target_tariff"] == "b" and request["channel"] == "sms"
+            n = min(request["n_customers"], 12)
+            env.remaining_budget -= n * 4
+            env.remaining_contacts -= n
+            env.pilots_left -= 1
+            result = dict(n_customers=n, cost=n * 4, observed_lift_ratio=ratio)
+            env.pilot_history.append(result)
+            return result
+        env.run_pilot = run_pilot
+        return env
+
+    instance = agent.Agent({"confirmation_pilots": 0, "final_contact_reserve": 0})
+    positive = instance.act(make_env(0.8))
+    first = instance.last_trace
+    assert positive[0]["channel"] == "sms"
+    assert first["summary"]["pilot_contacts"] == 12
+    assert first["observations"][0]["mean_lift"] == pytest.approx(0.8 / 0.65)
+    negative = instance.act(make_env(-0.8))
+    assert negative[0]["channel"] == "push"
+    assert instance.last_trace["summary"]["status"] == "fallback"
+    assert instance.last_trace["observations"][0]["pilot_n"] == 12
+    assert instance.last_trace["observations"][0]["mean_lift"] < 0
+    assert first["summary"]["status"] == "ok"
+    json.dumps(instance.last_trace, allow_nan=False)
+
+
+def test_starter_empty_final_plan_remains_evaluable_and_adaptive_rejects_it():
+    from tools.benchmark import validate_plan
+    baseline = validate_plan(environment(), [], strict=False)
+    assert baseline["final_contacts"] == 0
+    assert baseline["final_cost"] == 0
+    with pytest.raises(ValueError, match="1–10"):
+        validate_plan(environment(), [])

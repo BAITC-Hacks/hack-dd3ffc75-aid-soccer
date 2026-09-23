@@ -1,0 +1,9 @@
+{
+  "source": "git checkout-index --all (staged release files only)",
+  "untracked_task_directory_absent": true,
+  "test_command": "python -m pytest tests -q",
+  "tests": "........................................................................ [ 77%]\n.....................                                                    [100%]\n93 passed in 0.98s",
+  "submission_command": "python make_submission.py",
+  "submission_matches_workspace": true,
+  "submission_sha256": "3cba2865d369ad86c93e110476a4436c42f25c3583cbb9265382844e8e848e5e"
+}

@@ -1,27 +1,4033 @@
 {
   "schema_version": "1.0",
-  "candidates": [],
-  "observations": [],
-  "campaigns": [],
+  "candidates": [
+    {
+      "cell_id": "tariff_4|MID",
+      "current_tariff": "tariff_4",
+      "arpu_segment": "MID",
+      "audience_size": 1227,
+      "audience_arpu": 5840537.244104053,
+      "served_size": 1227,
+      "served_arpu": 5840537.244104053,
+      "candidate_id": "tariff_4|MID|tariff_8",
+      "target_tariff": "tariff_8",
+      "history_count": 408,
+      "prior_lift": 0.20661661691828703,
+      "positive_rate": 0.6887254901960784,
+      "raw_mean_lift": 0.4123449791021593,
+      "raw_median_lift": 0.2921078866039747,
+      "robust_mean_lift": 0.2319372807563124,
+      "source": "history",
+      "prior_score": 1018936.4705189242
+    },
+    {
+      "cell_id": "tariff_13|MID",
+      "current_tariff": "tariff_13",
+      "arpu_segment": "MID",
+      "audience_size": 1022,
+      "audience_arpu": 5000571.23814045,
+      "served_size": 1022,
+      "served_arpu": 5000571.23814045,
+      "candidate_id": "tariff_13|MID|tariff_8",
+      "target_tariff": "tariff_8",
+      "history_count": 234,
+      "prior_lift": 0.22175141768101575,
+      "positive_rate": 0.6709401709401709,
+      "raw_mean_lift": 0.47100749598140407,
+      "raw_median_lift": 0.4054727663629685,
+      "robust_mean_lift": 0.26913419923678833,
+      "source": "history",
+      "prior_score": 926439.2108067729
+    },
+    {
+      "cell_id": "tariff_8|MID",
+      "current_tariff": "tariff_8",
+      "arpu_segment": "MID",
+      "audience_size": 1720,
+      "audience_arpu": 8024489.894817886,
+      "served_size": 1720,
+      "served_arpu": 8024489.894817886,
+      "candidate_id": "tariff_8|MID|tariff_10",
+      "target_tariff": "tariff_10",
+      "history_count": 182,
+      "prior_lift": 0.11832592568908527,
+      "positive_rate": 0.6153846153846154,
+      "raw_mean_lift": 0.49141823644025345,
+      "raw_median_lift": 0.31764843041827323,
+      "robust_mean_lift": 0.15083304813114168,
+      "source": "history",
+      "prior_score": 766908.0421049144
+    },
+    {
+      "cell_id": "tariff_10|HIGH",
+      "current_tariff": "tariff_10",
+      "arpu_segment": "HIGH",
+      "audience_size": 2950,
+      "audience_arpu": 24190636.44091341,
+      "served_size": 2950,
+      "served_arpu": 24190636.44091341,
+      "candidate_id": "tariff_10|HIGH|tariff_20",
+      "target_tariff": "tariff_20",
+      "history_count": 0,
+      "prior_lift": 0.0,
+      "positive_rate": 0.5,
+      "source": "catalog",
+      "raw_mean_lift": null,
+      "raw_median_lift": null,
+      "robust_mean_lift": null,
+      "catalog_plausibility": 0.83805647338876,
+      "catalog_price_similarity": 0.8744937113621843,
+      "catalog_package_retention": 0.9166666666666667,
+      "prior_score": 506827.986617538
+    },
+    {
+      "cell_id": "tariff_11|HIGH",
+      "current_tariff": "tariff_11",
+      "arpu_segment": "HIGH",
+      "audience_size": 1633,
+      "audience_arpu": 14175708.002870273,
+      "served_size": 1633,
+      "served_arpu": 14175708.002870273,
+      "candidate_id": "tariff_11|HIGH|tariff_12",
+      "target_tariff": "tariff_12",
+      "history_count": 107,
+      "prior_lift": 0.042033786691016053,
+      "positive_rate": 0.5794392523364486,
+      "raw_mean_lift": 0.07746405220237243,
+      "raw_median_lift": 0.12055639398036457,
+      "robust_mean_lift": 0.06167574308868711,
+      "source": "history",
+      "prior_score": 470561.2990624557
+    },
+    {
+      "cell_id": "tariff_10|MID",
+      "current_tariff": "tariff_10",
+      "arpu_segment": "MID",
+      "audience_size": 645,
+      "audience_arpu": 3003700.1472749137,
+      "served_size": 645,
+      "served_arpu": 3003700.1472749137,
+      "candidate_id": "tariff_10|MID|tariff_11",
+      "target_tariff": "tariff_11",
+      "history_count": 86,
+      "prior_lift": 0.152624903778596,
+      "positive_rate": 0.6976744186046512,
+      "raw_mean_lift": 0.4159796411897228,
+      "raw_median_lift": 0.4539311552552814,
+      "robust_mean_lift": 0.2413603129521983,
+      "source": "history",
+      "prior_score": 389140.45994074363
+    },
+    {
+      "cell_id": "tariff_8|HIGH",
+      "current_tariff": "tariff_8",
+      "arpu_segment": "HIGH",
+      "audience_size": 4726,
+      "audience_arpu": 36988107.97242949,
+      "served_size": 4726,
+      "served_arpu": 36988107.97242949,
+      "candidate_id": "tariff_8|HIGH|tariff_10",
+      "target_tariff": "tariff_10",
+      "history_count": 283,
+      "prior_lift": 0.012038701720536012,
+      "positive_rate": 0.5017667844522968,
+      "raw_mean_lift": 0.020361219212799576,
+      "raw_median_lift": 0.001380260960840823,
+      "robust_mean_lift": 0.01416568082310421,
+      "source": "history",
+      "prior_score": 334359.96397879854
+    },
+    {
+      "cell_id": "tariff_8|LOW",
+      "current_tariff": "tariff_8",
+      "arpu_segment": "LOW",
+      "audience_size": 457,
+      "audience_arpu": 1312258.1647560755,
+      "served_size": 457,
+      "served_arpu": 1312258.1647560755,
+      "candidate_id": "tariff_8|LOW|tariff_9",
+      "target_tariff": "tariff_9",
+      "history_count": 39,
+      "prior_lift": 0.2539342450461481,
+      "positive_rate": 0.7692307692307693,
+      "raw_mean_lift": 1447.7646186861389,
+      "raw_median_lift": 6.420358901063998,
+      "robust_mean_lift": 0.5794909694642867,
+      "source": "history",
+      "prior_score": 294777.9840991727
+    },
+    {
+      "cell_id": "tariff_12|MID",
+      "current_tariff": "tariff_12",
+      "arpu_segment": "MID",
+      "audience_size": 342,
+      "audience_arpu": 1503059.9061305257,
+      "served_size": 342,
+      "served_arpu": 1503059.9061305257,
+      "candidate_id": "tariff_12|MID|tariff_8",
+      "target_tariff": "tariff_8",
+      "history_count": 78,
+      "prior_lift": 0.19010613910869006,
+      "positive_rate": 0.7435897435897436,
+      "raw_mean_lift": 0.5530612272222685,
+      "raw_median_lift": 0.3353335971727431,
+      "robust_mean_lift": 0.3119690487937478,
+      "source": "history",
+      "prior_score": 249107.46488514123
+    },
+    {
+      "cell_id": "tariff_14|MID",
+      "current_tariff": "tariff_14",
+      "arpu_segment": "MID",
+      "audience_size": 755,
+      "audience_arpu": 3686020.025355763,
+      "served_size": 755,
+      "served_arpu": 3686020.025355763,
+      "candidate_id": "tariff_14|MID|tariff_9",
+      "target_tariff": "tariff_9",
+      "history_count": 7,
+      "prior_lift": 0.05867032245587455,
+      "positive_rate": 0.7142857142857143,
+      "raw_mean_lift": 1.0191270294621138,
+      "raw_median_lift": 0.7287748298374775,
+      "robust_mean_lift": 0.47774405428354993,
+      "source": "history",
+      "prior_score": 185365.70011408586
+    },
+    {
+      "cell_id": "tariff_14|HIGH",
+      "current_tariff": "tariff_14",
+      "arpu_segment": "HIGH",
+      "audience_size": 963,
+      "audience_arpu": 7609558.492534343,
+      "served_size": 963,
+      "served_arpu": 7609558.492534343,
+      "candidate_id": "tariff_14|HIGH|tariff_19",
+      "target_tariff": "tariff_19",
+      "history_count": 0,
+      "prior_lift": 0.0,
+      "positive_rate": 0.5,
+      "source": "catalog",
+      "raw_mean_lift": null,
+      "raw_median_lift": null,
+      "robust_mean_lift": null,
+      "catalog_plausibility": 0.9322125374423185,
+      "catalog_price_similarity": 0.9322125374423185,
+      "catalog_package_retention": 1.0,
+      "prior_score": 177343.1457785296
+    },
+    {
+      "cell_id": "tariff_11|MID",
+      "current_tariff": "tariff_11",
+      "arpu_segment": "MID",
+      "audience_size": 464,
+      "audience_arpu": 2059004.3405840572,
+      "served_size": 464,
+      "served_arpu": 2059004.3405840572,
+      "candidate_id": "tariff_11|MID|tariff_8",
+      "target_tariff": "tariff_8",
+      "history_count": 103,
+      "prior_lift": 0.09263165561502247,
+      "positive_rate": 0.6699029126213593,
+      "raw_mean_lift": 0.25271704048786914,
+      "raw_median_lift": 0.22388153241474393,
+      "robust_mean_lift": 0.13759847872911105,
+      "source": "history",
+      "prior_score": 159249.4404355963
+    },
+    {
+      "cell_id": "tariff_4|LOW",
+      "current_tariff": "tariff_4",
+      "arpu_segment": "LOW",
+      "audience_size": 299,
+      "audience_arpu": 857563.179026669,
+      "served_size": 299,
+      "served_arpu": 857563.179026669,
+      "candidate_id": "tariff_4|LOW|tariff_9",
+      "target_tariff": "tariff_9",
+      "history_count": 31,
+      "prior_lift": 0.20086754986264427,
+      "positive_rate": 0.7741935483870968,
+      "raw_mean_lift": 1004.2304661916843,
+      "raw_median_lift": 8.349132947976878,
+      "robust_mean_lift": 0.5248474689959415,
+      "source": "history",
+      "prior_score": 152808.28716601443
+    },
+    {
+      "cell_id": "tariff_15|MID",
+      "current_tariff": "tariff_15",
+      "arpu_segment": "MID",
+      "audience_size": 80,
+      "audience_arpu": 402182.2596318361,
+      "served_size": 80,
+      "served_arpu": 402182.2596318361,
+      "candidate_id": "tariff_15|MID|tariff_8",
+      "target_tariff": "tariff_8",
+      "history_count": 430,
+      "prior_lift": 0.33161605831138036,
+      "positive_rate": 0.7581395348837209,
+      "raw_mean_lift": 0.5014149599355134,
+      "raw_median_lift": 0.46132938184519934,
+      "robust_mean_lift": 0.3701760650917734,
+      "source": "history",
+      "prior_score": 117241.61897718195
+    },
+    {
+      "cell_id": "tariff_10|LOW",
+      "current_tariff": "tariff_10",
+      "arpu_segment": "LOW",
+      "audience_size": 370,
+      "audience_arpu": 972233.5682257855,
+      "served_size": 370,
+      "served_arpu": 972233.5682257855,
+      "candidate_id": "tariff_10|LOW|tariff_9",
+      "target_tariff": "tariff_9",
+      "history_count": 10,
+      "prior_lift": 0.10484387177505085,
+      "positive_rate": 0.8,
+      "raw_mean_lift": 13.172624830048788,
+      "raw_median_lift": 5.253670079243775,
+      "robust_mean_lift": 0.6290632306503051,
+      "source": "history",
+      "prior_score": 91739.45840621798
+    },
+    {
+      "cell_id": "tariff_12|HIGH",
+      "current_tariff": "tariff_12",
+      "arpu_segment": "HIGH",
+      "audience_size": 567,
+      "audience_arpu": 5244797.051878841,
+      "served_size": 567,
+      "served_arpu": 5244797.051878841,
+      "candidate_id": "tariff_12|HIGH|tariff_11",
+      "target_tariff": "tariff_11",
+      "history_count": 82,
+      "prior_lift": 0.020605503372818138,
+      "positive_rate": 0.524390243902439,
+      "raw_mean_lift": 0.051374488617554934,
+      "raw_median_lift": 0.024922924167821197,
+      "robust_mean_lift": 0.03316983469770725,
+      "source": "history",
+      "prior_score": 82371.7098645092
+    },
+    {
+      "cell_id": "tariff_13|LOW",
+      "current_tariff": "tariff_13",
+      "arpu_segment": "LOW",
+      "audience_size": 251,
+      "audience_arpu": 756421.0833960543,
+      "served_size": 251,
+      "served_arpu": 756421.0833960543,
+      "candidate_id": "tariff_13|LOW|tariff_8",
+      "target_tariff": "tariff_8",
+      "history_count": 21,
+      "prior_lift": 0.12492787616656834,
+      "positive_rate": 0.7142857142857143,
+      "raw_mean_lift": 11.010377423162266,
+      "raw_median_lift": 1.3893597835888185,
+      "robust_mean_lift": 0.42237520037268345,
+      "source": "history",
+      "prior_score": 80998.35380252892
+    },
+    {
+      "cell_id": "tariff_11|LOW",
+      "current_tariff": "tariff_11",
+      "arpu_segment": "LOW",
+      "audience_size": 387,
+      "audience_arpu": 1067637.79615389,
+      "served_size": 387,
+      "served_arpu": 1067637.79615389,
+      "candidate_id": "tariff_11|LOW|tariff_9",
+      "target_tariff": "tariff_9",
+      "history_count": 5,
+      "prior_lift": 0.06106004696410601,
+      "positive_rate": 0.8,
+      "raw_mean_lift": 3072.4288643895475,
+      "raw_median_lift": 5.384595807690528,
+      "robust_mean_lift": 0.6716605166051661,
+      "source": "history",
+      "prior_score": 58671.01257643005
+    },
+    {
+      "cell_id": "tariff_1|LOW",
+      "current_tariff": "tariff_1",
+      "arpu_segment": "LOW",
+      "audience_size": 40,
+      "audience_arpu": 132219.59089506813,
+      "served_size": 40,
+      "served_arpu": 132219.59089506813,
+      "candidate_id": "tariff_1|LOW|tariff_9",
+      "target_tariff": "tariff_9",
+      "history_count": 107,
+      "prior_lift": 0.4728243586279456,
+      "positive_rate": 0.8504672897196262,
+      "raw_mean_lift": 342.3159939259931,
+      "raw_median_lift": 6.594248792956546,
+      "robust_mean_lift": 0.6937703206036211,
+      "source": "history",
+      "prior_score": 57842.50171063536
+    },
+    {
+      "cell_id": "tariff_3|MID",
+      "current_tariff": "tariff_3",
+      "arpu_segment": "MID",
+      "audience_size": 87,
+      "audience_arpu": 353907.75615506346,
+      "served_size": 87,
+      "served_arpu": 353907.75615506346,
+      "candidate_id": "tariff_3|MID|tariff_8",
+      "target_tariff": "tariff_8",
+      "history_count": 241,
+      "prior_lift": 0.15535843210592992,
+      "positive_rate": 0.6099585062240664,
+      "raw_mean_lift": 0.7360542784293365,
+      "raw_median_lift": 0.4526683697259297,
+      "robust_mean_lift": 0.18759047196193196,
+      "source": "history",
+      "prior_score": 44259.81533874447
+    },
+    {
+      "cell_id": "tariff_17|MID",
+      "current_tariff": "tariff_17",
+      "arpu_segment": "MID",
+      "audience_size": 32,
+      "audience_arpu": 166536.6493991783,
+      "served_size": 32,
+      "served_arpu": 166536.6493991783,
+      "candidate_id": "tariff_17|MID|tariff_8",
+      "target_tariff": "tariff_8",
+      "history_count": 127,
+      "prior_lift": 0.24436802262151555,
+      "positive_rate": 0.8267716535433071,
+      "raw_mean_lift": 0.5520690839752994,
+      "raw_median_lift": 0.3364115929049932,
+      "robust_mean_lift": 0.340575905543372,
+      "source": "history",
+      "prior_score": 37171.36124481903
+    },
+    {
+      "cell_id": "tariff_1|MID",
+      "current_tariff": "tariff_1",
+      "arpu_segment": "MID",
+      "audience_size": 32,
+      "audience_arpu": 165169.06544740367,
+      "served_size": 32,
+      "served_arpu": 165169.06544740367,
+      "candidate_id": "tariff_1|MID|tariff_4",
+      "target_tariff": "tariff_4",
+      "history_count": 51,
+      "prior_lift": 0.2515500658448503,
+      "positive_rate": 0.7450980392156863,
+      "raw_mean_lift": 1.1378058464167915,
+      "raw_median_lift": 0.6657704191746932,
+      "robust_mean_lift": 0.49816777745744856,
+      "source": "history",
+      "prior_score": 36252.919085348854
+    },
+    {
+      "cell_id": "tariff_13|HIGH",
+      "current_tariff": "tariff_13",
+      "arpu_segment": "HIGH",
+      "audience_size": 516,
+      "audience_arpu": 3712751.1737852106,
+      "served_size": 516,
+      "served_arpu": 3712751.1737852106,
+      "candidate_id": "tariff_13|HIGH|tariff_10",
+      "target_tariff": "tariff_10",
+      "history_count": 9,
+      "prior_lift": 0.01282888634015844,
+      "positive_rate": 0.4444444444444444,
+      "raw_mean_lift": 0.09381208708571899,
+      "raw_median_lift": -0.024250589424048518,
+      "robust_mean_lift": 0.08410047711881644,
+      "source": "history",
+      "prior_score": 34399.77870173022
+    },
+    {
+      "cell_id": "tariff_14|LOW",
+      "current_tariff": "tariff_14",
+      "arpu_segment": "LOW",
+      "audience_size": 231,
+      "audience_arpu": 721988.3024613425,
+      "served_size": 231,
+      "served_arpu": 721988.3024613425,
+      "candidate_id": "tariff_14|LOW|tariff_4",
+      "target_tariff": "tariff_4",
+      "history_count": 7,
+      "prior_lift": 0.05263157894736842,
+      "positive_rate": 0.7142857142857143,
+      "raw_mean_lift": 6.722074852089669,
+      "raw_median_lift": 2.5493610223642174,
+      "robust_mean_lift": 0.42857142857142855,
+      "source": "history",
+      "prior_score": 32570.900862917708
+    },
+    {
+      "cell_id": "tariff_9|LOW",
+      "current_tariff": "tariff_9",
+      "arpu_segment": "LOW",
+      "audience_size": 51,
+      "audience_arpu": 157453.03508879975,
+      "served_size": 51,
+      "served_arpu": 157453.03508879975,
+      "candidate_id": "tariff_9|LOW|tariff_13",
+      "target_tariff": "tariff_13",
+      "history_count": 23,
+      "prior_lift": 0.19610266904078832,
+      "positive_rate": 0.8260869565217391,
+      "raw_mean_lift": 5.9008495955044005,
+      "raw_median_lift": 1.8713088943021803,
+      "robust_mean_lift": 0.6224128191294587,
+      "source": "history",
+      "prior_score": 28192.007348661617
+    },
+    {
+      "cell_id": "tariff_12|LOW",
+      "current_tariff": "tariff_12",
+      "arpu_segment": "LOW",
+      "audience_size": 363,
+      "audience_arpu": 1017502.0543512055,
+      "served_size": 363,
+      "served_arpu": 1017502.0543512055,
+      "candidate_id": "tariff_12|LOW|tariff_11",
+      "target_tariff": "tariff_11",
+      "history_count": 7,
+      "prior_lift": 0.03078206256702887,
+      "positive_rate": 0.5714285714285714,
+      "raw_mean_lift": 2.8958111289191404,
+      "raw_median_lift": 3.687763002861471,
+      "robust_mean_lift": 0.25065393804580655,
+      "source": "history",
+      "prior_score": 24609.209349307956
+    },
+    {
+      "cell_id": "tariff_4|HIGH",
+      "current_tariff": "tariff_4",
+      "arpu_segment": "HIGH",
+      "audience_size": 2108,
+      "audience_arpu": 15794121.77170824,
+      "served_size": 2108,
+      "served_arpu": 15794121.77170824,
+      "candidate_id": "tariff_4|HIGH|tariff_12",
+      "target_tariff": "tariff_12",
+      "history_count": 19,
+      "prior_lift": 0.0017280267903008017,
+      "positive_rate": 0.631578947368421,
+      "raw_mean_lift": 0.006275465712145015,
+      "raw_median_lift": 0.05672080481147407,
+      "robust_mean_lift": 0.006275465712145017,
+      "source": "history",
+      "prior_score": 22265.06926511408
+    },
+    {
+      "cell_id": "tariff_3|LOW",
+      "current_tariff": "tariff_3",
+      "arpu_segment": "LOW",
+      "audience_size": 56,
+      "audience_arpu": 160544.44723558158,
+      "served_size": 56,
+      "served_arpu": 160544.44723558158,
+      "candidate_id": "tariff_3|LOW|tariff_9",
+      "target_tariff": "tariff_9",
+      "history_count": 56,
+      "prior_lift": 0.1558367468205872,
+      "positive_rate": 0.6428571428571429,
+      "raw_mean_lift": 1052.0944089185366,
+      "raw_median_lift": 4.1556392571924805,
+      "robust_mean_lift": 0.29497669933896864,
+      "source": "history",
+      "prior_score": 20551.095024212726
+    },
+    {
+      "cell_id": "tariff_5|HIGH",
+      "current_tariff": "tariff_5",
+      "arpu_segment": "HIGH",
+      "audience_size": 109,
+      "audience_arpu": 740120.0616143207,
+      "served_size": 109,
+      "served_arpu": 740120.0616143207,
+      "candidate_id": "tariff_5|HIGH|tariff_6",
+      "target_tariff": "tariff_6",
+      "history_count": 0,
+      "prior_lift": 0.0,
+      "positive_rate": 0.5,
+      "source": "catalog",
+      "raw_mean_lift": null,
+      "raw_median_lift": null,
+      "robust_mean_lift": null,
+      "catalog_plausibility": 1.0,
+      "catalog_price_similarity": 1.0,
+      "catalog_package_retention": 1.0,
+      "prior_score": 18503.00154035802
+    },
+    {
+      "cell_id": "tariff_5|LOW",
+      "current_tariff": "tariff_5",
+      "arpu_segment": "LOW",
+      "audience_size": 44,
+      "audience_arpu": 132153.6839166647,
+      "served_size": 44,
+      "served_arpu": 132153.6839166647,
+      "candidate_id": "tariff_5|LOW|tariff_13",
+      "target_tariff": "tariff_13",
+      "history_count": 41,
+      "prior_lift": 0.1591926025888616,
+      "positive_rate": 0.7073170731707317,
+      "raw_mean_lift": 1850.0084871480808,
+      "raw_median_lift": 1.6567850250067444,
+      "robust_mean_lift": 0.3533299228191806,
+      "source": "history",
+      "prior_score": 17959.173437902125
+    },
+    {
+      "cell_id": "tariff_6|LOW",
+      "current_tariff": "tariff_6",
+      "arpu_segment": "LOW",
+      "audience_size": 30,
+      "audience_arpu": 97039.60915588148,
+      "served_size": 30,
+      "served_arpu": 97039.60915588148,
+      "candidate_id": "tariff_6|LOW|tariff_13",
+      "target_tariff": "tariff_13",
+      "history_count": 42,
+      "prior_lift": 0.17951078925132125,
+      "positive_rate": 0.6904761904761905,
+      "raw_mean_lift": 78.88789547428671,
+      "raw_median_lift": 2.464912053276078,
+      "robust_mean_lift": 0.3932141097886085,
+      "source": "history",
+      "prior_score": 14723.75755717921
+    },
+    {
+      "cell_id": "tariff_19|MID",
+      "current_tariff": "tariff_19",
+      "arpu_segment": "MID",
+      "audience_size": 26,
+      "audience_arpu": 119249.02399881552,
+      "served_size": 26,
+      "served_arpu": 119249.02399881552,
+      "candidate_id": "tariff_19|MID|tariff_8",
+      "target_tariff": "tariff_8",
+      "history_count": 21,
+      "prior_lift": 0.1315705895939997,
+      "positive_rate": 0.8571428571428571,
+      "raw_mean_lift": 0.9110956096137053,
+      "raw_median_lift": 0.6888541097967849,
+      "robust_mean_lift": 0.4448338981511418,
+      "source": "history",
+      "prior_score": 14568.974082030809
+    },
+    {
+      "cell_id": "tariff_9|MID",
+      "current_tariff": "tariff_9",
+      "arpu_segment": "MID",
+      "audience_size": 67,
+      "audience_arpu": 281271.3997881733,
+      "served_size": 67,
+      "served_arpu": 281271.3997881733,
+      "candidate_id": "tariff_9|MID|tariff_8",
+      "target_tariff": "tariff_8",
+      "history_count": 71,
+      "prior_lift": 0.061908121778533276,
+      "positive_rate": 0.5774647887323944,
+      "raw_mean_lift": 0.5322406382418443,
+      "raw_median_lift": 0.14323888086734762,
+      "robust_mean_lift": 0.10550539063665529,
+      "source": "history",
+      "prior_score": 13734.184619305159
+    },
+    {
+      "cell_id": "tariff_18|HIGH",
+      "current_tariff": "tariff_18",
+      "arpu_segment": "HIGH",
+      "audience_size": 35,
+      "audience_arpu": 286137.26082276856,
+      "served_size": 35,
+      "served_arpu": 286137.26082276856,
+      "candidate_id": "tariff_18|HIGH|tariff_11",
+      "target_tariff": "tariff_11",
+      "history_count": 22,
+      "prior_lift": 0.05651783704511912,
+      "positive_rate": 0.6363636363636364,
+      "raw_mean_lift": 0.2303611798139769,
+      "raw_median_lift": 0.14291085827084996,
+      "robust_mean_lift": 0.1849674666931171,
+      "source": "history",
+      "prior_score": 13231.5210652238
+    },
+    {
+      "cell_id": "tariff_7|HIGH",
+      "current_tariff": "tariff_7",
+      "arpu_segment": "HIGH",
+      "audience_size": 72,
+      "audience_arpu": 519437.624644454,
+      "served_size": 72,
+      "served_arpu": 519437.624644454,
+      "candidate_id": "tariff_7|HIGH|tariff_5",
+      "target_tariff": "tariff_5",
+      "history_count": 0,
+      "prior_lift": 0.0,
+      "positive_rate": 0.5,
+      "source": "catalog",
+      "raw_mean_lift": null,
+      "raw_median_lift": null,
+      "robust_mean_lift": null,
+      "catalog_plausibility": 1.0,
+      "catalog_price_similarity": 1.0,
+      "catalog_package_retention": 1.0,
+      "prior_score": 12985.940616111351
+    },
+    {
+      "cell_id": "tariff_7|LOW",
+      "current_tariff": "tariff_7",
+      "arpu_segment": "LOW",
+      "audience_size": 29,
+      "audience_arpu": 93486.11254736516,
+      "served_size": 29,
+      "served_arpu": 93486.11254736516,
+      "candidate_id": "tariff_7|LOW|tariff_9",
+      "target_tariff": "tariff_9",
+      "history_count": 29,
+      "prior_lift": 0.15581624606671882,
+      "positive_rate": 0.6896551724137931,
+      "raw_mean_lift": 1256.4480247623883,
+      "raw_median_lift": 3.6673212181798713,
+      "robust_mean_lift": 0.42446494618175123,
+      "source": "history",
+      "prior_score": 12306.312081182066
+    },
+    {
+      "cell_id": "tariff_5|MID",
+      "current_tariff": "tariff_5",
+      "arpu_segment": "MID",
+      "audience_size": 91,
+      "audience_arpu": 367820.61011102656,
+      "served_size": 91,
+      "served_arpu": 367820.61011102656,
+      "candidate_id": "tariff_5|MID|tariff_6",
+      "target_tariff": "tariff_6",
+      "history_count": 0,
+      "prior_lift": 0.0,
+      "positive_rate": 0.5,
+      "source": "catalog",
+      "raw_mean_lift": null,
+      "raw_median_lift": null,
+      "robust_mean_lift": null,
+      "catalog_plausibility": 1.0,
+      "catalog_price_similarity": 1.0,
+      "catalog_package_retention": 1.0,
+      "prior_score": 9195.515252775664
+    },
+    {
+      "cell_id": "tariff_6|HIGH",
+      "current_tariff": "tariff_6",
+      "arpu_segment": "HIGH",
+      "audience_size": 53,
+      "audience_arpu": 341665.53809705016,
+      "served_size": 53,
+      "served_arpu": 341665.53809705016,
+      "candidate_id": "tariff_6|HIGH|tariff_5",
+      "target_tariff": "tariff_5",
+      "history_count": 0,
+      "prior_lift": 0.0,
+      "positive_rate": 0.5,
+      "source": "catalog",
+      "raw_mean_lift": null,
+      "raw_median_lift": null,
+      "robust_mean_lift": null,
+      "catalog_plausibility": 1.0,
+      "catalog_price_similarity": 1.0,
+      "catalog_package_retention": 1.0,
+      "prior_score": 8541.638452426254
+    },
+    {
+      "cell_id": "tariff_20|HIGH",
+      "current_tariff": "tariff_20",
+      "arpu_segment": "HIGH",
+      "audience_size": 38,
+      "audience_arpu": 287290.72291460045,
+      "served_size": 38,
+      "served_arpu": 287290.72291460045,
+      "candidate_id": "tariff_20|HIGH|tariff_21",
+      "target_tariff": "tariff_21",
+      "history_count": 0,
+      "prior_lift": 0.0,
+      "positive_rate": 0.5,
+      "source": "catalog",
+      "raw_mean_lift": null,
+      "raw_median_lift": null,
+      "robust_mean_lift": null,
+      "catalog_plausibility": 0.9521603997806066,
+      "catalog_price_similarity": 0.9521603997806066,
+      "catalog_package_retention": 1.0,
+      "prior_score": 6838.671239590636
+    },
+    {
+      "cell_id": "tariff_7|MID",
+      "current_tariff": "tariff_7",
+      "arpu_segment": "MID",
+      "audience_size": 52,
+      "audience_arpu": 267570.6779826569,
+      "served_size": 52,
+      "served_arpu": 267570.6779826569,
+      "candidate_id": "tariff_7|MID|tariff_5",
+      "target_tariff": "tariff_5",
+      "history_count": 0,
+      "prior_lift": 0.0,
+      "positive_rate": 0.5,
+      "source": "catalog",
+      "raw_mean_lift": null,
+      "raw_median_lift": null,
+      "robust_mean_lift": null,
+      "catalog_plausibility": 1.0,
+      "catalog_price_similarity": 1.0,
+      "catalog_package_retention": 1.0,
+      "prior_score": 6689.266949566423
+    }
+  ],
+  "observations": [
+    {
+      "cell_id": "tariff_4|MID",
+      "current_tariff": "tariff_4",
+      "arpu_segment": "MID",
+      "audience_size": 1227,
+      "audience_arpu": 5840537.244104053,
+      "served_size": 1227,
+      "served_arpu": 5840537.244104053,
+      "candidate_id": "tariff_4|MID|tariff_8",
+      "target_tariff": "tariff_8",
+      "history_count": 408,
+      "prior_lift": 0.20661661691828703,
+      "positive_rate": 0.6887254901960784,
+      "raw_mean_lift": 0.4123449791021593,
+      "raw_median_lift": 0.2921078866039747,
+      "robust_mean_lift": 0.2319372807563124,
+      "source": "history",
+      "prior_score": 1018936.4705189242,
+      "status": "measured",
+      "pilot_count": 2,
+      "pilot_n": 280,
+      "pilot_cost": 1120.0,
+      "mean_lift": 0.18759515518207975,
+      "se_lift": 0.07392029245421942,
+      "safe_lift": 0.0929771808406789,
+      "optimistic_lift": 0.2822131295234806,
+      "pilots": [
+        {
+          "channel": "sms",
+          "n_customers": 80,
+          "cost": 320.0,
+          "observed_lift_ratio": 0.06266940810115376
+        },
+        {
+          "channel": "sms",
+          "n_customers": 200,
+          "cost": 800.0,
+          "observed_lift_ratio": 0.1456438279752311
+        }
+      ]
+    },
+    {
+      "cell_id": "tariff_13|MID",
+      "current_tariff": "tariff_13",
+      "arpu_segment": "MID",
+      "audience_size": 1022,
+      "audience_arpu": 5000571.23814045,
+      "served_size": 1022,
+      "served_arpu": 5000571.23814045,
+      "candidate_id": "tariff_13|MID|tariff_8",
+      "target_tariff": "tariff_8",
+      "history_count": 234,
+      "prior_lift": 0.22175141768101575,
+      "positive_rate": 0.6709401709401709,
+      "raw_mean_lift": 0.47100749598140407,
+      "raw_median_lift": 0.4054727663629685,
+      "robust_mean_lift": 0.26913419923678833,
+      "source": "history",
+      "prior_score": 926439.2108067729,
+      "status": "measured",
+      "pilot_count": 1,
+      "pilot_n": 80,
+      "pilot_cost": 320.0,
+      "mean_lift": 0.36018585611991766,
+      "se_lift": 0.13829220414691007,
+      "safe_lift": 0.18317183481187277,
+      "optimistic_lift": 0.5371998774279625,
+      "pilots": [
+        {
+          "channel": "sms",
+          "n_customers": 80,
+          "cost": 320.0,
+          "observed_lift_ratio": 0.23412080647794647
+        }
+      ]
+    },
+    {
+      "cell_id": "tariff_8|MID",
+      "current_tariff": "tariff_8",
+      "arpu_segment": "MID",
+      "audience_size": 1720,
+      "audience_arpu": 8024489.894817886,
+      "served_size": 1720,
+      "served_arpu": 8024489.894817886,
+      "candidate_id": "tariff_8|MID|tariff_10",
+      "target_tariff": "tariff_10",
+      "history_count": 182,
+      "prior_lift": 0.11832592568908527,
+      "positive_rate": 0.6153846153846154,
+      "raw_mean_lift": 0.49141823644025345,
+      "raw_median_lift": 0.31764843041827323,
+      "robust_mean_lift": 0.15083304813114168,
+      "source": "history",
+      "prior_score": 766908.0421049144,
+      "status": "measured",
+      "pilot_count": 1,
+      "pilot_n": 80,
+      "pilot_cost": 320.0,
+      "mean_lift": -0.17308525538683756,
+      "se_lift": 0.13829220414691007,
+      "safe_lift": -0.35009927669488244,
+      "optimistic_lift": 0.003928765921207333,
+      "pilots": [
+        {
+          "channel": "sms",
+          "n_customers": 80,
+          "cost": 320.0,
+          "observed_lift_ratio": -0.11250541600144441
+        }
+      ]
+    },
+    {
+      "cell_id": "tariff_10|HIGH",
+      "current_tariff": "tariff_10",
+      "arpu_segment": "HIGH",
+      "audience_size": 2950,
+      "audience_arpu": 24190636.44091341,
+      "served_size": 2950,
+      "served_arpu": 24190636.44091341,
+      "candidate_id": "tariff_10|HIGH|tariff_20",
+      "target_tariff": "tariff_20",
+      "history_count": 0,
+      "prior_lift": 0.0,
+      "positive_rate": 0.5,
+      "source": "catalog",
+      "raw_mean_lift": null,
+      "raw_median_lift": null,
+      "robust_mean_lift": null,
+      "catalog_plausibility": 0.83805647338876,
+      "catalog_price_similarity": 0.8744937113621843,
+      "catalog_package_retention": 0.9166666666666667,
+      "prior_score": 506827.986617538,
+      "status": "measured",
+      "pilot_count": 1,
+      "pilot_n": 80,
+      "pilot_cost": 320.0,
+      "mean_lift": -0.18593607513569452,
+      "se_lift": 0.13829220414691007,
+      "safe_lift": -0.36295009644373943,
+      "optimistic_lift": -0.008922053827649629,
+      "pilots": [
+        {
+          "channel": "sms",
+          "n_customers": 80,
+          "cost": 320.0,
+          "observed_lift_ratio": -0.12085844883820145
+        }
+      ]
+    },
+    {
+      "cell_id": "tariff_11|HIGH",
+      "current_tariff": "tariff_11",
+      "arpu_segment": "HIGH",
+      "audience_size": 1633,
+      "audience_arpu": 14175708.002870273,
+      "served_size": 1633,
+      "served_arpu": 14175708.002870273,
+      "candidate_id": "tariff_11|HIGH|tariff_12",
+      "target_tariff": "tariff_12",
+      "history_count": 107,
+      "prior_lift": 0.042033786691016053,
+      "positive_rate": 0.5794392523364486,
+      "raw_mean_lift": 0.07746405220237243,
+      "raw_median_lift": 0.12055639398036457,
+      "robust_mean_lift": 0.06167574308868711,
+      "source": "history",
+      "prior_score": 470561.2990624557,
+      "status": "measured",
+      "pilot_count": 2,
+      "pilot_n": 280,
+      "pilot_cost": 1120.0,
+      "mean_lift": -0.05572330359467475,
+      "se_lift": 0.07392029245421942,
+      "safe_lift": -0.1503412779360756,
+      "optimistic_lift": 0.03889467074672611,
+      "pilots": [
+        {
+          "channel": "sms",
+          "n_customers": 80,
+          "cost": 320.0,
+          "observed_lift_ratio": -0.017586733931403517
+        },
+        {
+          "channel": "sms",
+          "n_customers": 200,
+          "cost": 800.0,
+          "observed_lift_ratio": -0.04367351269859262
+        }
+      ]
+    },
+    {
+      "cell_id": "tariff_10|MID",
+      "current_tariff": "tariff_10",
+      "arpu_segment": "MID",
+      "audience_size": 645,
+      "audience_arpu": 3003700.1472749137,
+      "served_size": 645,
+      "served_arpu": 3003700.1472749137,
+      "candidate_id": "tariff_10|MID|tariff_11",
+      "target_tariff": "tariff_11",
+      "history_count": 86,
+      "prior_lift": 0.152624903778596,
+      "positive_rate": 0.6976744186046512,
+      "raw_mean_lift": 0.4159796411897228,
+      "raw_median_lift": 0.4539311552552814,
+      "robust_mean_lift": 0.2413603129521983,
+      "source": "history",
+      "prior_score": 389140.45994074363,
+      "status": "measured",
+      "pilot_count": 1,
+      "pilot_n": 80,
+      "pilot_cost": 320.0,
+      "mean_lift": 0.09633977738362395,
+      "se_lift": 0.13829220414691007,
+      "safe_lift": -0.08067424392442094,
+      "optimistic_lift": 0.27335379869166887,
+      "pilots": [
+        {
+          "channel": "sms",
+          "n_customers": 80,
+          "cost": 320.0,
+          "observed_lift_ratio": 0.06262085529935557
+        }
+      ]
+    },
+    {
+      "cell_id": "tariff_8|HIGH",
+      "current_tariff": "tariff_8",
+      "arpu_segment": "HIGH",
+      "audience_size": 4726,
+      "audience_arpu": 36988107.97242949,
+      "served_size": 4726,
+      "served_arpu": 36988107.97242949,
+      "candidate_id": "tariff_8|HIGH|tariff_10",
+      "target_tariff": "tariff_10",
+      "history_count": 283,
+      "prior_lift": 0.012038701720536012,
+      "positive_rate": 0.5017667844522968,
+      "raw_mean_lift": 0.020361219212799576,
+      "raw_median_lift": 0.001380260960840823,
+      "robust_mean_lift": 0.01416568082310421,
+      "source": "history",
+      "prior_score": 334359.96397879854,
+      "status": "measured",
+      "pilot_count": 4,
+      "pilot_n": 680,
+      "pilot_cost": 2720.0,
+      "mean_lift": 0.06038961317257617,
+      "se_lift": 0.047433834694868136,
+      "safe_lift": -0.00032569523685504337,
+      "optimistic_lift": 0.12110492158200739,
+      "pilots": [
+        {
+          "channel": "sms",
+          "n_customers": 80,
+          "cost": 320.0,
+          "observed_lift_ratio": 0.08322921034684899
+        },
+        {
+          "channel": "sms",
+          "n_customers": 200,
+          "cost": 800.0,
+          "observed_lift_ratio": 0.025144178445282116
+        },
+        {
+          "channel": "sms",
+          "n_customers": 200,
+          "cost": 800.0,
+          "observed_lift_ratio": 0.0013418283765680222
+        },
+        {
+          "channel": "sms",
+          "n_customers": 200,
+          "cost": 800.0,
+          "observed_lift_ratio": 0.0736833541508036
+        }
+      ]
+    },
+    {
+      "cell_id": "tariff_8|LOW",
+      "current_tariff": "tariff_8",
+      "arpu_segment": "LOW",
+      "audience_size": 457,
+      "audience_arpu": 1312258.1647560755,
+      "served_size": 457,
+      "served_arpu": 1312258.1647560755,
+      "candidate_id": "tariff_8|LOW|tariff_9",
+      "target_tariff": "tariff_9",
+      "history_count": 39,
+      "prior_lift": 0.2539342450461481,
+      "positive_rate": 0.7692307692307693,
+      "raw_mean_lift": 1447.7646186861389,
+      "raw_median_lift": 6.420358901063998,
+      "robust_mean_lift": 0.5794909694642867,
+      "source": "history",
+      "prior_score": 294777.9840991727,
+      "status": "measured",
+      "pilot_count": 1,
+      "pilot_n": 80,
+      "pilot_cost": 320.0,
+      "mean_lift": 0.5905935378028925,
+      "se_lift": 0.13829220414691007,
+      "safe_lift": 0.4135795164948476,
+      "optimistic_lift": 0.7676075591109374,
+      "pilots": [
+        {
+          "channel": "sms",
+          "n_customers": 80,
+          "cost": 320.0,
+          "observed_lift_ratio": 0.3838857995718801
+        }
+      ]
+    },
+    {
+      "cell_id": "tariff_12|MID",
+      "current_tariff": "tariff_12",
+      "arpu_segment": "MID",
+      "audience_size": 342,
+      "audience_arpu": 1503059.9061305257,
+      "served_size": 342,
+      "served_arpu": 1503059.9061305257,
+      "candidate_id": "tariff_12|MID|tariff_8",
+      "target_tariff": "tariff_8",
+      "history_count": 78,
+      "prior_lift": 0.19010613910869006,
+      "positive_rate": 0.7435897435897436,
+      "raw_mean_lift": 0.5530612272222685,
+      "raw_median_lift": 0.3353335971727431,
+      "robust_mean_lift": 0.3119690487937478,
+      "source": "history",
+      "prior_score": 249107.46488514123,
+      "status": "measured",
+      "pilot_count": 1,
+      "pilot_n": 80,
+      "pilot_cost": 320.0,
+      "mean_lift": 0.4334465089876253,
+      "se_lift": 0.13829220414691007,
+      "safe_lift": 0.25643248767958043,
+      "optimistic_lift": 0.6104605302956703,
+      "pilots": [
+        {
+          "channel": "sms",
+          "n_customers": 80,
+          "cost": 320.0,
+          "observed_lift_ratio": 0.2817402308419565
+        }
+      ]
+    },
+    {
+      "cell_id": "tariff_14|MID",
+      "current_tariff": "tariff_14",
+      "arpu_segment": "MID",
+      "audience_size": 755,
+      "audience_arpu": 3686020.025355763,
+      "served_size": 755,
+      "served_arpu": 3686020.025355763,
+      "candidate_id": "tariff_14|MID|tariff_9",
+      "target_tariff": "tariff_9",
+      "history_count": 7,
+      "prior_lift": 0.05867032245587455,
+      "positive_rate": 0.7142857142857143,
+      "raw_mean_lift": 1.0191270294621138,
+      "raw_median_lift": 0.7287748298374775,
+      "robust_mean_lift": 0.47774405428354993,
+      "source": "history",
+      "prior_score": 185365.70011408586,
+      "status": "measured",
+      "pilot_count": 1,
+      "pilot_n": 80,
+      "pilot_cost": 320.0,
+      "mean_lift": 0.11789189393953844,
+      "se_lift": 0.13829220414691007,
+      "safe_lift": -0.059122127368506444,
+      "optimistic_lift": 0.29490591524758336,
+      "pilots": [
+        {
+          "channel": "sms",
+          "n_customers": 80,
+          "cost": 320.0,
+          "observed_lift_ratio": 0.0766297310607
+        }
+      ]
+    },
+    {
+      "cell_id": "tariff_14|HIGH",
+      "current_tariff": "tariff_14",
+      "arpu_segment": "HIGH",
+      "audience_size": 963,
+      "audience_arpu": 7609558.492534343,
+      "served_size": 963,
+      "served_arpu": 7609558.492534343,
+      "candidate_id": "tariff_14|HIGH|tariff_19",
+      "target_tariff": "tariff_19",
+      "history_count": 0,
+      "prior_lift": 0.0,
+      "positive_rate": 0.5,
+      "source": "catalog",
+      "raw_mean_lift": null,
+      "raw_median_lift": null,
+      "robust_mean_lift": null,
+      "catalog_plausibility": 0.9322125374423185,
+      "catalog_price_similarity": 0.9322125374423185,
+      "catalog_package_retention": 1.0,
+      "prior_score": 177343.1457785296,
+      "status": "untested",
+      "pilot_count": 0,
+      "pilot_n": 0,
+      "pilot_cost": 0.0,
+      "mean_lift": null,
+      "se_lift": null,
+      "safe_lift": null,
+      "optimistic_lift": null,
+      "pilots": []
+    },
+    {
+      "cell_id": "tariff_11|MID",
+      "current_tariff": "tariff_11",
+      "arpu_segment": "MID",
+      "audience_size": 464,
+      "audience_arpu": 2059004.3405840572,
+      "served_size": 464,
+      "served_arpu": 2059004.3405840572,
+      "candidate_id": "tariff_11|MID|tariff_8",
+      "target_tariff": "tariff_8",
+      "history_count": 103,
+      "prior_lift": 0.09263165561502247,
+      "positive_rate": 0.6699029126213593,
+      "raw_mean_lift": 0.25271704048786914,
+      "raw_median_lift": 0.22388153241474393,
+      "robust_mean_lift": 0.13759847872911105,
+      "source": "history",
+      "prior_score": 159249.4404355963,
+      "status": "untested",
+      "pilot_count": 0,
+      "pilot_n": 0,
+      "pilot_cost": 0.0,
+      "mean_lift": null,
+      "se_lift": null,
+      "safe_lift": null,
+      "optimistic_lift": null,
+      "pilots": []
+    },
+    {
+      "cell_id": "tariff_4|LOW",
+      "current_tariff": "tariff_4",
+      "arpu_segment": "LOW",
+      "audience_size": 299,
+      "audience_arpu": 857563.179026669,
+      "served_size": 299,
+      "served_arpu": 857563.179026669,
+      "candidate_id": "tariff_4|LOW|tariff_9",
+      "target_tariff": "tariff_9",
+      "history_count": 31,
+      "prior_lift": 0.20086754986264427,
+      "positive_rate": 0.7741935483870968,
+      "raw_mean_lift": 1004.2304661916843,
+      "raw_median_lift": 8.349132947976878,
+      "robust_mean_lift": 0.5248474689959415,
+      "source": "history",
+      "prior_score": 152808.28716601443,
+      "status": "untested",
+      "pilot_count": 0,
+      "pilot_n": 0,
+      "pilot_cost": 0.0,
+      "mean_lift": null,
+      "se_lift": null,
+      "safe_lift": null,
+      "optimistic_lift": null,
+      "pilots": []
+    },
+    {
+      "cell_id": "tariff_15|MID",
+      "current_tariff": "tariff_15",
+      "arpu_segment": "MID",
+      "audience_size": 80,
+      "audience_arpu": 402182.2596318361,
+      "served_size": 80,
+      "served_arpu": 402182.2596318361,
+      "candidate_id": "tariff_15|MID|tariff_8",
+      "target_tariff": "tariff_8",
+      "history_count": 430,
+      "prior_lift": 0.33161605831138036,
+      "positive_rate": 0.7581395348837209,
+      "raw_mean_lift": 0.5014149599355134,
+      "raw_median_lift": 0.46132938184519934,
+      "robust_mean_lift": 0.3701760650917734,
+      "source": "history",
+      "prior_score": 117241.61897718195,
+      "status": "untested",
+      "pilot_count": 0,
+      "pilot_n": 0,
+      "pilot_cost": 0.0,
+      "mean_lift": null,
+      "se_lift": null,
+      "safe_lift": null,
+      "optimistic_lift": null,
+      "pilots": []
+    },
+    {
+      "cell_id": "tariff_10|LOW",
+      "current_tariff": "tariff_10",
+      "arpu_segment": "LOW",
+      "audience_size": 370,
+      "audience_arpu": 972233.5682257855,
+      "served_size": 370,
+      "served_arpu": 972233.5682257855,
+      "candidate_id": "tariff_10|LOW|tariff_9",
+      "target_tariff": "tariff_9",
+      "history_count": 10,
+      "prior_lift": 0.10484387177505085,
+      "positive_rate": 0.8,
+      "raw_mean_lift": 13.172624830048788,
+      "raw_median_lift": 5.253670079243775,
+      "robust_mean_lift": 0.6290632306503051,
+      "source": "history",
+      "prior_score": 91739.45840621798,
+      "status": "untested",
+      "pilot_count": 0,
+      "pilot_n": 0,
+      "pilot_cost": 0.0,
+      "mean_lift": null,
+      "se_lift": null,
+      "safe_lift": null,
+      "optimistic_lift": null,
+      "pilots": []
+    },
+    {
+      "cell_id": "tariff_12|HIGH",
+      "current_tariff": "tariff_12",
+      "arpu_segment": "HIGH",
+      "audience_size": 567,
+      "audience_arpu": 5244797.051878841,
+      "served_size": 567,
+      "served_arpu": 5244797.051878841,
+      "candidate_id": "tariff_12|HIGH|tariff_11",
+      "target_tariff": "tariff_11",
+      "history_count": 82,
+      "prior_lift": 0.020605503372818138,
+      "positive_rate": 0.524390243902439,
+      "raw_mean_lift": 0.051374488617554934,
+      "raw_median_lift": 0.024922924167821197,
+      "robust_mean_lift": 0.03316983469770725,
+      "source": "history",
+      "prior_score": 82371.7098645092,
+      "status": "untested",
+      "pilot_count": 0,
+      "pilot_n": 0,
+      "pilot_cost": 0.0,
+      "mean_lift": null,
+      "se_lift": null,
+      "safe_lift": null,
+      "optimistic_lift": null,
+      "pilots": []
+    },
+    {
+      "cell_id": "tariff_13|LOW",
+      "current_tariff": "tariff_13",
+      "arpu_segment": "LOW",
+      "audience_size": 251,
+      "audience_arpu": 756421.0833960543,
+      "served_size": 251,
+      "served_arpu": 756421.0833960543,
+      "candidate_id": "tariff_13|LOW|tariff_8",
+      "target_tariff": "tariff_8",
+      "history_count": 21,
+      "prior_lift": 0.12492787616656834,
+      "positive_rate": 0.7142857142857143,
+      "raw_mean_lift": 11.010377423162266,
+      "raw_median_lift": 1.3893597835888185,
+      "robust_mean_lift": 0.42237520037268345,
+      "source": "history",
+      "prior_score": 80998.35380252892,
+      "status": "untested",
+      "pilot_count": 0,
+      "pilot_n": 0,
+      "pilot_cost": 0.0,
+      "mean_lift": null,
+      "se_lift": null,
+      "safe_lift": null,
+      "optimistic_lift": null,
+      "pilots": []
+    },
+    {
+      "cell_id": "tariff_11|LOW",
+      "current_tariff": "tariff_11",
+      "arpu_segment": "LOW",
+      "audience_size": 387,
+      "audience_arpu": 1067637.79615389,
+      "served_size": 387,
+      "served_arpu": 1067637.79615389,
+      "candidate_id": "tariff_11|LOW|tariff_9",
+      "target_tariff": "tariff_9",
+      "history_count": 5,
+      "prior_lift": 0.06106004696410601,
+      "positive_rate": 0.8,
+      "raw_mean_lift": 3072.4288643895475,
+      "raw_median_lift": 5.384595807690528,
+      "robust_mean_lift": 0.6716605166051661,
+      "source": "history",
+      "prior_score": 58671.01257643005,
+      "status": "untested",
+      "pilot_count": 0,
+      "pilot_n": 0,
+      "pilot_cost": 0.0,
+      "mean_lift": null,
+      "se_lift": null,
+      "safe_lift": null,
+      "optimistic_lift": null,
+      "pilots": []
+    },
+    {
+      "cell_id": "tariff_1|LOW",
+      "current_tariff": "tariff_1",
+      "arpu_segment": "LOW",
+      "audience_size": 40,
+      "audience_arpu": 132219.59089506813,
+      "served_size": 40,
+      "served_arpu": 132219.59089506813,
+      "candidate_id": "tariff_1|LOW|tariff_9",
+      "target_tariff": "tariff_9",
+      "history_count": 107,
+      "prior_lift": 0.4728243586279456,
+      "positive_rate": 0.8504672897196262,
+      "raw_mean_lift": 342.3159939259931,
+      "raw_median_lift": 6.594248792956546,
+      "robust_mean_lift": 0.6937703206036211,
+      "source": "history",
+      "prior_score": 57842.50171063536,
+      "status": "untested",
+      "pilot_count": 0,
+      "pilot_n": 0,
+      "pilot_cost": 0.0,
+      "mean_lift": null,
+      "se_lift": null,
+      "safe_lift": null,
+      "optimistic_lift": null,
+      "pilots": []
+    },
+    {
+      "cell_id": "tariff_3|MID",
+      "current_tariff": "tariff_3",
+      "arpu_segment": "MID",
+      "audience_size": 87,
+      "audience_arpu": 353907.75615506346,
+      "served_size": 87,
+      "served_arpu": 353907.75615506346,
+      "candidate_id": "tariff_3|MID|tariff_8",
+      "target_tariff": "tariff_8",
+      "history_count": 241,
+      "prior_lift": 0.15535843210592992,
+      "positive_rate": 0.6099585062240664,
+      "raw_mean_lift": 0.7360542784293365,
+      "raw_median_lift": 0.4526683697259297,
+      "robust_mean_lift": 0.18759047196193196,
+      "source": "history",
+      "prior_score": 44259.81533874447,
+      "status": "untested",
+      "pilot_count": 0,
+      "pilot_n": 0,
+      "pilot_cost": 0.0,
+      "mean_lift": null,
+      "se_lift": null,
+      "safe_lift": null,
+      "optimistic_lift": null,
+      "pilots": []
+    },
+    {
+      "cell_id": "tariff_17|MID",
+      "current_tariff": "tariff_17",
+      "arpu_segment": "MID",
+      "audience_size": 32,
+      "audience_arpu": 166536.6493991783,
+      "served_size": 32,
+      "served_arpu": 166536.6493991783,
+      "candidate_id": "tariff_17|MID|tariff_8",
+      "target_tariff": "tariff_8",
+      "history_count": 127,
+      "prior_lift": 0.24436802262151555,
+      "positive_rate": 0.8267716535433071,
+      "raw_mean_lift": 0.5520690839752994,
+      "raw_median_lift": 0.3364115929049932,
+      "robust_mean_lift": 0.340575905543372,
+      "source": "history",
+      "prior_score": 37171.36124481903,
+      "status": "untested",
+      "pilot_count": 0,
+      "pilot_n": 0,
+      "pilot_cost": 0.0,
+      "mean_lift": null,
+      "se_lift": null,
+      "safe_lift": null,
+      "optimistic_lift": null,
+      "pilots": []
+    },
+    {
+      "cell_id": "tariff_1|MID",
+      "current_tariff": "tariff_1",
+      "arpu_segment": "MID",
+      "audience_size": 32,
+      "audience_arpu": 165169.06544740367,
+      "served_size": 32,
+      "served_arpu": 165169.06544740367,
+      "candidate_id": "tariff_1|MID|tariff_4",
+      "target_tariff": "tariff_4",
+      "history_count": 51,
+      "prior_lift": 0.2515500658448503,
+      "positive_rate": 0.7450980392156863,
+      "raw_mean_lift": 1.1378058464167915,
+      "raw_median_lift": 0.6657704191746932,
+      "robust_mean_lift": 0.49816777745744856,
+      "source": "history",
+      "prior_score": 36252.919085348854,
+      "status": "untested",
+      "pilot_count": 0,
+      "pilot_n": 0,
+      "pilot_cost": 0.0,
+      "mean_lift": null,
+      "se_lift": null,
+      "safe_lift": null,
+      "optimistic_lift": null,
+      "pilots": []
+    },
+    {
+      "cell_id": "tariff_13|HIGH",
+      "current_tariff": "tariff_13",
+      "arpu_segment": "HIGH",
+      "audience_size": 516,
+      "audience_arpu": 3712751.1737852106,
+      "served_size": 516,
+      "served_arpu": 3712751.1737852106,
+      "candidate_id": "tariff_13|HIGH|tariff_10",
+      "target_tariff": "tariff_10",
+      "history_count": 9,
+      "prior_lift": 0.01282888634015844,
+      "positive_rate": 0.4444444444444444,
+      "raw_mean_lift": 0.09381208708571899,
+      "raw_median_lift": -0.024250589424048518,
+      "robust_mean_lift": 0.08410047711881644,
+      "source": "history",
+      "prior_score": 34399.77870173022,
+      "status": "untested",
+      "pilot_count": 0,
+      "pilot_n": 0,
+      "pilot_cost": 0.0,
+      "mean_lift": null,
+      "se_lift": null,
+      "safe_lift": null,
+      "optimistic_lift": null,
+      "pilots": []
+    },
+    {
+      "cell_id": "tariff_14|LOW",
+      "current_tariff": "tariff_14",
+      "arpu_segment": "LOW",
+      "audience_size": 231,
+      "audience_arpu": 721988.3024613425,
+      "served_size": 231,
+      "served_arpu": 721988.3024613425,
+      "candidate_id": "tariff_14|LOW|tariff_4",
+      "target_tariff": "tariff_4",
+      "history_count": 7,
+      "prior_lift": 0.05263157894736842,
+      "positive_rate": 0.7142857142857143,
+      "raw_mean_lift": 6.722074852089669,
+      "raw_median_lift": 2.5493610223642174,
+      "robust_mean_lift": 0.42857142857142855,
+      "source": "history",
+      "prior_score": 32570.900862917708,
+      "status": "untested",
+      "pilot_count": 0,
+      "pilot_n": 0,
+      "pilot_cost": 0.0,
+      "mean_lift": null,
+      "se_lift": null,
+      "safe_lift": null,
+      "optimistic_lift": null,
+      "pilots": []
+    },
+    {
+      "cell_id": "tariff_9|LOW",
+      "current_tariff": "tariff_9",
+      "arpu_segment": "LOW",
+      "audience_size": 51,
+      "audience_arpu": 157453.03508879975,
+      "served_size": 51,
+      "served_arpu": 157453.03508879975,
+      "candidate_id": "tariff_9|LOW|tariff_13",
+      "target_tariff": "tariff_13",
+      "history_count": 23,
+      "prior_lift": 0.19610266904078832,
+      "positive_rate": 0.8260869565217391,
+      "raw_mean_lift": 5.9008495955044005,
+      "raw_median_lift": 1.8713088943021803,
+      "robust_mean_lift": 0.6224128191294587,
+      "source": "history",
+      "prior_score": 28192.007348661617,
+      "status": "untested",
+      "pilot_count": 0,
+      "pilot_n": 0,
+      "pilot_cost": 0.0,
+      "mean_lift": null,
+      "se_lift": null,
+      "safe_lift": null,
+      "optimistic_lift": null,
+      "pilots": []
+    },
+    {
+      "cell_id": "tariff_12|LOW",
+      "current_tariff": "tariff_12",
+      "arpu_segment": "LOW",
+      "audience_size": 363,
+      "audience_arpu": 1017502.0543512055,
+      "served_size": 363,
+      "served_arpu": 1017502.0543512055,
+      "candidate_id": "tariff_12|LOW|tariff_11",
+      "target_tariff": "tariff_11",
+      "history_count": 7,
+      "prior_lift": 0.03078206256702887,
+      "positive_rate": 0.5714285714285714,
+      "raw_mean_lift": 2.8958111289191404,
+      "raw_median_lift": 3.687763002861471,
+      "robust_mean_lift": 0.25065393804580655,
+      "source": "history",
+      "prior_score": 24609.209349307956,
+      "status": "untested",
+      "pilot_count": 0,
+      "pilot_n": 0,
+      "pilot_cost": 0.0,
+      "mean_lift": null,
+      "se_lift": null,
+      "safe_lift": null,
+      "optimistic_lift": null,
+      "pilots": []
+    },
+    {
+      "cell_id": "tariff_4|HIGH",
+      "current_tariff": "tariff_4",
+      "arpu_segment": "HIGH",
+      "audience_size": 2108,
+      "audience_arpu": 15794121.77170824,
+      "served_size": 2108,
+      "served_arpu": 15794121.77170824,
+      "candidate_id": "tariff_4|HIGH|tariff_12",
+      "target_tariff": "tariff_12",
+      "history_count": 19,
+      "prior_lift": 0.0017280267903008017,
+      "positive_rate": 0.631578947368421,
+      "raw_mean_lift": 0.006275465712145015,
+      "raw_median_lift": 0.05672080481147407,
+      "robust_mean_lift": 0.006275465712145017,
+      "source": "history",
+      "prior_score": 22265.06926511408,
+      "status": "untested",
+      "pilot_count": 0,
+      "pilot_n": 0,
+      "pilot_cost": 0.0,
+      "mean_lift": null,
+      "se_lift": null,
+      "safe_lift": null,
+      "optimistic_lift": null,
+      "pilots": []
+    },
+    {
+      "cell_id": "tariff_3|LOW",
+      "current_tariff": "tariff_3",
+      "arpu_segment": "LOW",
+      "audience_size": 56,
+      "audience_arpu": 160544.44723558158,
+      "served_size": 56,
+      "served_arpu": 160544.44723558158,
+      "candidate_id": "tariff_3|LOW|tariff_9",
+      "target_tariff": "tariff_9",
+      "history_count": 56,
+      "prior_lift": 0.1558367468205872,
+      "positive_rate": 0.6428571428571429,
+      "raw_mean_lift": 1052.0944089185366,
+      "raw_median_lift": 4.1556392571924805,
+      "robust_mean_lift": 0.29497669933896864,
+      "source": "history",
+      "prior_score": 20551.095024212726,
+      "status": "untested",
+      "pilot_count": 0,
+      "pilot_n": 0,
+      "pilot_cost": 0.0,
+      "mean_lift": null,
+      "se_lift": null,
+      "safe_lift": null,
+      "optimistic_lift": null,
+      "pilots": []
+    },
+    {
+      "cell_id": "tariff_5|HIGH",
+      "current_tariff": "tariff_5",
+      "arpu_segment": "HIGH",
+      "audience_size": 109,
+      "audience_arpu": 740120.0616143207,
+      "served_size": 109,
+      "served_arpu": 740120.0616143207,
+      "candidate_id": "tariff_5|HIGH|tariff_6",
+      "target_tariff": "tariff_6",
+      "history_count": 0,
+      "prior_lift": 0.0,
+      "positive_rate": 0.5,
+      "source": "catalog",
+      "raw_mean_lift": null,
+      "raw_median_lift": null,
+      "robust_mean_lift": null,
+      "catalog_plausibility": 1.0,
+      "catalog_price_similarity": 1.0,
+      "catalog_package_retention": 1.0,
+      "prior_score": 18503.00154035802,
+      "status": "untested",
+      "pilot_count": 0,
+      "pilot_n": 0,
+      "pilot_cost": 0.0,
+      "mean_lift": null,
+      "se_lift": null,
+      "safe_lift": null,
+      "optimistic_lift": null,
+      "pilots": []
+    },
+    {
+      "cell_id": "tariff_5|LOW",
+      "current_tariff": "tariff_5",
+      "arpu_segment": "LOW",
+      "audience_size": 44,
+      "audience_arpu": 132153.6839166647,
+      "served_size": 44,
+      "served_arpu": 132153.6839166647,
+      "candidate_id": "tariff_5|LOW|tariff_13",
+      "target_tariff": "tariff_13",
+      "history_count": 41,
+      "prior_lift": 0.1591926025888616,
+      "positive_rate": 0.7073170731707317,
+      "raw_mean_lift": 1850.0084871480808,
+      "raw_median_lift": 1.6567850250067444,
+      "robust_mean_lift": 0.3533299228191806,
+      "source": "history",
+      "prior_score": 17959.173437902125,
+      "status": "untested",
+      "pilot_count": 0,
+      "pilot_n": 0,
+      "pilot_cost": 0.0,
+      "mean_lift": null,
+      "se_lift": null,
+      "safe_lift": null,
+      "optimistic_lift": null,
+      "pilots": []
+    },
+    {
+      "cell_id": "tariff_6|LOW",
+      "current_tariff": "tariff_6",
+      "arpu_segment": "LOW",
+      "audience_size": 30,
+      "audience_arpu": 97039.60915588148,
+      "served_size": 30,
+      "served_arpu": 97039.60915588148,
+      "candidate_id": "tariff_6|LOW|tariff_13",
+      "target_tariff": "tariff_13",
+      "history_count": 42,
+      "prior_lift": 0.17951078925132125,
+      "positive_rate": 0.6904761904761905,
+      "raw_mean_lift": 78.88789547428671,
+      "raw_median_lift": 2.464912053276078,
+      "robust_mean_lift": 0.3932141097886085,
+      "source": "history",
+      "prior_score": 14723.75755717921,
+      "status": "untested",
+      "pilot_count": 0,
+      "pilot_n": 0,
+      "pilot_cost": 0.0,
+      "mean_lift": null,
+      "se_lift": null,
+      "safe_lift": null,
+      "optimistic_lift": null,
+      "pilots": []
+    },
+    {
+      "cell_id": "tariff_19|MID",
+      "current_tariff": "tariff_19",
+      "arpu_segment": "MID",
+      "audience_size": 26,
+      "audience_arpu": 119249.02399881552,
+      "served_size": 26,
+      "served_arpu": 119249.02399881552,
+      "candidate_id": "tariff_19|MID|tariff_8",
+      "target_tariff": "tariff_8",
+      "history_count": 21,
+      "prior_lift": 0.1315705895939997,
+      "positive_rate": 0.8571428571428571,
+      "raw_mean_lift": 0.9110956096137053,
+      "raw_median_lift": 0.6888541097967849,
+      "robust_mean_lift": 0.4448338981511418,
+      "source": "history",
+      "prior_score": 14568.974082030809,
+      "status": "untested",
+      "pilot_count": 0,
+      "pilot_n": 0,
+      "pilot_cost": 0.0,
+      "mean_lift": null,
+      "se_lift": null,
+      "safe_lift": null,
+      "optimistic_lift": null,
+      "pilots": []
+    },
+    {
+      "cell_id": "tariff_9|MID",
+      "current_tariff": "tariff_9",
+      "arpu_segment": "MID",
+      "audience_size": 67,
+      "audience_arpu": 281271.3997881733,
+      "served_size": 67,
+      "served_arpu": 281271.3997881733,
+      "candidate_id": "tariff_9|MID|tariff_8",
+      "target_tariff": "tariff_8",
+      "history_count": 71,
+      "prior_lift": 0.061908121778533276,
+      "positive_rate": 0.5774647887323944,
+      "raw_mean_lift": 0.5322406382418443,
+      "raw_median_lift": 0.14323888086734762,
+      "robust_mean_lift": 0.10550539063665529,
+      "source": "history",
+      "prior_score": 13734.184619305159,
+      "status": "untested",
+      "pilot_count": 0,
+      "pilot_n": 0,
+      "pilot_cost": 0.0,
+      "mean_lift": null,
+      "se_lift": null,
+      "safe_lift": null,
+      "optimistic_lift": null,
+      "pilots": []
+    },
+    {
+      "cell_id": "tariff_18|HIGH",
+      "current_tariff": "tariff_18",
+      "arpu_segment": "HIGH",
+      "audience_size": 35,
+      "audience_arpu": 286137.26082276856,
+      "served_size": 35,
+      "served_arpu": 286137.26082276856,
+      "candidate_id": "tariff_18|HIGH|tariff_11",
+      "target_tariff": "tariff_11",
+      "history_count": 22,
+      "prior_lift": 0.05651783704511912,
+      "positive_rate": 0.6363636363636364,
+      "raw_mean_lift": 0.2303611798139769,
+      "raw_median_lift": 0.14291085827084996,
+      "robust_mean_lift": 0.1849674666931171,
+      "source": "history",
+      "prior_score": 13231.5210652238,
+      "status": "untested",
+      "pilot_count": 0,
+      "pilot_n": 0,
+      "pilot_cost": 0.0,
+      "mean_lift": null,
+      "se_lift": null,
+      "safe_lift": null,
+      "optimistic_lift": null,
+      "pilots": []
+    },
+    {
+      "cell_id": "tariff_7|HIGH",
+      "current_tariff": "tariff_7",
+      "arpu_segment": "HIGH",
+      "audience_size": 72,
+      "audience_arpu": 519437.624644454,
+      "served_size": 72,
+      "served_arpu": 519437.624644454,
+      "candidate_id": "tariff_7|HIGH|tariff_5",
+      "target_tariff": "tariff_5",
+      "history_count": 0,
+      "prior_lift": 0.0,
+      "positive_rate": 0.5,
+      "source": "catalog",
+      "raw_mean_lift": null,
+      "raw_median_lift": null,
+      "robust_mean_lift": null,
+      "catalog_plausibility": 1.0,
+      "catalog_price_similarity": 1.0,
+      "catalog_package_retention": 1.0,
+      "prior_score": 12985.940616111351,
+      "status": "untested",
+      "pilot_count": 0,
+      "pilot_n": 0,
+      "pilot_cost": 0.0,
+      "mean_lift": null,
+      "se_lift": null,
+      "safe_lift": null,
+      "optimistic_lift": null,
+      "pilots": []
+    },
+    {
+      "cell_id": "tariff_7|LOW",
+      "current_tariff": "tariff_7",
+      "arpu_segment": "LOW",
+      "audience_size": 29,
+      "audience_arpu": 93486.11254736516,
+      "served_size": 29,
+      "served_arpu": 93486.11254736516,
+      "candidate_id": "tariff_7|LOW|tariff_9",
+      "target_tariff": "tariff_9",
+      "history_count": 29,
+      "prior_lift": 0.15581624606671882,
+      "positive_rate": 0.6896551724137931,
+      "raw_mean_lift": 1256.4480247623883,
+      "raw_median_lift": 3.6673212181798713,
+      "robust_mean_lift": 0.42446494618175123,
+      "source": "history",
+      "prior_score": 12306.312081182066,
+      "status": "untested",
+      "pilot_count": 0,
+      "pilot_n": 0,
+      "pilot_cost": 0.0,
+      "mean_lift": null,
+      "se_lift": null,
+      "safe_lift": null,
+      "optimistic_lift": null,
+      "pilots": []
+    },
+    {
+      "cell_id": "tariff_5|MID",
+      "current_tariff": "tariff_5",
+      "arpu_segment": "MID",
+      "audience_size": 91,
+      "audience_arpu": 367820.61011102656,
+      "served_size": 91,
+      "served_arpu": 367820.61011102656,
+      "candidate_id": "tariff_5|MID|tariff_6",
+      "target_tariff": "tariff_6",
+      "history_count": 0,
+      "prior_lift": 0.0,
+      "positive_rate": 0.5,
+      "source": "catalog",
+      "raw_mean_lift": null,
+      "raw_median_lift": null,
+      "robust_mean_lift": null,
+      "catalog_plausibility": 1.0,
+      "catalog_price_similarity": 1.0,
+      "catalog_package_retention": 1.0,
+      "prior_score": 9195.515252775664,
+      "status": "untested",
+      "pilot_count": 0,
+      "pilot_n": 0,
+      "pilot_cost": 0.0,
+      "mean_lift": null,
+      "se_lift": null,
+      "safe_lift": null,
+      "optimistic_lift": null,
+      "pilots": []
+    },
+    {
+      "cell_id": "tariff_6|HIGH",
+      "current_tariff": "tariff_6",
+      "arpu_segment": "HIGH",
+      "audience_size": 53,
+      "audience_arpu": 341665.53809705016,
+      "served_size": 53,
+      "served_arpu": 341665.53809705016,
+      "candidate_id": "tariff_6|HIGH|tariff_5",
+      "target_tariff": "tariff_5",
+      "history_count": 0,
+      "prior_lift": 0.0,
+      "positive_rate": 0.5,
+      "source": "catalog",
+      "raw_mean_lift": null,
+      "raw_median_lift": null,
+      "robust_mean_lift": null,
+      "catalog_plausibility": 1.0,
+      "catalog_price_similarity": 1.0,
+      "catalog_package_retention": 1.0,
+      "prior_score": 8541.638452426254,
+      "status": "untested",
+      "pilot_count": 0,
+      "pilot_n": 0,
+      "pilot_cost": 0.0,
+      "mean_lift": null,
+      "se_lift": null,
+      "safe_lift": null,
+      "optimistic_lift": null,
+      "pilots": []
+    },
+    {
+      "cell_id": "tariff_20|HIGH",
+      "current_tariff": "tariff_20",
+      "arpu_segment": "HIGH",
+      "audience_size": 38,
+      "audience_arpu": 287290.72291460045,
+      "served_size": 38,
+      "served_arpu": 287290.72291460045,
+      "candidate_id": "tariff_20|HIGH|tariff_21",
+      "target_tariff": "tariff_21",
+      "history_count": 0,
+      "prior_lift": 0.0,
+      "positive_rate": 0.5,
+      "source": "catalog",
+      "raw_mean_lift": null,
+      "raw_median_lift": null,
+      "robust_mean_lift": null,
+      "catalog_plausibility": 0.9521603997806066,
+      "catalog_price_similarity": 0.9521603997806066,
+      "catalog_package_retention": 1.0,
+      "prior_score": 6838.671239590636,
+      "status": "untested",
+      "pilot_count": 0,
+      "pilot_n": 0,
+      "pilot_cost": 0.0,
+      "mean_lift": null,
+      "se_lift": null,
+      "safe_lift": null,
+      "optimistic_lift": null,
+      "pilots": []
+    },
+    {
+      "cell_id": "tariff_7|MID",
+      "current_tariff": "tariff_7",
+      "arpu_segment": "MID",
+      "audience_size": 52,
+      "audience_arpu": 267570.6779826569,
+      "served_size": 52,
+      "served_arpu": 267570.6779826569,
+      "candidate_id": "tariff_7|MID|tariff_5",
+      "target_tariff": "tariff_5",
+      "history_count": 0,
+      "prior_lift": 0.0,
+      "positive_rate": 0.5,
+      "source": "catalog",
+      "raw_mean_lift": null,
+      "raw_median_lift": null,
+      "robust_mean_lift": null,
+      "catalog_plausibility": 1.0,
+      "catalog_price_similarity": 1.0,
+      "catalog_package_retention": 1.0,
+      "prior_score": 6689.266949566423,
+      "status": "untested",
+      "pilot_count": 0,
+      "pilot_n": 0,
+      "pilot_cost": 0.0,
+      "mean_lift": null,
+      "se_lift": null,
+      "safe_lift": null,
+      "optimistic_lift": null,
+      "pilots": []
+    }
+  ],
+  "campaigns": [
+    {
+      "campaign_name": "campaign_01_tariff_13_MID_tariff_8_digital_ads",
+      "filter_current_tariff": "tariff_13",
+      "filter_arpu_segment": "MID",
+      "target_tariff": "tariff_8",
+      "channel": "digital_ads"
+    },
+    {
+      "campaign_name": "campaign_02_tariff_8_LOW_tariff_9_digital_ads",
+      "filter_current_tariff": "tariff_8",
+      "filter_arpu_segment": "LOW",
+      "target_tariff": "tariff_9",
+      "channel": "digital_ads"
+    },
+    {
+      "campaign_name": "campaign_03_tariff_4_MID_tariff_8_digital_ads",
+      "filter_current_tariff": "tariff_4",
+      "filter_arpu_segment": "MID",
+      "target_tariff": "tariff_8",
+      "channel": "digital_ads"
+    },
+    {
+      "campaign_name": "campaign_04_tariff_12_MID_tariff_8_digital_ads",
+      "filter_current_tariff": "tariff_12",
+      "filter_arpu_segment": "MID",
+      "target_tariff": "tariff_8",
+      "channel": "digital_ads"
+    }
+  ],
   "events": [
     {
-      "stage": "agent",
-      "event": "missing_dependency",
+      "stage": "candidate",
+      "event": "catalog_audit",
       "candidate_id": null,
-      "reason": "No module named 'candidate_engine'",
+      "reason": "Validate public data; exclusion counts can overlap.",
       "details": {
-        "module": "candidate_engine"
+        "rows": 21,
+        "invalid_code_rows": 0,
+        "invalid_price_rows": 0,
+        "known_tariffs": 21
+      }
+    },
+    {
+      "stage": "candidate",
+      "event": "audience_audit",
+      "candidate_id": null,
+      "reason": "Validate public data; exclusion counts can overlap.",
+      "details": {
+        "rows": 23441,
+        "usable_rows": 23341,
+        "excluded_rows": 100,
+        "blank_current_tariff_rows": 95,
+        "invalid_current_tariff_rows": 95,
+        "blank_arpu_segment_rows": 5,
+        "invalid_arpu_segment_rows": 5,
+        "invalid_id_rows": 0,
+        "duplicate_numeric_id_rows": 0,
+        "invalid_revenue_rows": 0,
+        "zero_revenue_rows": 103,
+        "cells": [
+          {
+            "cell_id": "tariff_1|HIGH",
+            "current_tariff": "tariff_1",
+            "arpu_segment": "HIGH",
+            "audience_size": 11,
+            "audience_arpu": 82638.48170901385,
+            "served_size": 11,
+            "served_arpu": 82638.48170901385
+          },
+          {
+            "cell_id": "tariff_1|LOW",
+            "current_tariff": "tariff_1",
+            "arpu_segment": "LOW",
+            "audience_size": 40,
+            "audience_arpu": 132219.59089506813,
+            "served_size": 40,
+            "served_arpu": 132219.59089506813
+          },
+          {
+            "cell_id": "tariff_1|MID",
+            "current_tariff": "tariff_1",
+            "arpu_segment": "MID",
+            "audience_size": 32,
+            "audience_arpu": 165169.06544740367,
+            "served_size": 32,
+            "served_arpu": 165169.06544740367
+          },
+          {
+            "cell_id": "tariff_10|HIGH",
+            "current_tariff": "tariff_10",
+            "arpu_segment": "HIGH",
+            "audience_size": 2950,
+            "audience_arpu": 24190636.44091341,
+            "served_size": 2950,
+            "served_arpu": 24190636.44091341
+          },
+          {
+            "cell_id": "tariff_10|LOW",
+            "current_tariff": "tariff_10",
+            "arpu_segment": "LOW",
+            "audience_size": 370,
+            "audience_arpu": 972233.5682257855,
+            "served_size": 370,
+            "served_arpu": 972233.5682257855
+          },
+          {
+            "cell_id": "tariff_10|MID",
+            "current_tariff": "tariff_10",
+            "arpu_segment": "MID",
+            "audience_size": 645,
+            "audience_arpu": 3003700.1472749137,
+            "served_size": 645,
+            "served_arpu": 3003700.1472749137
+          },
+          {
+            "cell_id": "tariff_11|HIGH",
+            "current_tariff": "tariff_11",
+            "arpu_segment": "HIGH",
+            "audience_size": 1633,
+            "audience_arpu": 14175708.002870273,
+            "served_size": 1633,
+            "served_arpu": 14175708.002870273
+          },
+          {
+            "cell_id": "tariff_11|LOW",
+            "current_tariff": "tariff_11",
+            "arpu_segment": "LOW",
+            "audience_size": 387,
+            "audience_arpu": 1067637.79615389,
+            "served_size": 387,
+            "served_arpu": 1067637.79615389
+          },
+          {
+            "cell_id": "tariff_11|MID",
+            "current_tariff": "tariff_11",
+            "arpu_segment": "MID",
+            "audience_size": 464,
+            "audience_arpu": 2059004.3405840572,
+            "served_size": 464,
+            "served_arpu": 2059004.3405840572
+          },
+          {
+            "cell_id": "tariff_12|HIGH",
+            "current_tariff": "tariff_12",
+            "arpu_segment": "HIGH",
+            "audience_size": 567,
+            "audience_arpu": 5244797.051878841,
+            "served_size": 567,
+            "served_arpu": 5244797.051878841
+          },
+          {
+            "cell_id": "tariff_12|LOW",
+            "current_tariff": "tariff_12",
+            "arpu_segment": "LOW",
+            "audience_size": 363,
+            "audience_arpu": 1017502.0543512055,
+            "served_size": 363,
+            "served_arpu": 1017502.0543512055
+          },
+          {
+            "cell_id": "tariff_12|MID",
+            "current_tariff": "tariff_12",
+            "arpu_segment": "MID",
+            "audience_size": 342,
+            "audience_arpu": 1503059.9061305257,
+            "served_size": 342,
+            "served_arpu": 1503059.9061305257
+          },
+          {
+            "cell_id": "tariff_13|HIGH",
+            "current_tariff": "tariff_13",
+            "arpu_segment": "HIGH",
+            "audience_size": 516,
+            "audience_arpu": 3712751.1737852106,
+            "served_size": 516,
+            "served_arpu": 3712751.1737852106
+          },
+          {
+            "cell_id": "tariff_13|LOW",
+            "current_tariff": "tariff_13",
+            "arpu_segment": "LOW",
+            "audience_size": 251,
+            "audience_arpu": 756421.0833960543,
+            "served_size": 251,
+            "served_arpu": 756421.0833960543
+          },
+          {
+            "cell_id": "tariff_13|MID",
+            "current_tariff": "tariff_13",
+            "arpu_segment": "MID",
+            "audience_size": 1022,
+            "audience_arpu": 5000571.23814045,
+            "served_size": 1022,
+            "served_arpu": 5000571.23814045
+          },
+          {
+            "cell_id": "tariff_14|HIGH",
+            "current_tariff": "tariff_14",
+            "arpu_segment": "HIGH",
+            "audience_size": 963,
+            "audience_arpu": 7609558.492534343,
+            "served_size": 963,
+            "served_arpu": 7609558.492534343
+          },
+          {
+            "cell_id": "tariff_14|LOW",
+            "current_tariff": "tariff_14",
+            "arpu_segment": "LOW",
+            "audience_size": 231,
+            "audience_arpu": 721988.3024613425,
+            "served_size": 231,
+            "served_arpu": 721988.3024613425
+          },
+          {
+            "cell_id": "tariff_14|MID",
+            "current_tariff": "tariff_14",
+            "arpu_segment": "MID",
+            "audience_size": 755,
+            "audience_arpu": 3686020.025355763,
+            "served_size": 755,
+            "served_arpu": 3686020.025355763
+          },
+          {
+            "cell_id": "tariff_15|HIGH",
+            "current_tariff": "tariff_15",
+            "arpu_segment": "HIGH",
+            "audience_size": 14,
+            "audience_arpu": 96923.36662092671,
+            "served_size": 14,
+            "served_arpu": 96923.36662092671
+          },
+          {
+            "cell_id": "tariff_15|LOW",
+            "current_tariff": "tariff_15",
+            "arpu_segment": "LOW",
+            "audience_size": 14,
+            "audience_arpu": 43367.06010503618,
+            "served_size": 14,
+            "served_arpu": 43367.06010503618
+          },
+          {
+            "cell_id": "tariff_15|MID",
+            "current_tariff": "tariff_15",
+            "arpu_segment": "MID",
+            "audience_size": 80,
+            "audience_arpu": 402182.2596318361,
+            "served_size": 80,
+            "served_arpu": 402182.2596318361
+          },
+          {
+            "cell_id": "tariff_16|HIGH",
+            "current_tariff": "tariff_16",
+            "arpu_segment": "HIGH",
+            "audience_size": 2,
+            "audience_arpu": 8012.469158351882,
+            "served_size": 2,
+            "served_arpu": 8012.469158351882
+          },
+          {
+            "cell_id": "tariff_16|LOW",
+            "current_tariff": "tariff_16",
+            "arpu_segment": "LOW",
+            "audience_size": 8,
+            "audience_arpu": 21006.127868354895,
+            "served_size": 8,
+            "served_arpu": 21006.127868354895
+          },
+          {
+            "cell_id": "tariff_16|MID",
+            "current_tariff": "tariff_16",
+            "arpu_segment": "MID",
+            "audience_size": 10,
+            "audience_arpu": 47207.16015030426,
+            "served_size": 10,
+            "served_arpu": 47207.16015030426
+          },
+          {
+            "cell_id": "tariff_17|HIGH",
+            "current_tariff": "tariff_17",
+            "arpu_segment": "HIGH",
+            "audience_size": 27,
+            "audience_arpu": 233018.89904674364,
+            "served_size": 27,
+            "served_arpu": 233018.89904674364
+          },
+          {
+            "cell_id": "tariff_17|LOW",
+            "current_tariff": "tariff_17",
+            "arpu_segment": "LOW",
+            "audience_size": 8,
+            "audience_arpu": 23317.104493311017,
+            "served_size": 8,
+            "served_arpu": 23317.104493311017
+          },
+          {
+            "cell_id": "tariff_17|MID",
+            "current_tariff": "tariff_17",
+            "arpu_segment": "MID",
+            "audience_size": 32,
+            "audience_arpu": 166536.6493991783,
+            "served_size": 32,
+            "served_arpu": 166536.6493991783
+          },
+          {
+            "cell_id": "tariff_18|HIGH",
+            "current_tariff": "tariff_18",
+            "arpu_segment": "HIGH",
+            "audience_size": 35,
+            "audience_arpu": 286137.26082276856,
+            "served_size": 35,
+            "served_arpu": 286137.26082276856
+          },
+          {
+            "cell_id": "tariff_18|LOW",
+            "current_tariff": "tariff_18",
+            "arpu_segment": "LOW",
+            "audience_size": 19,
+            "audience_arpu": 60062.980205548956,
+            "served_size": 19,
+            "served_arpu": 60062.980205548956
+          },
+          {
+            "cell_id": "tariff_18|MID",
+            "current_tariff": "tariff_18",
+            "arpu_segment": "MID",
+            "audience_size": 13,
+            "audience_arpu": 70016.13153131168,
+            "served_size": 13,
+            "served_arpu": 70016.13153131168
+          },
+          {
+            "cell_id": "tariff_19|HIGH",
+            "current_tariff": "tariff_19",
+            "arpu_segment": "HIGH",
+            "audience_size": 33,
+            "audience_arpu": 259350.81354660032,
+            "served_size": 33,
+            "served_arpu": 259350.81354660032
+          },
+          {
+            "cell_id": "tariff_19|LOW",
+            "current_tariff": "tariff_19",
+            "arpu_segment": "LOW",
+            "audience_size": 14,
+            "audience_arpu": 40738.450382627256,
+            "served_size": 14,
+            "served_arpu": 40738.450382627256
+          },
+          {
+            "cell_id": "tariff_19|MID",
+            "current_tariff": "tariff_19",
+            "arpu_segment": "MID",
+            "audience_size": 26,
+            "audience_arpu": 119249.02399881552,
+            "served_size": 26,
+            "served_arpu": 119249.02399881552
+          },
+          {
+            "cell_id": "tariff_2|HIGH",
+            "current_tariff": "tariff_2",
+            "arpu_segment": "HIGH",
+            "audience_size": 7,
+            "audience_arpu": 36800.23072418845,
+            "served_size": 7,
+            "served_arpu": 36800.23072418845
+          },
+          {
+            "cell_id": "tariff_2|LOW",
+            "current_tariff": "tariff_2",
+            "arpu_segment": "LOW",
+            "audience_size": 9,
+            "audience_arpu": 23951.38715991484,
+            "served_size": 9,
+            "served_arpu": 23951.38715991484
+          },
+          {
+            "cell_id": "tariff_2|MID",
+            "current_tariff": "tariff_2",
+            "arpu_segment": "MID",
+            "audience_size": 20,
+            "audience_arpu": 92193.04215266432,
+            "served_size": 20,
+            "served_arpu": 92193.04215266432
+          },
+          {
+            "cell_id": "tariff_20|HIGH",
+            "current_tariff": "tariff_20",
+            "arpu_segment": "HIGH",
+            "audience_size": 38,
+            "audience_arpu": 287290.72291460045,
+            "served_size": 38,
+            "served_arpu": 287290.72291460045
+          },
+          {
+            "cell_id": "tariff_20|LOW",
+            "current_tariff": "tariff_20",
+            "arpu_segment": "LOW",
+            "audience_size": 5,
+            "audience_arpu": 18274.493795633207,
+            "served_size": 5,
+            "served_arpu": 18274.493795633207
+          },
+          {
+            "cell_id": "tariff_20|MID",
+            "current_tariff": "tariff_20",
+            "arpu_segment": "MID",
+            "audience_size": 7,
+            "audience_arpu": 40256.80953791291,
+            "served_size": 7,
+            "served_arpu": 40256.80953791291
+          },
+          {
+            "cell_id": "tariff_21|HIGH",
+            "current_tariff": "tariff_21",
+            "arpu_segment": "HIGH",
+            "audience_size": 5,
+            "audience_arpu": 40063.82816157731,
+            "served_size": 5,
+            "served_arpu": 40063.82816157731
+          },
+          {
+            "cell_id": "tariff_21|LOW",
+            "current_tariff": "tariff_21",
+            "arpu_segment": "LOW",
+            "audience_size": 12,
+            "audience_arpu": 56342.329315095456,
+            "served_size": 12,
+            "served_arpu": 56342.329315095456
+          },
+          {
+            "cell_id": "tariff_21|MID",
+            "current_tariff": "tariff_21",
+            "arpu_segment": "MID",
+            "audience_size": 13,
+            "audience_arpu": 57141.37776829388,
+            "served_size": 13,
+            "served_arpu": 57141.37776829388
+          },
+          {
+            "cell_id": "tariff_3|HIGH",
+            "current_tariff": "tariff_3",
+            "arpu_segment": "HIGH",
+            "audience_size": 27,
+            "audience_arpu": 180049.65929309526,
+            "served_size": 27,
+            "served_arpu": 180049.65929309526
+          },
+          {
+            "cell_id": "tariff_3|LOW",
+            "current_tariff": "tariff_3",
+            "arpu_segment": "LOW",
+            "audience_size": 56,
+            "audience_arpu": 160544.44723558158,
+            "served_size": 56,
+            "served_arpu": 160544.44723558158
+          },
+          {
+            "cell_id": "tariff_3|MID",
+            "current_tariff": "tariff_3",
+            "arpu_segment": "MID",
+            "audience_size": 87,
+            "audience_arpu": 353907.75615506346,
+            "served_size": 87,
+            "served_arpu": 353907.75615506346
+          },
+          {
+            "cell_id": "tariff_4|HIGH",
+            "current_tariff": "tariff_4",
+            "arpu_segment": "HIGH",
+            "audience_size": 2108,
+            "audience_arpu": 15794121.77170824,
+            "served_size": 2108,
+            "served_arpu": 15794121.77170824
+          },
+          {
+            "cell_id": "tariff_4|LOW",
+            "current_tariff": "tariff_4",
+            "arpu_segment": "LOW",
+            "audience_size": 299,
+            "audience_arpu": 857563.179026669,
+            "served_size": 299,
+            "served_arpu": 857563.179026669
+          },
+          {
+            "cell_id": "tariff_4|MID",
+            "current_tariff": "tariff_4",
+            "arpu_segment": "MID",
+            "audience_size": 1227,
+            "audience_arpu": 5840537.244104053,
+            "served_size": 1227,
+            "served_arpu": 5840537.244104053
+          },
+          {
+            "cell_id": "tariff_5|HIGH",
+            "current_tariff": "tariff_5",
+            "arpu_segment": "HIGH",
+            "audience_size": 109,
+            "audience_arpu": 740120.0616143207,
+            "served_size": 109,
+            "served_arpu": 740120.0616143207
+          },
+          {
+            "cell_id": "tariff_5|LOW",
+            "current_tariff": "tariff_5",
+            "arpu_segment": "LOW",
+            "audience_size": 44,
+            "audience_arpu": 132153.6839166647,
+            "served_size": 44,
+            "served_arpu": 132153.6839166647
+          },
+          {
+            "cell_id": "tariff_5|MID",
+            "current_tariff": "tariff_5",
+            "arpu_segment": "MID",
+            "audience_size": 91,
+            "audience_arpu": 367820.61011102656,
+            "served_size": 91,
+            "served_arpu": 367820.61011102656
+          },
+          {
+            "cell_id": "tariff_6|HIGH",
+            "current_tariff": "tariff_6",
+            "arpu_segment": "HIGH",
+            "audience_size": 53,
+            "audience_arpu": 341665.53809705016,
+            "served_size": 53,
+            "served_arpu": 341665.53809705016
+          },
+          {
+            "cell_id": "tariff_6|LOW",
+            "current_tariff": "tariff_6",
+            "arpu_segment": "LOW",
+            "audience_size": 30,
+            "audience_arpu": 97039.60915588148,
+            "served_size": 30,
+            "served_arpu": 97039.60915588148
+          },
+          {
+            "cell_id": "tariff_6|MID",
+            "current_tariff": "tariff_6",
+            "arpu_segment": "MID",
+            "audience_size": 34,
+            "audience_arpu": 135351.60083776538,
+            "served_size": 34,
+            "served_arpu": 135351.60083776538
+          },
+          {
+            "cell_id": "tariff_7|HIGH",
+            "current_tariff": "tariff_7",
+            "arpu_segment": "HIGH",
+            "audience_size": 72,
+            "audience_arpu": 519437.624644454,
+            "served_size": 72,
+            "served_arpu": 519437.624644454
+          },
+          {
+            "cell_id": "tariff_7|LOW",
+            "current_tariff": "tariff_7",
+            "arpu_segment": "LOW",
+            "audience_size": 29,
+            "audience_arpu": 93486.11254736516,
+            "served_size": 29,
+            "served_arpu": 93486.11254736516
+          },
+          {
+            "cell_id": "tariff_7|MID",
+            "current_tariff": "tariff_7",
+            "arpu_segment": "MID",
+            "audience_size": 52,
+            "audience_arpu": 267570.6779826569,
+            "served_size": 52,
+            "served_arpu": 267570.6779826569
+          },
+          {
+            "cell_id": "tariff_8|HIGH",
+            "current_tariff": "tariff_8",
+            "arpu_segment": "HIGH",
+            "audience_size": 4726,
+            "audience_arpu": 36988107.97242949,
+            "served_size": 4726,
+            "served_arpu": 36988107.97242949
+          },
+          {
+            "cell_id": "tariff_8|LOW",
+            "current_tariff": "tariff_8",
+            "arpu_segment": "LOW",
+            "audience_size": 457,
+            "audience_arpu": 1312258.1647560755,
+            "served_size": 457,
+            "served_arpu": 1312258.1647560755
+          },
+          {
+            "cell_id": "tariff_8|MID",
+            "current_tariff": "tariff_8",
+            "arpu_segment": "MID",
+            "audience_size": 1720,
+            "audience_arpu": 8024489.894817886,
+            "served_size": 1720,
+            "served_arpu": 8024489.894817886
+          },
+          {
+            "cell_id": "tariff_9|HIGH",
+            "current_tariff": "tariff_9",
+            "arpu_segment": "HIGH",
+            "audience_size": 9,
+            "audience_arpu": 52537.21275559646,
+            "served_size": 9,
+            "served_arpu": 52537.21275559646
+          },
+          {
+            "cell_id": "tariff_9|LOW",
+            "current_tariff": "tariff_9",
+            "arpu_segment": "LOW",
+            "audience_size": 51,
+            "audience_arpu": 157453.03508879975,
+            "served_size": 51,
+            "served_arpu": 157453.03508879975
+          },
+          {
+            "cell_id": "tariff_9|MID",
+            "current_tariff": "tariff_9",
+            "arpu_segment": "MID",
+            "audience_size": 67,
+            "audience_arpu": 281271.3997881733,
+            "served_size": 67,
+            "served_arpu": 281271.3997881733
+          }
+        ]
+      }
+    },
+    {
+      "stage": "candidate",
+      "event": "history_audit",
+      "candidate_id": null,
+      "reason": "Validate public data; exclusion counts can overlap.",
+      "details": {
+        "rows": 14823,
+        "usable_lift_rows": 13416,
+        "excluded_rows": 1407,
+        "nonfinite_arpu_rows": 0,
+        "nonpositive_pre_arpu_rows": 1407,
+        "invalid_tariff_rows": 0,
+        "self_transition_rows": 0,
+        "nonfinite_relative_lift_rows": 0,
+        "exact_history_cells": 456,
+        "winsor_lower": -1.0,
+        "winsor_upper": 1.0,
+        "clipped_lift_rows": 2558,
+        "abs_raw_lift_above_one_rows": 2558,
+        "raw_lift_min": -1.0,
+        "raw_lift_max": 592276.0,
+        "raw_lift_mean": 450.3693312033994,
+        "raw_lift_median": 0.013981849809465641
+      }
+    },
+    {
+      "stage": "candidate",
+      "event": "pool_selected",
+      "candidate_id": null,
+      "reason": "Diverse ranking hypotheses require validation by pilots.",
+      "details": {
+        "eligible_candidates": 1260,
+        "selected": 40,
+        "selected_cells": 40,
+        "selected_catalog": 8,
+        "candidate_limit": 40,
+        "shrinkage_strength": 50.0
+      }
+    },
+    {
+      "stage": "pilot",
+      "event": "exploration",
+      "candidate_id": "tariff_4|MID|tariff_8",
+      "reason": "Pilot-only evidence; historical ranking is not pooled.",
+      "details": {
+        "requested_n": 80,
+        "actual_n": 80,
+        "cost": 320.0,
+        "observed_lift_ratio": 0.06266940810115376
+      }
+    },
+    {
+      "stage": "pilot",
+      "event": "exploration",
+      "candidate_id": "tariff_13|MID|tariff_8",
+      "reason": "Pilot-only evidence; historical ranking is not pooled.",
+      "details": {
+        "requested_n": 80,
+        "actual_n": 80,
+        "cost": 320.0,
+        "observed_lift_ratio": 0.23412080647794647
+      }
+    },
+    {
+      "stage": "pilot",
+      "event": "exploration",
+      "candidate_id": "tariff_8|MID|tariff_10",
+      "reason": "Pilot-only evidence; historical ranking is not pooled.",
+      "details": {
+        "requested_n": 80,
+        "actual_n": 80,
+        "cost": 320.0,
+        "observed_lift_ratio": -0.11250541600144441
+      }
+    },
+    {
+      "stage": "pilot",
+      "event": "exploration",
+      "candidate_id": "tariff_10|HIGH|tariff_20",
+      "reason": "Pilot-only evidence; historical ranking is not pooled.",
+      "details": {
+        "requested_n": 80,
+        "actual_n": 80,
+        "cost": 320.0,
+        "observed_lift_ratio": -0.12085844883820145
+      }
+    },
+    {
+      "stage": "pilot",
+      "event": "exploration",
+      "candidate_id": "tariff_11|HIGH|tariff_12",
+      "reason": "Pilot-only evidence; historical ranking is not pooled.",
+      "details": {
+        "requested_n": 80,
+        "actual_n": 80,
+        "cost": 320.0,
+        "observed_lift_ratio": -0.017586733931403517
+      }
+    },
+    {
+      "stage": "pilot",
+      "event": "exploration",
+      "candidate_id": "tariff_10|MID|tariff_11",
+      "reason": "Pilot-only evidence; historical ranking is not pooled.",
+      "details": {
+        "requested_n": 80,
+        "actual_n": 80,
+        "cost": 320.0,
+        "observed_lift_ratio": 0.06262085529935557
+      }
+    },
+    {
+      "stage": "pilot",
+      "event": "exploration",
+      "candidate_id": "tariff_8|HIGH|tariff_10",
+      "reason": "Pilot-only evidence; historical ranking is not pooled.",
+      "details": {
+        "requested_n": 80,
+        "actual_n": 80,
+        "cost": 320.0,
+        "observed_lift_ratio": 0.08322921034684899
+      }
+    },
+    {
+      "stage": "pilot",
+      "event": "exploration",
+      "candidate_id": "tariff_8|LOW|tariff_9",
+      "reason": "Pilot-only evidence; historical ranking is not pooled.",
+      "details": {
+        "requested_n": 80,
+        "actual_n": 80,
+        "cost": 320.0,
+        "observed_lift_ratio": 0.3838857995718801
+      }
+    },
+    {
+      "stage": "pilot",
+      "event": "exploration",
+      "candidate_id": "tariff_12|MID|tariff_8",
+      "reason": "Pilot-only evidence; historical ranking is not pooled.",
+      "details": {
+        "requested_n": 80,
+        "actual_n": 80,
+        "cost": 320.0,
+        "observed_lift_ratio": 0.2817402308419565
+      }
+    },
+    {
+      "stage": "pilot",
+      "event": "exploration",
+      "candidate_id": "tariff_14|MID|tariff_9",
+      "reason": "Pilot-only evidence; historical ranking is not pooled.",
+      "details": {
+        "requested_n": 80,
+        "actual_n": 80,
+        "cost": 320.0,
+        "observed_lift_ratio": 0.0766297310607
+      }
+    },
+    {
+      "stage": "pilot",
+      "event": "confirmation",
+      "candidate_id": "tariff_8|HIGH|tariff_10",
+      "reason": "Pilot-only evidence; historical ranking is not pooled.",
+      "details": {
+        "requested_n": 200,
+        "actual_n": 200,
+        "cost": 800.0,
+        "observed_lift_ratio": 0.025144178445282116,
+        "priority": 6406.578148145605,
+        "value_at_stake": 36988107.97242949,
+        "se_reduction": 0.06437191169269064,
+        "ambiguity_weight": 0.5384179177216053,
+        "burden": 200.10221663683953,
+        "feasible_reach": 4726
+      }
+    },
+    {
+      "stage": "pilot",
+      "event": "confirmation",
+      "candidate_id": "tariff_11|HIGH|tariff_12",
+      "reason": "Pilot-only evidence; historical ranking is not pooled.",
+      "details": {
+        "requested_n": 200,
+        "actual_n": 200,
+        "cost": 800.0,
+        "observed_lift_ratio": -0.04367351269859262,
+        "priority": 4392.3554894441295,
+        "value_at_stake": 14175708.002870273,
+        "se_reduction": 0.06437191169269064,
+        "ambiguity_weight": 0.9631332665015421,
+        "burden": 200.09215765447027,
+        "feasible_reach": 1633
+      }
+    },
+    {
+      "stage": "pilot",
+      "event": "confirmation",
+      "candidate_id": "tariff_8|HIGH|tariff_10",
+      "reason": "Pilot-only evidence; historical ranking is not pooled.",
+      "details": {
+        "requested_n": 200,
+        "actual_n": 200,
+        "cost": 800.0,
+        "observed_lift_ratio": 0.0013418283765680222,
+        "priority": 1839.630662974098,
+        "value_at_stake": 36988107.97242949,
+        "se_reduction": 0.01746273652676384,
+        "ambiguity_weight": 0.5699124193848689,
+        "burden": 200.10221663683953,
+        "feasible_reach": 4726
+      }
+    },
+    {
+      "stage": "pilot",
+      "event": "confirmation",
+      "candidate_id": "tariff_4|MID|tariff_8",
+      "reason": "Pilot-only evidence; historical ranking is not pooled.",
+      "details": {
+        "requested_n": 200,
+        "actual_n": 200,
+        "cost": 800.0,
+        "observed_lift_ratio": 0.1456438279752311,
+        "priority": 1263.9163426299729,
+        "value_at_stake": 5840537.244104053,
+        "se_reduction": 0.06437191169269064,
+        "ambiguity_weight": 0.6729207488031683,
+        "burden": 200.1680667306746,
+        "feasible_reach": 1227
+      }
+    },
+    {
+      "stage": "pilot",
+      "event": "confirmation",
+      "candidate_id": "tariff_8|HIGH|tariff_10",
+      "reason": "Pilot-only evidence; historical ranking is not pooled.",
+      "details": {
+        "requested_n": 200,
+        "actual_n": 200,
+        "cost": 800.0,
+        "observed_lift_ratio": 0.0736833541508036,
+        "priority": 1141.9454431432835,
+        "value_at_stake": 36988107.97242949,
+        "se_reduction": 0.009023721232587448,
+        "ambiguity_weight": 0.6846198206492586,
+        "burden": 200.10221663683953,
+        "feasible_reach": 4726
+      }
+    },
+    {
+      "stage": "pilot",
+      "event": "complete",
+      "candidate_id": null,
+      "reason": "Optional pilot slots are left unused.",
+      "details": {
+        "attempts": 15,
+        "pilot_contacts": 1800,
+        "pilot_cost": 7200.0
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "evaluated_channel",
+      "candidate_id": "tariff_4|MID|tariff_8",
+      "reason": "Computed channel economics from normalized pilot evidence.",
+      "details": {
+        "channel": "push",
+        "contacts": 1227,
+        "served_arpu": 5840537.244104054,
+        "mean_gross": 547828.2453272082,
+        "conservative_gross": 271518.34377589147,
+        "cost": 0.0,
+        "conservative_net": 271518.34377589147
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "evaluated_channel",
+      "candidate_id": "tariff_4|MID|tariff_8",
+      "reason": "Computed channel economics from normalized pilot evidence.",
+      "details": {
+        "channel": "sms",
+        "contacts": 1227,
+        "served_arpu": 5840537.244104054,
+        "mean_gross": 712176.7189253707,
+        "conservative_gross": 352973.8469086589,
+        "cost": 4908.0,
+        "conservative_net": 348065.8469086589
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "evaluated_channel",
+      "candidate_id": "tariff_4|MID|tariff_8",
+      "reason": "Computed channel economics from normalized pilot evidence.",
+      "details": {
+        "channel": "digital_ads",
+        "contacts": 1227,
+        "served_arpu": 5840537.244104054,
+        "mean_gross": 931308.0170562539,
+        "conservative_gross": 461581.1844190155,
+        "cost": 26994.0,
+        "conservative_net": 434587.1844190155
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "evaluated_channel",
+      "candidate_id": "tariff_13|MID|tariff_8",
+      "reason": "Computed channel economics from normalized pilot evidence.",
+      "details": {
+        "channel": "push",
+        "contacts": 1022,
+        "served_arpu": 5000571.238140449,
+        "mean_gross": 900567.5162491271,
+        "conservative_gross": 457981.9043988322,
+        "cost": 0.0,
+        "conservative_net": 457981.9043988322
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "evaluated_channel",
+      "candidate_id": "tariff_13|MID|tariff_8",
+      "reason": "Computed channel economics from normalized pilot evidence.",
+      "details": {
+        "channel": "sms",
+        "contacts": 1022,
+        "served_arpu": 5000571.238140449,
+        "mean_gross": 1170737.7711238652,
+        "conservative_gross": 595376.4757184819,
+        "cost": 4088.0,
+        "conservative_net": 591288.4757184819
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "evaluated_channel",
+      "candidate_id": "tariff_13|MID|tariff_8",
+      "reason": "Computed channel economics from normalized pilot evidence.",
+      "details": {
+        "channel": "digital_ads",
+        "contacts": 1022,
+        "served_arpu": 5000571.238140449,
+        "mean_gross": 1530964.777623516,
+        "conservative_gross": 778569.2374780148,
+        "cost": 22484.0,
+        "conservative_net": 756085.2374780148
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "evaluated_channel",
+      "candidate_id": "tariff_8|MID|tariff_10",
+      "reason": "Computed channel economics from normalized pilot evidence.",
+      "details": {
+        "channel": "push",
+        "contacts": 1720,
+        "served_arpu": 8024489.894817886,
+        "mean_gross": -694460.4413968255,
+        "conservative_gross": -1404684.0540105675,
+        "cost": 0.0,
+        "conservative_net": -1404684.0540105675
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "rejected",
+      "candidate_id": "tariff_8|MID|tariff_10",
+      "reason": "Conservative net is nonpositive.",
+      "details": {
+        "category": "nonpositive conservative net",
+        "channel": "push",
+        "conservative_net": -1404684.0540105675
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "evaluated_channel",
+      "candidate_id": "tariff_8|MID|tariff_10",
+      "reason": "Computed channel economics from normalized pilot evidence.",
+      "details": {
+        "channel": "sms",
+        "contacts": 1720,
+        "served_arpu": 8024489.894817886,
+        "mean_gross": -902798.5738158731,
+        "conservative_gross": -1826089.270213738,
+        "cost": 6880.0,
+        "conservative_net": -1832969.270213738
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "rejected",
+      "candidate_id": "tariff_8|MID|tariff_10",
+      "reason": "Conservative net is nonpositive.",
+      "details": {
+        "category": "nonpositive conservative net",
+        "channel": "sms",
+        "conservative_net": -1832969.270213738
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "evaluated_channel",
+      "candidate_id": "tariff_8|MID|tariff_10",
+      "reason": "Computed channel economics from normalized pilot evidence.",
+      "details": {
+        "channel": "digital_ads",
+        "contacts": 1720,
+        "served_arpu": 8024489.894817886,
+        "mean_gross": -1180582.7503746033,
+        "conservative_gross": -2387962.8918179646,
+        "cost": 37840.0,
+        "conservative_net": -2425802.8918179646
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "rejected",
+      "candidate_id": "tariff_8|MID|tariff_10",
+      "reason": "Conservative net is nonpositive.",
+      "details": {
+        "category": "nonpositive conservative net",
+        "channel": "digital_ads",
+        "conservative_net": -2425802.8918179646
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "evaluated_channel",
+      "candidate_id": "tariff_10|HIGH|tariff_20",
+      "reason": "Computed channel economics from normalized pilot evidence.",
+      "details": {
+        "channel": "push",
+        "contacts": 2950,
+        "served_arpu": 24190636.44091341,
+        "mean_gross": -2248955.9974289727,
+        "conservative_gross": -4389996.91463248,
+        "cost": 0.0,
+        "conservative_net": -4389996.91463248
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "rejected",
+      "candidate_id": "tariff_10|HIGH|tariff_20",
+      "reason": "Conservative net is nonpositive.",
+      "details": {
+        "category": "nonpositive conservative net",
+        "channel": "push",
+        "conservative_net": -4389996.91463248
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "evaluated_channel",
+      "candidate_id": "tariff_10|HIGH|tariff_20",
+      "reason": "Computed channel economics from normalized pilot evidence.",
+      "details": {
+        "channel": "sms",
+        "contacts": 2950,
+        "served_arpu": 24190636.44091341,
+        "mean_gross": -2923642.7966576647,
+        "conservative_gross": -5706995.989022224,
+        "cost": 11800.0,
+        "conservative_net": -5718795.989022224
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "rejected",
+      "candidate_id": "tariff_10|HIGH|tariff_20",
+      "reason": "Conservative net is nonpositive.",
+      "details": {
+        "category": "nonpositive conservative net",
+        "channel": "sms",
+        "conservative_net": -5718795.989022224
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "evaluated_channel",
+      "candidate_id": "tariff_10|HIGH|tariff_20",
+      "reason": "Computed channel economics from normalized pilot evidence.",
+      "details": {
+        "channel": "digital_ads",
+        "contacts": 2950,
+        "served_arpu": 24190636.44091341,
+        "mean_gross": -3823225.1956292535,
+        "conservative_gross": -7462994.754875216,
+        "cost": 64900.0,
+        "conservative_net": -7527894.754875216
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "rejected",
+      "candidate_id": "tariff_10|HIGH|tariff_20",
+      "reason": "Conservative net is nonpositive.",
+      "details": {
+        "category": "nonpositive conservative net",
+        "channel": "digital_ads",
+        "conservative_net": -7527894.754875216
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "evaluated_channel",
+      "candidate_id": "tariff_11|HIGH|tariff_12",
+      "reason": "Computed channel economics from normalized pilot evidence.",
+      "details": {
+        "channel": "push",
+        "contacts": 1633,
+        "served_arpu": 14175708.002870273,
+        "mean_gross": -394958.64035670034,
+        "conservative_gross": -1065597.0284000854,
+        "cost": 0.0,
+        "conservative_net": -1065597.0284000854
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "rejected",
+      "candidate_id": "tariff_11|HIGH|tariff_12",
+      "reason": "Conservative net is nonpositive.",
+      "details": {
+        "category": "nonpositive conservative net",
+        "channel": "push",
+        "conservative_net": -1065597.0284000854
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "evaluated_channel",
+      "candidate_id": "tariff_11|HIGH|tariff_12",
+      "reason": "Computed channel economics from normalized pilot evidence.",
+      "details": {
+        "channel": "sms",
+        "contacts": 1633,
+        "served_arpu": 14175708.002870273,
+        "mean_gross": -513446.2324637105,
+        "conservative_gross": -1385276.136920111,
+        "cost": 6532.0,
+        "conservative_net": -1391808.136920111
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "rejected",
+      "candidate_id": "tariff_11|HIGH|tariff_12",
+      "reason": "Conservative net is nonpositive.",
+      "details": {
+        "category": "nonpositive conservative net",
+        "channel": "sms",
+        "conservative_net": -1391808.136920111
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "evaluated_channel",
+      "candidate_id": "tariff_11|HIGH|tariff_12",
+      "reason": "Computed channel economics from normalized pilot evidence.",
+      "details": {
+        "channel": "digital_ads",
+        "contacts": 1633,
+        "served_arpu": 14175708.002870273,
+        "mean_gross": -671429.6886063906,
+        "conservative_gross": -1811514.9482801452,
+        "cost": 35926.0,
+        "conservative_net": -1847440.9482801452
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "rejected",
+      "candidate_id": "tariff_11|HIGH|tariff_12",
+      "reason": "Conservative net is nonpositive.",
+      "details": {
+        "category": "nonpositive conservative net",
+        "channel": "digital_ads",
+        "conservative_net": -1847440.9482801452
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "evaluated_channel",
+      "candidate_id": "tariff_10|MID|tariff_11",
+      "reason": "Computed channel economics from normalized pilot evidence.",
+      "details": {
+        "channel": "push",
+        "contacts": 645,
+        "served_arpu": 3003700.1472749137,
+        "mean_gross": 144687.90175781184,
+        "conservative_gross": -121160.61917853775,
+        "cost": 0.0,
+        "conservative_net": -121160.61917853775
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "rejected",
+      "candidate_id": "tariff_10|MID|tariff_11",
+      "reason": "Conservative net is nonpositive.",
+      "details": {
+        "category": "nonpositive conservative net",
+        "channel": "push",
+        "conservative_net": -121160.61917853775
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "evaluated_channel",
+      "candidate_id": "tariff_10|MID|tariff_11",
+      "reason": "Computed channel economics from normalized pilot evidence.",
+      "details": {
+        "channel": "sms",
+        "contacts": 645,
+        "served_arpu": 3003700.1472749137,
+        "mean_gross": 188094.2722851554,
+        "conservative_gross": -157508.80493209907,
+        "cost": 2580.0,
+        "conservative_net": -160088.80493209907
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "rejected",
+      "candidate_id": "tariff_10|MID|tariff_11",
+      "reason": "Conservative net is nonpositive.",
+      "details": {
+        "category": "nonpositive conservative net",
+        "channel": "sms",
+        "conservative_net": -160088.80493209907
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "evaluated_channel",
+      "candidate_id": "tariff_10|MID|tariff_11",
+      "reason": "Computed channel economics from normalized pilot evidence.",
+      "details": {
+        "channel": "digital_ads",
+        "contacts": 645,
+        "served_arpu": 3003700.1472749137,
+        "mean_gross": 245969.4329882801,
+        "conservative_gross": -205973.05260351414,
+        "cost": 14190.0,
+        "conservative_net": -220163.05260351414
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "rejected",
+      "candidate_id": "tariff_10|MID|tariff_11",
+      "reason": "Conservative net is nonpositive.",
+      "details": {
+        "category": "nonpositive conservative net",
+        "channel": "digital_ads",
+        "conservative_net": -220163.05260351414
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "evaluated_channel",
+      "candidate_id": "tariff_8|HIGH|tariff_10",
+      "reason": "Computed channel economics from normalized pilot evidence.",
+      "details": {
+        "channel": "push",
+        "contacts": 4726,
+        "served_arpu": 36988107.97242949,
+        "mean_gross": 1116848.7662202488,
+        "conservative_gross": -6023.425293450171,
+        "cost": 0.0,
+        "conservative_net": -6023.425293450171
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "rejected",
+      "candidate_id": "tariff_8|HIGH|tariff_10",
+      "reason": "Conservative net is nonpositive.",
+      "details": {
+        "category": "nonpositive conservative net",
+        "channel": "push",
+        "conservative_net": -6023.425293450171
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "evaluated_channel",
+      "candidate_id": "tariff_8|HIGH|tariff_10",
+      "reason": "Computed channel economics from normalized pilot evidence.",
+      "details": {
+        "channel": "sms",
+        "contacts": 4726,
+        "served_arpu": 36988107.97242949,
+        "mean_gross": 1451903.3960863235,
+        "conservative_gross": -7830.452881485222,
+        "cost": 18904.0,
+        "conservative_net": -26734.452881485224
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "rejected",
+      "candidate_id": "tariff_8|HIGH|tariff_10",
+      "reason": "Conservative net is nonpositive.",
+      "details": {
+        "category": "nonpositive conservative net",
+        "channel": "sms",
+        "conservative_net": -26734.452881485224
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "evaluated_channel",
+      "candidate_id": "tariff_8|HIGH|tariff_10",
+      "reason": "Computed channel economics from normalized pilot evidence.",
+      "details": {
+        "channel": "digital_ads",
+        "contacts": 4726,
+        "served_arpu": 36988107.97242949,
+        "mean_gross": 1898642.902574423,
+        "conservative_gross": -10239.82299886529,
+        "cost": 103972.0,
+        "conservative_net": -114211.82299886529
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "rejected",
+      "candidate_id": "tariff_8|HIGH|tariff_10",
+      "reason": "Conservative net is nonpositive.",
+      "details": {
+        "category": "nonpositive conservative net",
+        "channel": "digital_ads",
+        "conservative_net": -114211.82299886529
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "evaluated_channel",
+      "candidate_id": "tariff_8|LOW|tariff_9",
+      "reason": "Computed channel economics from normalized pilot evidence.",
+      "details": {
+        "channel": "push",
+        "contacts": 457,
+        "served_arpu": 1312258.1647560755,
+        "mean_gross": 387505.5960170108,
+        "conservative_gross": 271361.5486481169,
+        "cost": 0.0,
+        "conservative_net": 271361.5486481169
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "evaluated_channel",
+      "candidate_id": "tariff_8|LOW|tariff_9",
+      "reason": "Computed channel economics from normalized pilot evidence.",
+      "details": {
+        "channel": "sms",
+        "contacts": 457,
+        "served_arpu": 1312258.1647560755,
+        "mean_gross": 503757.27482211404,
+        "conservative_gross": 352770.0132425519,
+        "cost": 1828.0,
+        "conservative_net": 350942.0132425519
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "evaluated_channel",
+      "candidate_id": "tariff_8|LOW|tariff_9",
+      "reason": "Computed channel economics from normalized pilot evidence.",
+      "details": {
+        "channel": "digital_ads",
+        "contacts": 457,
+        "served_arpu": 1312258.1647560755,
+        "mean_gross": 658759.5132289183,
+        "conservative_gross": 461314.6327017987,
+        "cost": 10054.0,
+        "conservative_net": 451260.6327017987
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "evaluated_channel",
+      "candidate_id": "tariff_12|MID|tariff_8",
+      "reason": "Computed channel economics from normalized pilot evidence.",
+      "details": {
+        "channel": "push",
+        "contacts": 342,
+        "served_arpu": 1503059.9061305255,
+        "mean_gross": 325748.034555772,
+        "conservative_gross": 192716.69543024365,
+        "cost": 0.0,
+        "conservative_net": 192716.69543024365
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "evaluated_channel",
+      "candidate_id": "tariff_12|MID|tariff_8",
+      "reason": "Computed channel economics from normalized pilot evidence.",
+      "details": {
+        "channel": "sms",
+        "contacts": 342,
+        "served_arpu": 1503059.9061305255,
+        "mean_gross": 423472.4449225037,
+        "conservative_gross": 250531.70405931678,
+        "cost": 1368.0,
+        "conservative_net": 249163.70405931678
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "evaluated_channel",
+      "candidate_id": "tariff_12|MID|tariff_8",
+      "reason": "Computed channel economics from normalized pilot evidence.",
+      "details": {
+        "channel": "digital_ads",
+        "contacts": 342,
+        "served_arpu": 1503059.9061305255,
+        "mean_gross": 553771.6587448125,
+        "conservative_gross": 327618.3822314142,
+        "cost": 7524.0,
+        "conservative_net": 320094.3822314142
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "evaluated_channel",
+      "candidate_id": "tariff_14|MID|tariff_9",
+      "reason": "Computed channel economics from normalized pilot evidence.",
+      "details": {
+        "channel": "push",
+        "contacts": 755,
+        "served_arpu": 3686020.025355763,
+        "mean_gross": 217275.9409441282,
+        "conservative_gross": -108962.67271097438,
+        "cost": 0.0,
+        "conservative_net": -108962.67271097438
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "rejected",
+      "candidate_id": "tariff_14|MID|tariff_9",
+      "reason": "Conservative net is nonpositive.",
+      "details": {
+        "category": "nonpositive conservative net",
+        "channel": "push",
+        "conservative_net": -108962.67271097438
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "evaluated_channel",
+      "candidate_id": "tariff_14|MID|tariff_9",
+      "reason": "Computed channel economics from normalized pilot evidence.",
+      "details": {
+        "channel": "sms",
+        "contacts": 755,
+        "served_arpu": 3686020.025355763,
+        "mean_gross": 282458.7232273667,
+        "conservative_gross": -141651.4745242667,
+        "cost": 3020.0,
+        "conservative_net": -144671.4745242667
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "rejected",
+      "candidate_id": "tariff_14|MID|tariff_9",
+      "reason": "Conservative net is nonpositive.",
+      "details": {
+        "category": "nonpositive conservative net",
+        "channel": "sms",
+        "conservative_net": -144671.4745242667
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "evaluated_channel",
+      "candidate_id": "tariff_14|MID|tariff_9",
+      "reason": "Computed channel economics from normalized pilot evidence.",
+      "details": {
+        "channel": "digital_ads",
+        "contacts": 755,
+        "served_arpu": 3686020.025355763,
+        "mean_gross": 369369.0996050179,
+        "conservative_gross": -185236.54360865644,
+        "cost": 16610.0,
+        "conservative_net": -201846.54360865644
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "rejected",
+      "candidate_id": "tariff_14|MID|tariff_9",
+      "reason": "Conservative net is nonpositive.",
+      "details": {
+        "category": "nonpositive conservative net",
+        "channel": "digital_ads",
+        "conservative_net": -201846.54360865644
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "rejected",
+      "candidate_id": "tariff_14|HIGH|tariff_19",
+      "reason": "Candidate has no valid pilot measurement for normal exploitation.",
+      "details": {
+        "category": "no measurement"
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "rejected",
+      "candidate_id": "tariff_11|MID|tariff_8",
+      "reason": "Candidate has no valid pilot measurement for normal exploitation.",
+      "details": {
+        "category": "no measurement"
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "rejected",
+      "candidate_id": "tariff_4|LOW|tariff_9",
+      "reason": "Candidate has no valid pilot measurement for normal exploitation.",
+      "details": {
+        "category": "no measurement"
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "rejected",
+      "candidate_id": "tariff_15|MID|tariff_8",
+      "reason": "Candidate has no valid pilot measurement for normal exploitation.",
+      "details": {
+        "category": "no measurement"
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "rejected",
+      "candidate_id": "tariff_10|LOW|tariff_9",
+      "reason": "Candidate has no valid pilot measurement for normal exploitation.",
+      "details": {
+        "category": "no measurement"
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "rejected",
+      "candidate_id": "tariff_12|HIGH|tariff_11",
+      "reason": "Candidate has no valid pilot measurement for normal exploitation.",
+      "details": {
+        "category": "no measurement"
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "rejected",
+      "candidate_id": "tariff_13|LOW|tariff_8",
+      "reason": "Candidate has no valid pilot measurement for normal exploitation.",
+      "details": {
+        "category": "no measurement"
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "rejected",
+      "candidate_id": "tariff_11|LOW|tariff_9",
+      "reason": "Candidate has no valid pilot measurement for normal exploitation.",
+      "details": {
+        "category": "no measurement"
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "rejected",
+      "candidate_id": "tariff_1|LOW|tariff_9",
+      "reason": "Candidate has no valid pilot measurement for normal exploitation.",
+      "details": {
+        "category": "no measurement"
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "rejected",
+      "candidate_id": "tariff_3|MID|tariff_8",
+      "reason": "Candidate has no valid pilot measurement for normal exploitation.",
+      "details": {
+        "category": "no measurement"
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "rejected",
+      "candidate_id": "tariff_17|MID|tariff_8",
+      "reason": "Candidate has no valid pilot measurement for normal exploitation.",
+      "details": {
+        "category": "no measurement"
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "rejected",
+      "candidate_id": "tariff_1|MID|tariff_4",
+      "reason": "Candidate has no valid pilot measurement for normal exploitation.",
+      "details": {
+        "category": "no measurement"
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "rejected",
+      "candidate_id": "tariff_13|HIGH|tariff_10",
+      "reason": "Candidate has no valid pilot measurement for normal exploitation.",
+      "details": {
+        "category": "no measurement"
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "rejected",
+      "candidate_id": "tariff_14|LOW|tariff_4",
+      "reason": "Candidate has no valid pilot measurement for normal exploitation.",
+      "details": {
+        "category": "no measurement"
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "rejected",
+      "candidate_id": "tariff_9|LOW|tariff_13",
+      "reason": "Candidate has no valid pilot measurement for normal exploitation.",
+      "details": {
+        "category": "no measurement"
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "rejected",
+      "candidate_id": "tariff_12|LOW|tariff_11",
+      "reason": "Candidate has no valid pilot measurement for normal exploitation.",
+      "details": {
+        "category": "no measurement"
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "rejected",
+      "candidate_id": "tariff_4|HIGH|tariff_12",
+      "reason": "Candidate has no valid pilot measurement for normal exploitation.",
+      "details": {
+        "category": "no measurement"
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "rejected",
+      "candidate_id": "tariff_3|LOW|tariff_9",
+      "reason": "Candidate has no valid pilot measurement for normal exploitation.",
+      "details": {
+        "category": "no measurement"
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "rejected",
+      "candidate_id": "tariff_5|HIGH|tariff_6",
+      "reason": "Candidate has no valid pilot measurement for normal exploitation.",
+      "details": {
+        "category": "no measurement"
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "rejected",
+      "candidate_id": "tariff_5|LOW|tariff_13",
+      "reason": "Candidate has no valid pilot measurement for normal exploitation.",
+      "details": {
+        "category": "no measurement"
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "rejected",
+      "candidate_id": "tariff_6|LOW|tariff_13",
+      "reason": "Candidate has no valid pilot measurement for normal exploitation.",
+      "details": {
+        "category": "no measurement"
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "rejected",
+      "candidate_id": "tariff_19|MID|tariff_8",
+      "reason": "Candidate has no valid pilot measurement for normal exploitation.",
+      "details": {
+        "category": "no measurement"
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "rejected",
+      "candidate_id": "tariff_9|MID|tariff_8",
+      "reason": "Candidate has no valid pilot measurement for normal exploitation.",
+      "details": {
+        "category": "no measurement"
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "rejected",
+      "candidate_id": "tariff_18|HIGH|tariff_11",
+      "reason": "Candidate has no valid pilot measurement for normal exploitation.",
+      "details": {
+        "category": "no measurement"
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "rejected",
+      "candidate_id": "tariff_7|HIGH|tariff_5",
+      "reason": "Candidate has no valid pilot measurement for normal exploitation.",
+      "details": {
+        "category": "no measurement"
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "rejected",
+      "candidate_id": "tariff_7|LOW|tariff_9",
+      "reason": "Candidate has no valid pilot measurement for normal exploitation.",
+      "details": {
+        "category": "no measurement"
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "rejected",
+      "candidate_id": "tariff_5|MID|tariff_6",
+      "reason": "Candidate has no valid pilot measurement for normal exploitation.",
+      "details": {
+        "category": "no measurement"
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "rejected",
+      "candidate_id": "tariff_6|HIGH|tariff_5",
+      "reason": "Candidate has no valid pilot measurement for normal exploitation.",
+      "details": {
+        "category": "no measurement"
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "rejected",
+      "candidate_id": "tariff_20|HIGH|tariff_21",
+      "reason": "Candidate has no valid pilot measurement for normal exploitation.",
+      "details": {
+        "category": "no measurement"
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "rejected",
+      "candidate_id": "tariff_7|MID|tariff_5",
+      "reason": "Candidate has no valid pilot measurement for normal exploitation.",
+      "details": {
+        "category": "no measurement"
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "rejected",
+      "candidate_id": "tariff_12|MID|tariff_8",
+      "reason": "Another target/channel alternative was selected for this cell.",
+      "details": {
+        "category": "same-cell alternative",
+        "channel": "sms",
+        "conservative_net": 249163.70405931678
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "rejected",
+      "candidate_id": "tariff_12|MID|tariff_8",
+      "reason": "Another target/channel alternative was selected for this cell.",
+      "details": {
+        "category": "same-cell alternative",
+        "channel": "push",
+        "conservative_net": 192716.69543024365
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "rejected",
+      "candidate_id": "tariff_13|MID|tariff_8",
+      "reason": "Another target/channel alternative was selected for this cell.",
+      "details": {
+        "category": "same-cell alternative",
+        "channel": "sms",
+        "conservative_net": 591288.4757184819
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "rejected",
+      "candidate_id": "tariff_13|MID|tariff_8",
+      "reason": "Another target/channel alternative was selected for this cell.",
+      "details": {
+        "category": "same-cell alternative",
+        "channel": "push",
+        "conservative_net": 457981.9043988322
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "rejected",
+      "candidate_id": "tariff_4|MID|tariff_8",
+      "reason": "Another target/channel alternative was selected for this cell.",
+      "details": {
+        "category": "same-cell alternative",
+        "channel": "sms",
+        "conservative_net": 348065.8469086589
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "rejected",
+      "candidate_id": "tariff_4|MID|tariff_8",
+      "reason": "Another target/channel alternative was selected for this cell.",
+      "details": {
+        "category": "same-cell alternative",
+        "channel": "push",
+        "conservative_net": 271518.34377589147
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "rejected",
+      "candidate_id": "tariff_8|LOW|tariff_9",
+      "reason": "Another target/channel alternative was selected for this cell.",
+      "details": {
+        "category": "same-cell alternative",
+        "channel": "sms",
+        "conservative_net": 350942.0132425519
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "rejected",
+      "candidate_id": "tariff_8|LOW|tariff_9",
+      "reason": "Another target/channel alternative was selected for this cell.",
+      "details": {
+        "category": "same-cell alternative",
+        "channel": "push",
+        "conservative_net": 271361.5486481169
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "selected",
+      "candidate_id": "tariff_13|MID|tariff_8",
+      "reason": "Selected by bounded portfolio search under joint resource limits.",
+      "details": {
+        "channel": "digital_ads",
+        "contacts": 1022,
+        "cost": 22484.0,
+        "conservative_net": 756085.2374780148,
+        "closest_alternative": {
+          "candidate_id": "tariff_13|MID|tariff_8",
+          "channel": "sms",
+          "conservative_net": 591288.4757184819
+        }
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "selected",
+      "candidate_id": "tariff_8|LOW|tariff_9",
+      "reason": "Selected by bounded portfolio search under joint resource limits.",
+      "details": {
+        "channel": "digital_ads",
+        "contacts": 457,
+        "cost": 10054.0,
+        "conservative_net": 451260.6327017987,
+        "closest_alternative": {
+          "candidate_id": "tariff_8|LOW|tariff_9",
+          "channel": "sms",
+          "conservative_net": 350942.0132425519
+        }
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "selected",
+      "candidate_id": "tariff_4|MID|tariff_8",
+      "reason": "Selected by bounded portfolio search under joint resource limits.",
+      "details": {
+        "channel": "digital_ads",
+        "contacts": 1227,
+        "cost": 26994.0,
+        "conservative_net": 434587.1844190155,
+        "closest_alternative": {
+          "candidate_id": "tariff_4|MID|tariff_8",
+          "channel": "sms",
+          "conservative_net": 348065.8469086589
+        }
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "selected",
+      "candidate_id": "tariff_12|MID|tariff_8",
+      "reason": "Selected by bounded portfolio search under joint resource limits.",
+      "details": {
+        "channel": "digital_ads",
+        "contacts": 342,
+        "cost": 7524.0,
+        "conservative_net": 320094.3822314142,
+        "closest_alternative": {
+          "candidate_id": "tariff_12|MID|tariff_8",
+          "channel": "sms",
+          "conservative_net": 249163.70405931678
+        }
+      }
+    },
+    {
+      "stage": "portfolio",
+      "event": "resource_totals",
+      "candidate_id": null,
+      "reason": "Final-only estimates are a conservative proxy; pilot overlap is unknown.",
+      "details": {
+        "campaign_count": 4,
+        "final_contacts": 3048,
+        "final_cost": 67056.0,
+        "conservative_final_net_proxy": 1962027.436830243,
+        "remaining_budget_after_plan": 25744.0,
+        "remaining_contacts_after_plan": 10152,
+        "greedy_baseline_objective": 1962027.436830243,
+        "search": "bounded beam heuristic"
       }
     }
   ],
   "summary": {
-    "pilot_count": 0,
-    "pilot_contacts": 0,
-    "pilot_cost": 0.0,
-    "final_contacts": 0,
-    "final_cost": 0.0,
-    "remaining_budget_after_plan": 100000.0,
-    "remaining_contacts_after_plan": 15000,
-    "status": "error"
+    "pilot_count": 15,
+    "pilot_contacts": 1800,
+    "pilot_cost": 7200.0,
+    "final_contacts": 3048,
+    "final_cost": 67056.0,
+    "remaining_budget_after_plan": 25744.0,
+    "remaining_contacts_after_plan": 10152,
+    "status": "ok"
+  },
+  "benchmark": {
+    "source": "official local_eval.evaluate_agent",
+    "seed": 42,
+    "net_gain": 3206241.490737184,
+    "failure": null
   }
 }

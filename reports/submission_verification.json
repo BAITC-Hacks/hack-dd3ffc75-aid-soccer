@@ -1,0 +1,22 @@
+{
+  "seed": 42,
+  "generation_command": "python make_submission.py",
+  "two_generations_identical": true,
+  "sha256": "3cba2865d369ad86c93e110476a4436c42f25c3583cbb9265382844e8e848e5e",
+  "campaign_count": 4,
+  "public_validators_passed": true,
+  "trace_matches_submission": true,
+  "pilot_count": 15,
+  "pilot_contacts": 1800,
+  "pilot_cost": 7200.0,
+  "total_contacts": 4848,
+  "total_cost": 74256.0,
+  "final_contacts": 3048,
+  "final_cost": 67056.0,
+  "max_final_campaign_contacts": 1227,
+  "distinct_final_cells": true,
+  "disjoint_final_audiences": true,
+  "fits_residual_resources": true,
+  "remaining_budget_after_plan": 25744.0,
+  "remaining_contacts_after_plan": 10152
+}
