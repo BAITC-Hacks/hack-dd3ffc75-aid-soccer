@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Adaptive Campaign Portfolio Report</title>
+<style>
+:root{--ink:#171717;--muted:#666;--paper:#f7f5ef;--card:#fff;--accent:#ffd400;--line:#dedbd2;}
+*{box-sizing:border-box} body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.5 system-ui,sans-serif}
+main{max-width:1120px;margin:auto;padding:40px 24px 72px} header{border-left:10px solid var(--accent);padding-left:20px}
+h1{font-size:clamp(30px,5vw,54px);line-height:1.02;margin:0 0 12px} h2{margin:40px 0 14px;font-size:23px}
+.sub{color:var(--muted);max-width:760px} .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:26px 0}
+.card{background:var(--card);border:1px solid var(--line);padding:18px} .card span{display:block;color:var(--muted);font-size:13px}
+.card strong{display:block;font-size:25px;margin-top:6px} .panel{background:var(--card);border:1px solid var(--line);padding:18px;overflow:auto}
+table{width:100%;border-collapse:collapse;min-width:720px} th,td{padding:11px 9px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{font-size:12px;text-transform:uppercase;letter-spacing:.06em} .empty{color:var(--muted);font-style:italic}
+.pill{display:inline-block;border-radius:99px;padding:3px 9px;font-size:12px} .selected{background:#e7f5e8} .rejected{background:#f4eceb}
+.warning{margin:12px 0;padding:14px 18px;background:#fff4c4;border-left:5px solid var(--accent)}
+svg{width:100%;min-width:660px} .band{stroke:#555;stroke-width:4;stroke-linecap:round} .mean{fill:var(--accent);stroke:#111;stroke-width:1.5}
+.zero{stroke:#c8c4b9;stroke-dasharray:4} .svg-label{font-size:11px;fill:#444} .toolbar{margin-bottom:12px}
+button{border:1px solid #222;background:#fff;padding:7px 12px;margin-right:6px;cursor:pointer} button:hover{background:var(--accent)}
+.note{border-top:1px solid var(--line);margin-top:42px;padding-top:18px;color:var(--muted)}
+</style>
+</head>
+<body><main>
+<header><h1>Campaign portfolio</h1><p class="sub">Analyst-facing decision trace. Uncertainty bands and conservative net values are heuristic planning estimates, not guaranteed profit.</p></header>
+
+<section class="cards"><article class="card"><span>Pilot spend</span><strong>1 120.00</strong></article><article class="card"><span>Planned final spend</span><strong>6 400.00</strong></article><article class="card"><span>Total contacts</span><strong>1 880</strong></article><article class="card"><span>Budget after plan</span><strong>92 480.00</strong></article><article class="card"><span>Contacts after plan</span><strong>13 120</strong></article></section>
+<h2>Selected campaigns</h2><div class="panel"><table><thead><tr><th>Name</th><th>Audience</th><th>Target</th><th>Channel</th><th>Why</th></tr></thead><tbody><tr><td>campaign_01_tariff_4_HIGH_tariff_9_sms</td><td>tariff_4 / HIGH</td><td>tariff_9</td><td>sms</td><td>Selected by bounded portfolio search under joint resource limits.</td></tr></tbody></table></div>
+<h2>Pilot evidence and uncertainty</h2><div class="panel"><svg viewBox="0 0 920 131" role="img" aria-label="Pilot uncertainty intervals"><line x1="307.4" y1="25" x2="307.4" y2="121" class="zero"/><text x="8" y="46" class="svg-label">tariff_4|HIGH|tariff_9</text><line x1="423.9" y1="42" x2="890.0" y2="42" class="band"/><circle cx="657.0" cy="42" r="5" class="mean"/><text x="8" y="84" class="svg-label">tariff_7|MID|tariff_12</text><line x1="220.0" y1="80" x2="860.9" y2="80" class="band"/><circle cx="540.4" cy="80" r="5" class="mean"/></svg><p class="sub">Line: safe-to-optimistic heuristic interval. Dot: normalized mean lift. Adaptive selection means this is not a simultaneous calibrated guarantee.</p></div>
+<h2>Selected and rejected alternatives</h2><div class="panel"><div class="toolbar"><button data-filter="all">All</button><button data-filter="selected">Selected</button><button data-filter="rejected">Rejected</button></div><table><thead><tr><th>Decision</th><th>Candidate</th><th>Channel</th><th>Reason</th><th>Conservative net</th></tr></thead><tbody id="decisions"><tr data-decision="selected"><td><span class="pill selected">selected</span></td><td>tariff_4|HIGH|tariff_9</td><td>sms</td><td>Selected by bounded portfolio search under joint resource limits.</td><td>18 400.00</td></tr><tr data-decision="rejected"><td><span class="pill rejected">rejected</span></td><td>tariff_7|MID|tariff_12</td><td>digital_ads</td><td>Conservative net is nonpositive.</td><td>-2 300.00</td></tr></tbody></table></div>
+<h2>Externally measured result</h2><div class="panel"><p class="empty">No externally measured mock result is attached to this trace.</p></div>
+<p class="note">Final-campaign economics are a trace-based proxy. Pilot contacts may overlap final audiences; exact pilot IDs are not available to the planner. Real mock performance must come from the external evaluator.</p>
+</main><script>
+document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{
+ const wanted=button.dataset.filter;
+ document.querySelectorAll('#decisions tr[data-decision]').forEach(row=>{row.hidden=wanted!=='all'&&row.dataset.decision!==wanted;});
+}));
+</script></body></html>
